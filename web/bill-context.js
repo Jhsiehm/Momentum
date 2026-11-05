@@ -1,0 +1,31 @@
+import {icon} from './icons.js';
+
+// Source relationships and observed revisions are descriptive evidence, not model features.
+export function mountBillContext(container,r,ctx){
+  const {api,esc,navigate}=ctx;
+  const evidence=r.context||{};
+  const dataset=ctx.dataset||r.bill?.dataset||'official';
+  const billId=ctx.bill_id||r.bill?.bill_id;
+  const stamp=value=>value?new Date(value).toLocaleString():'Date not recorded';
+  const plain=value=>value===null||value===undefined?'Not recorded':typeof value==='object'?JSON.stringify(value):String(value);
+  function officialLink(url,text){
+    try{const u=new URL(url);if(u.protocol!=='https:'||!['www.govinfo.gov','govinfo.gov','www.congress.gov','congress.gov'].includes(u.hostname)||u.username||u.password)return '';
+      return `<a href="${esc(u.href)}" target="_blank" rel="noopener noreferrer">${esc(text)} ${icon('arrowRight')}</a>`;
+    }catch{return '';}
+  }
+  function relatedRow(b){
+    const title=String(b.title||''),short=title.length>140?title.slice(0,137).trimEnd()+'…':title;
+    return `<article class="collection-row"><div><h3>${esc(b.bill_id)}${short?' · '+esc(short):''}</h3><p>${esc(b.relationship||'Source-listed relationship')}</p>${title.length>140?`<details class="flow-details"><summary>Full official title</summary><p>${esc(title)}</p></details>`:''}</div>${b.imported?`<button class="secondary" data-related-bill="${esc(b.bill_id)}">${icon('source')}Open imported bill</button>`:officialLink(b.source_url,'Read official record')}</article>`;
+  }
+  const related=evidence.related_bills||[];
+  const section=document.createElement('section');section.className='flow-section';section.setAttribute('aria-label','Related evidence and forecast snapshots');
+  let receipts=[...(Array.isArray(r.prospective)?r.prospective:[])];
+  section.innerHTML=`<section class="flow-section"><h2>Related bills</h2><p class="run-note">Official source relationships help you explore connected legislation. They do not establish shared bill families or influence.</p>${related.length?`<div class="flow-list">${related.slice(0,4).map(relatedRow).join('')}</div>${related.length>4?`<details class="flow-details"><summary>Show ${related.length-4} more source relationships</summary><div class="flow-list">${related.slice(4).map(relatedRow).join('')}</div></details>`:''}`:'<p class="run-note">No related-bill records are available in the retained source at this evidence date.</p>'}</section><section class="flow-section"><h2>Official text versions</h2><p class="run-note">Open the source documents to read legislative text. This workspace does not yet compare full-text versions inline.</p>${evidence.text_versions?.length?`<ul>${evidence.text_versions.map(v=>`<li><p>${esc(v.type||'Official text')} · ${esc(stamp(v.date))}<br>${officialLink(v.url,'Open text version')}</p></li>`).join('')}</ul>`:'<p class="run-note">No official text links are available in this retained record.</p>'}</section><details class="bill-audit"><summary>Observed changes <span>Metadata and source summaries</span></summary><p class="run-note">These are changes between records captured locally. Observation dates do not establish the original publication dates.</p>${evidence.changes?.length?evidence.changes.map(change=>`<details class="flow-details"><summary>${esc(plain(change.field))} · observed ${esc(stamp(change.observed_at))}</summary><h3>Before</h3><p>${esc(plain(change.before))}</p><h3>After</h3><p>${esc(plain(change.after))}</p></details>`).join(''):'<p>No changes found between retained metadata and summary versions.</p>'}${evidence.notes?.length?`<ul class="run-note">${evidence.notes.map(note=>`<li>${esc(note)}</li>`).join('')}</ul>`:''}</details><section class="flow-section"><h2>Forecast snapshots</h2><p>Preserve the current evidence and forecast decision for later evaluation.</p><p class="run-note">Capture uses the current time, even when viewing an earlier evidence date. Resolved bills and ended Congresses cannot generate prospective forecasts. Local receipts are not independent timestamp attestations.</p><button class="secondary" data-capture-snapshot ${billId?'':'disabled'}>${icon('save')}Save current forecast snapshot</button><p class="form-status" data-capture-status role="status"></p><div data-snapshot-list></div></section>`;
+  container.appendChild(section);
+  section.querySelectorAll('[data-related-bill]').forEach(button=>button.onclick=()=>navigate('bill',{dataset,bill_id:button.dataset.relatedBill,cutoff:r.as_of}));
+  function renderReceipts(){section.querySelector('[data-snapshot-list]').innerHTML=receipts.length?`<div class="flow-list">${receipts.map(receipt=>`<article class="collection-row"><div><h3>${receipt.synthetic?'Synthetic snapshot':receipt.status==='captured'?'Forecast recorded':'Evidence decision recorded'}</h3><p>Issued ${esc(stamp(receipt.issued_at))} · ${esc(String(receipt.status||'unavailable').replaceAll('_',' '))}</p>${receipt.forecast?.status==='available'&&Number.isFinite(receipt.forecast.probability)?`<p>Experimental enactment estimate: ${(receipt.forecast.probability*100).toFixed(1)}%.</p>`:''}<p class="run-note">${esc(receipt.reason||receipt.interpretation||'Saved for later evaluation. This receipt does not establish forecasting accuracy.')}</p></div></article>`).join('')}</div>`:'<p class="run-note">No snapshots have been saved for this bill.</p>';}
+  renderReceipts();
+  const button=section.querySelector('[data-capture-snapshot]'),status=section.querySelector('[data-capture-status]');
+  button.onclick=async()=>{button.disabled=true;button.setAttribute('aria-busy','true');status.textContent='Capturing current evidence…';status.setAttribute('role','status');try{const receipt=await api('prospective/capture',{dataset,bill_id:billId});if(!section.isConnected)return;receipts=[receipt,...receipts.filter(existing=>existing.id!==receipt.id)];renderReceipts();status.textContent=receipt.reused?'Unchanged evidence: the existing receipt is shown.':receipt.status==='captured'?'Forecast snapshot saved.':`Decision saved: ${receipt.reason||'No eligible forecast is available.'}`;}catch(e){if(section.isConnected){status.textContent=e.message;status.setAttribute('role','alert');}}finally{button.disabled=false;button.removeAttribute('aria-busy');}};
+  return section;
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research workspace</title><meta name="description" content="Chat with your legislative data, run experiments and inspect the evidence."><link rel="stylesheet" href="/shell.css"><link rel="stylesheet" href="/explore.css"><link rel="stylesheet" href="/design-system.css"><link rel="stylesheet" href="/sampling.css"><link rel="stylesheet" href="/consumer.css"><link rel="stylesheet" href="/research-lab.css"><link rel="stylesheet" href="/intelligence.css"><script type="module" src="/icons.js"></script><script type="module" src="/shell.js"></script></head>
+<body>
+<a class="skip-link" href="#workspace-main">Skip to content</a>
+<aside id="sidebar" class="sidebar">
+<a class="wordmark" href="/" data-icon="workspace">Research workspace</a>
+<button id="new-chat" class="new-chat" data-icon="plus">New chat<kbd>⌘ K</kbd></button>
+<nav class="workspace-nav" aria-label="Workspace tabs">
+<button data-page="priorities" data-icon="watch">Home</button>
+<button data-page="bills" data-icon="collection">Bills</button>
+<button data-page="campaigns" data-icon="experiment">Research</button>
+
+<button data-page="chat" data-icon="chat">Chat</button>
+<details class="nav-advanced"><summary>More tools</summary>
+<button data-page="firm" data-icon="collection">Organization workspace</button>
+<button data-page="intelligence" data-icon="experiment">Evidence analysis</button>
+<button data-page="activity" data-icon="clock">Activity</button>
+<button data-page="collections" data-icon="collection">Saved lists</button>
+<button data-page="explore" data-icon="explore">Visual map</button>
+<button data-page="coverage" data-icon="data">Data coverage</button>
+<button data-page="learning" data-icon="experiment">Model learning</button>
+<button data-page="autoresearch" data-icon="refresh">Worker settings</button>
+<button data-page="experiments" data-icon="experiment">All experiments</button>
+<button data-page="watching" data-icon="watch">Watch settings</button>
+<button data-page="data" data-icon="import">Imports &amp; audits</button>
+<button data-page="rigor" data-icon="audit">Research methods</button>
+<button data-page="sources" data-icon="source">All source records</button>
+</details></nav>
+<div class="chat-list-heading">Your chats</div><div id="chat-list" class="chat-list"></div>
+<div class="sidebar-bottom"><button data-page="settings" data-icon="connection">Connections<span id="connection-dot" class="connection-dot"></span></button><span class="local-note">Local workspace · Saved on this device</span></div></aside>
+<main id="workspace-main" class="main-shell" tabindex="-1"><header class="topbar"><button id="toggle-sidebar" class="icon-button" aria-label="Toggle sidebar" aria-expanded="true" data-icon="sidebar"></button><span id="breadcrumb">New chat</span><span id="top-context">Legislative research</span></header><div id="global-error" class="global-error" role="alert" hidden></div>
+<section id="chat-page" class="chat-page"><div id="messages" class="messages" aria-live="polite"></div><div class="composer-area"><div id="chat-research-context" class="chat-research-context" hidden></div><form id="composer"><label for="prompt" class="sr-only">Message your research assistant</label><textarea id="prompt" rows="2" placeholder="Ask about your data, or run an experiment…" maxlength="10000"></textarea><div class="composer-bottom"><label class="collection-choice" data-icon="collection"><select id="chat-dataset" aria-label="Chat data collection"><option value="official">Official sources</option><option value="demo">Demo collection</option></select></label><button id="model-shortcut" type="button" class="model-shortcut">OpenRouter</button><button type="submit" id="send" class="send-button" aria-label="Send message" data-icon="send"></button></div></form><p class="composer-note">Experiments use saved evidence. Demo data is fictional; estimates are unvalidated.</p></div></section>
+<section id="content-page" class="content-page" hidden></section><section id="frame-page" class="frame-page" hidden><iframe id="research-frame" title="Legislative research view"></iframe></section>
+</main><nav class="mobile-primary" aria-label="Primary navigation"><button data-page="priorities" data-icon="watch">Home</button><button data-page="bills" data-icon="collection">Bills</button><button data-page="campaigns" data-icon="experiment">Research</button><button data-page="chat" data-icon="chat">Chat</button></nav><div id="toast" class="toast" role="status" hidden></div></body></html>
