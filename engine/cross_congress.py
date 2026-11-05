@@ -11,6 +11,7 @@ import shutil
 from . import cohort,sample_publication_v2 as pub
 from .store import ROOT,digest,now
 from .survivor_batch import save
+from .billstatus_compat import AuditedSources
 
 DIRECTORY=ROOT/'data/research-runs/cross-congress-20261105'
 
@@ -56,7 +57,7 @@ def register(directory=DIRECTORY):
 def audit(directory=DIRECTORY,offline=False):
     directory=Path(directory);protocol=json.loads((directory/'protocol.json').read_text());spec=protocol['spec']
     assert digest(spec)==protocol['hash']
-    sources=pub.Sources(directory,offline)
+    sources=AuditedSources(directory,offline)
     labels={}
     for c in spec['congresses']:
         value=json.loads((directory/f'laws-{c}.json').read_text())

@@ -58,7 +58,14 @@ def import_xml(store, raw, source_url, observed=None):
     bill = root.find('bill')
     if bill is None:
         raise ValueError('Expected GovInfo billStatus/bill XML')
-    congress, kind, number = int(bill.findtext('congress')), bill.findtext('type', '').lower(), bill.findtext('number', '')
+    # Legacy GovInfo v1 snapshots use billType/billNumber; retain original bytes.
+    for current, legacy in (('type', 'billType'), ('number', 'billNumber')):
+        a, b = bill.findtext(current), bill.findtext(legacy)
+        if a and b and a.lower() != b.lower():
+            raise ValueError('Conflicting BILLSTATUS identifier aliases')
+    congress = int(bill.findtext('congress'))
+    kind = (bill.findtext('type') or bill.findtext('billType') or '').lower()
+    number = bill.findtext('number') or bill.findtext('billNumber') or ''
     if kind not in ('hr', 's') or not number.isdigit():
         raise ValueError('Initial universe supports H.R. and S. public bills only')
     bill_id = f'{congress}-{kind}{number}'

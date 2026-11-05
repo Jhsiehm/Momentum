@@ -30,3 +30,7 @@ Crosschecked full final-calendar public-law tables against NARA:113=296,114=329,
 Progress is recorded in ignored `data/research-runs/cross-congress-scale-20261105/progress.json` and `pipeline-progress.json`. Completed records are immutable and reused for retries; replay reconstructs from retained sources. Source interruptions remain visible and block scoring until resolved. Current-time imports must never be backdated.
 
 Initial validation:27 focused temporal/family/calibration/source-label tests passed; exact500-case offline replay; complete five-period calendar sequence/identity crosschecks. Large-batch acquisition and later evaluation are still in progress at this receipt checkpoint. No large-batch improvement is claimed.
+
+## Acquisition compatibility amendment
+
+The initial scale pass encountered one network timeout and a legacy identifier-schema record (115-hr3354). Same-ID retries recovered both. Explicit adapter maps only unambiguous billType/billNumber aliases, records original and parsed SHA256, and leaves source cache bytes unchanged.115-hr3354 remains excluded because its official list lacks an introduced publication. Platform import supports these aliases while retaining original raw bytes.56 focused tests passed; no scoring, selection or model-setting change. Amendment hashes and original failed-attempt records are retained locally.

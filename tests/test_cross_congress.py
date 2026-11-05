@@ -42,4 +42,37 @@ class SourceAndFittingTests(unittest.TestCase):
   rows=[row('train',available='2017-07-01T00:00:00Z'),row('test',115)]
   self.assertEqual(make_split(rows,115,dict(train='a',test='b'))[0],[])
 
+class CompatibilityTests(unittest.TestCase):
+ def test_legacy_identifiers_and_preserved_raw_hash(self):
+  from engine.billstatus_compat import normalize
+  import hashlib,xml.etree.ElementTree as ET
+  raw=b'<billStatus><bill><billType>HR</billType><billNumber>3354</billNumber></bill></billStatus>'
+  converted,proof=normalize(raw)
+  self.assertEqual(ET.fromstring(converted).findtext('bill/type'),'HR')
+  self.assertEqual(ET.fromstring(converted).findtext('bill/number'),'3354')
+  self.assertEqual(proof['original_sha256'],hashlib.sha256(raw).hexdigest())
+ def test_modern_unchanged(self):
+  from engine.billstatus_compat import normalize
+  raw=b'<billStatus><bill><type>HR</type><number>1</number></bill></billStatus>'
+  self.assertEqual(normalize(raw),(raw,None))
+ def test_conflicting_alias_rejected(self):
+  from engine.billstatus_compat import normalize
+  with self.assertRaises(ValueError):normalize(b'<billStatus><bill><type>S</type><billType>HR</billType></bill></billStatus>')
+
+class LegacyImportTests(unittest.TestCase):
+ def test_import_retains_original_bytes_hash(self):
+  import tempfile,hashlib
+  from pathlib import Path
+  from engine.store import Store
+  from engine.ingest import import_xml
+  raw=b'<billStatus><bill><congress>115</congress><billType>HR</billType><billNumber>3354</billNumber><introducedDate>2017-07-21</introducedDate><title>Fixture</title></bill></billStatus>'
+  with tempfile.TemporaryDirectory() as directory:
+   store=Store(Path(directory)/'test.sqlite')
+   try:
+    result=import_xml(store,raw,'https://www.govinfo.gov/test')
+    self.assertEqual(result['bill_id'],'115-hr3354')
+    self.assertEqual(result['hash'],hashlib.sha256(raw).hexdigest())
+    self.assertEqual(store.bill('official','115-hr3354')['raw_hash'],result['hash'])
+   finally:store.close()
+
 if __name__=='__main__':unittest.main()

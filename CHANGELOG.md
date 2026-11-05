@@ -64,3 +64,9 @@ This baseline captures existing work; it does not mean all features were impleme
 - Audited all five final public-law calendars; preserved and explicitly corrected NARA117-354 bill-identity disagreement using calendar and individual law evidence. No prior immutable run changed.
 - Registered15,000 development candidates,10,000 count-triggered reserves and5,000 separate confirmation identities. Added resumable acquisition/coordinator, chronological folds, family/label-time gates and one-challenger lock. Large acquisition is running; no completed accuracy or promotion claim.
 - Validation:27 focused tests and exact500-case offline replay. Full receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
+
+## 2026-11-05 — Legacy source compatibility during scale acquisition
+
+- Large-batch auditing found115-hr3354 uses legacy GovInfo billType/billNumber fields. Added explicit unambiguous identifier normalization with original/parsed hashes; retained original source bytes. Current-time imports now accept the same aliases while retaining the original raw hash. Conflicting aliases are rejected.
+- Same-ID retry resolves the parser failure; the bill remains excluded for its missing introduced publication under unchanged evidence rules. An earlier network timeout also recovered without replacement.
+- Validation:56 focused temporal/model/import/schema tests passed;500-case feasibility replay rerun after the adapter. Changes amend source compatibility only, before model fitting; frozen statistical rules and previous artifacts remain unchanged.
