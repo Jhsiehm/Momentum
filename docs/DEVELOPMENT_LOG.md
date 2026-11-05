@@ -130,3 +130,9 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Explicitly quarantined final118-s4197 unresolved date conflict before scoring, with unchanged model/candidate identities and no replacement. Reported historical exposure and source-disposition amendments.
 - Validation:70 focused tests, exact source/fitting/scoring replays, separate61,410-probability arithmetic and102,417 main source-file checks. Full receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
 - Platform delivery: 25,400 new bill identities, 5,100 unchanged records, four final reports verified through the API, and six 100-candidate collections. Completed campaign releases its research lease; recurring schedules remain unchanged.
+
+## 2026-11-05 — Transfer diagnosis and constrained weight tests
+
+- Preserved the survivor and diagnosed the canceled gains: improved negative-case error was offset by worse positive-case error; calibration partly rescued retraining.
+- Tested fixed 25%/50% weight changes on explicitly exposed development evidence. Best blend improves Brier only 0.1195%, conditional interval includes zero; no independent validation or promotion.
+- 22 tests, exact replay and 11,575 independently recalculated probabilities passed. Full report saved to the platform campaign chat. Receipt: `docs/operations/runs/20261105-transfer-diagnosis.md`.

@@ -1,3 +1,7 @@
+# Latest transfer diagnosis: survivor retained
+
+Fixed 25%/50% weight changes tested on the already exposed 2,315-case comparison. The 50% blend leads with only 0.1195% lower Brier; conditional uncertainty includes zero. No independent success or promotion. 22 tests, exact replay and 11,575 arithmetic checks passed. Full diagnosis is in `docs/operations/runs/20261105-transfer-diagnosis.md` and the platform campaign chat.
+
 # Latest cross-Congress campaign: completed, no established gain
 
 Completed30,500 candidate audits:500 feasibility,25,000 development/reserve and5,000 reserved comparison. The extra10,000 candidates were triggered by insufficient usable positive counts. Latest development fold then cleared evidence gates with8,812 training cases/227 enactments and3,059 evaluation cases/59 enactments.
