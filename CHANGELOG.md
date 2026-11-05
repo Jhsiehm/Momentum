@@ -9,6 +9,11 @@
 
 This baseline captures existing work; it does not mean all features were implemented on this date or that forecasting performance is validated.
 
+## 2026-11-05 — Historical data audit
+
+- Added per-Congress read-only import diagnostics that distinguish recorded enactments, deadline-qualified outcomes and historical metadata availability.
+- Published actual cohort/positive counts, saved baseline results and provenance blockers, with a proposed multi-Congress expansion and protected future evaluation design. No new scoring or predictive-validation claim.
+
 ## 2026-11-05 — Expanded forecasting research batch
 
 - Completed 700-bill acquisition and 10 predefined forecasting experiments with separate development and confirmation samples.

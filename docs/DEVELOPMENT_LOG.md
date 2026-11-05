@@ -30,6 +30,14 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Reviewed these documentation diffs; they record the completed verifier and preserve negative-transfer and development-only conclusions. Their numerical findings are attributed to the research receipts, not independently rerun by this repository-publication task.
 - Validation: documentation diff whitespace check passed. Application code unchanged from the tested baseline.
 
+## 2026-11-05 — Historical data audit and expansion design
+
+- Audited a read-only official-data snapshot, saved publication studies, temporal/model/evaluator gates and the concurrent research lease. Added an aggregate audit receipt with exact inventory/import/positive counts, saved baseline performance, provenance gaps and blockers; no fitting or new scoring.
+- Documented a proposed full 113–117 census, fixed day180 target, global adjudicated family purges, historical source/label availability gates, positive-family minima, and future 120/121 protected temporal evaluation before scoring. Existing 118 studies remain exposed; 119 is not asserted untouched.
+- Extended only the read-only import-quality audit (schema v2) with per-Congress horizon/availability diagnostics, conflicting identities/labels/dates and orphan-resolution counts. No labels, model behavior, forecasts, frozen studies, human reviews or UI changed.
+- Validation: focused suite 7/7; full suite 209 tests passed in 117.890 seconds. Checked 70,858 record IDs, 10,398 raw hashes and 10,392 import receipts without integrity failures. Verified 5,321 frozen files unchanged and 2,625 source receipt hashes. Historical proof is still not certified by byte integrity.
+- Remaining: source acquisition/availability, complete negatives, family adjudication, enough eligible positive families, protected access and stricter future scoring preflight. No improvement or promotion claim. Full receipt: `docs/operations/runs/20261105-historical-data-audit.md`; detailed local artifacts remain ignored in `data/audits/historical-expansion-20261105/`.
+
 ## 2026-11-05 — Expanded survivor experiments
 
 - Acquired 700 new official historical bills, fitted 10 prespecified variants, and locked development selection before confirmation scoring. Added 149 eligible training rows after temporal/family gates.
