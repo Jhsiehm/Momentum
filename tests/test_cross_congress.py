@@ -117,4 +117,26 @@ class QuarantineTests(unittest.TestCase):
   with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
    with self.assertRaises(AssertionError):missing_introduction_action(source,'116-s4935')
 
+class LegislativeDayTests(unittest.TestCase):
+ def fixture(self,header):
+  import xml.etree.ElementTree as ET
+  from types import SimpleNamespace
+  mods=ET.fromstring('<mods xmlns="http://www.loc.gov/mods/v3"><recordInfo><recordIdentifier>BILLS-114s895is</recordIdentifier></recordInfo><originInfo><dateIssued>2015-03-27</dateIssued></originInfo><extension><action date="2015-03-27">Mr. X introduced the following bill</action></extension></mods>')
+  raw=('[Congressional Bills 114th Congress] [S. 895 Introduced in Senate (IS)] '+header+' A BILL').encode()
+  return SimpleNamespace(get=lambda url:(raw,dict(url=url))),mods
+ def test_explicit_header_corroborates_both_dates(self):
+  from engine.cross_congress_adjudication import legislative_day_validator
+  source,mods=self.fixture('March 27 (legislative day, March 26), 2015')
+  proof=legislative_day_validator(source,mods,'BILLS-114s895is','2015-03-26')
+  self.assertEqual(proof['introduced_at'],'2015-03-26')
+  self.assertEqual(proof['calendar_introduction_at'],'2015-03-27')
+ def test_no_parenthetical_cannot_override_conflict(self):
+  from engine.cross_congress_adjudication import legislative_day_validator
+  source,mods=self.fixture('March 27, 2015')
+  with self.assertRaises(AssertionError):legislative_day_validator(source,mods,'BILLS-114s895is','2015-03-26')
+ def test_wrong_legislative_day_rejected(self):
+  from engine.cross_congress_adjudication import legislative_day_validator
+  source,mods=self.fixture('March 27 (legislative day, March 25), 2015')
+  with self.assertRaises(AssertionError):legislative_day_validator(source,mods,'BILLS-114s895is','2015-03-26')
+
 if __name__=='__main__':unittest.main()

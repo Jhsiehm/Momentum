@@ -117,3 +117,8 @@ Record each meaningful work batch with its date, changes, validation, and remain
 
 - The15,000-candidate batch completed with clean recovered acquisition,51,138 source documents and5.795GB retained evidence. Temporal/family checks yielded156 usable training positives and46 development positives, triggering the registered10,000-candidate reserve before any model fitting.
 - Reserve113-hr2793 lacks mandatory explicit introduction-date evidence in its official introduced package; retained an explicit provenance quarantine with no features/outcome assigned and no replacement. The pre-fitting disposition amendment does not relax requirements for included rows; unavailable network sources and identity conflicts still block.60 focused tests passed.
+
+## 2026-11-05 — Explicit legislative-day reconciliation
+
+- Reserve114-s895 official introduced header says March27 (legislative day, March26),2015. BILLSTATUS uses March26 and MODS action uses March27. Added a narrowly scoped validator requiring exact package/bill identity and explicit corroboration of both dates in the official introduced header; original BILLSTATUS checkpoint convention stays unchanged.
+- Default publication validation remains unchanged; only named adjudicated records use the supplementary validator. Original raw sources and initial failed attempt retained.68 focused tests passed, including missing/wrong-header rejection and publication regressions.

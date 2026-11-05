@@ -74,7 +74,7 @@ def assign_families(rows, test_congress=118):
             else: used.add(row['family_id'])
     return rows
 
-def sample_bill(sources, congress, kind, number, spec, labels, directories=None):
+def sample_bill(sources, congress, kind, number, spec, labels, directories=None, introduction_validator=None):
     identity = f'{congress}-{kind}{number}'
     if directories and number not in directories[(congress,kind)][0]:
         return excluded_slot(identity,congress,kind,'No BILLSTATUS entry in complete official chamber directory; no historical introduction audited',directories[(congress,kind)][1])
@@ -101,7 +101,7 @@ def sample_bill(sources, congress, kind, number, spec, labels, directories=None)
         proof['stage'] = VERSION_STAGE[version] if (version not in ('eh', 'es') or version == ('eh' if kind == 'hr' else 'es')) else 0
         proof['title'] = mods.findtext('m:titleInfo/m:title', namespaces=M)
         if version == ('ih' if kind == 'hr' else 'is'):
-            proof['introduction_validation'] = validate_introduction(mods, package, intro)
+            proof['introduction_validation'] = (introduction_validator or validate_introduction)(mods, package, intro)
         versions.append(proof)
     introductions = [v for v in versions if v['version'] == ('ih' if kind == 'hr' else 'is')]
     if not introductions:
