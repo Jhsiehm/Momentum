@@ -4,6 +4,10 @@ A local-first workspace for researching U.S. federal legislation, monitoring bil
 
 Momentum brings official-source imports, bill collections, research conversations, and reproducible experiments into one browser interface. It is an experimental research prototype: predictive accuracy has not been independently validated.
 
+## Current research priority
+
+The active milestone is a forward-only learning benchmark for originating-chamber passage at day 30. It compares frozen, retrained, adaptive, and historical-rate models across Congresses. The [benchmark protocol and command](docs/SEQUENTIAL_BENCHMARK.md) describe the separate audited labels required. Official-data improvement remains unestablished; other product features are on maintenance-only status.
+
 ## What you can do
 
 - Import bill records from GovInfo and Congress.gov, inspect source evidence, and follow legislative changes.

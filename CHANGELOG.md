@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-05 — Sequential passage development benchmark
+
+- Added a separate day-30 originating-chamber passage benchmark with forward Congress folds, frozen/retrained/adaptive/rate comparisons, provenance manifests, and immutable report files.
+- Explicitly block sparse folds and report missing passage labels; preserve the existing enactment engine.
+- Narrowed the active milestone to sequential learning evaluation. Official-data learning gains remain unestablished.
+
 ## 2026-11-05 — Initial repository baseline
 
 - Versioned the existing local Momentum application, regression tests, design notes, research protocols, and operational receipts.
