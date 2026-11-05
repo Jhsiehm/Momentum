@@ -1,3 +1,9 @@
+# Active cross-Congress learning campaign
+
+User authorized staged larger acquisition and extra official data if insufficient. Completed500-case feasibility across113–117:426 eligible checkpoints,411 within-period families,7 positives; exact offline replay and27 focused tests passed. Five historical calendar label censuses reconciled, including explicitly adjudicated117-354 identity discrepancy.
+
+Now acquiring15,000 registered development candidates, with10,000 fixed reserves triggered by usable positive counts.5,000 new118 identities reserved for one locked challenger comparison. No large-batch score yet; preserve survivor. Historical publication/family/human limitations remain. Receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
+
 # Latest controlled three-model comparison
 
 November5,2026. Receipt: `docs/operations/runs/20261105-three-model.md`.

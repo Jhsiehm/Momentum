@@ -57,3 +57,10 @@ This baseline captures existing work; it does not mean all features were impleme
 - Evaluated all696 eligible families,10 enactments: original Brier0.01354544; calibrated0.01365660 (+0.82% worse, interval includes zero); retrained0.01408350 (+3.97% worse, paired interval favors original). Preserve survivor; no challenger promotion or self-improvement claim.
 - Validation:36 focused tests; exact offline replay;2,088 probabilities/scores and both bootstraps independently recalculated by separate verifier;3,320 source hashes/lengths checked. Five reports and ten collections saved and API-verified;1,000 current imports retain real observation timestamps.
 - Remaining: rare calibration positives, repeated same-Congress exposure, incomplete historical-action/family/human gates; stronger representative training evidence and separately registered time-period validation needed. Receipt: `docs/operations/runs/20261105-three-model.md`.
+
+## 2026-11-05 — Cross-Congress acquisition campaign started
+
+- Completed500-case feasibility and offline replay across113–117:426 eligible checkpoints,411 within-period families,7 positives; discovered75,605 bill identities across113–118. Diagnosed weakened stage separation in the prior retrained model.
+- Audited all five final public-law calendars; preserved and explicitly corrected NARA117-354 bill-identity disagreement using calendar and individual law evidence. No prior immutable run changed.
+- Registered15,000 development candidates,10,000 count-triggered reserves and5,000 separate confirmation identities. Added resumable acquisition/coordinator, chronological folds, family/label-time gates and one-challenger lock. Large acquisition is running; no completed accuracy or promotion claim.
+- Validation:27 focused tests and exact500-case offline replay. Full receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.

@@ -1,0 +1,45 @@
+import unittest
+from scripts.cross_congress_evaluate import unique,make_split,probability,train_models
+
+
+def row(bid,c=113,y=0,available='2015-04-01T00:00:00Z',cutoff='2017-07-01T00:00:00Z',exclusion=None):
+ return dict(bill_id=bid,congress=c,y=y,label_available_at=available,cutoff=cutoff,exclusion=exclusion)
+
+
+class CrossCongressTests(unittest.TestCase):
+ def test_outcome_independent_family_representative(self):
+  rows=[row('a',y=1),row('b'),row('c')];groups=dict(a='f',b='f',c='g')
+  self.assertEqual([r['bill_id'] for r in unique(rows,groups)],['a','c'])
+  for r in rows:r['y']=1-r['y']
+  self.assertEqual([r['bill_id'] for r in unique(rows,groups)],['a','c'])
+ def test_future_labels_excluded(self):
+  rows=[row('early'),row('late',available='2018-01-01T00:00:00Z'),row('test',115)]
+  train,test=make_split(rows,115,{r['bill_id']:r['bill_id'] for r in rows})
+  self.assertEqual([r['bill_id'] for r in train],['early'])
+ def test_eval_family_excluded_from_training(self):
+  rows=[row('train'),row('test',115)]
+  train,test=make_split(rows,115,dict(train='same',test='same'))
+  self.assertEqual(train,[]);self.assertEqual(len(test),1)
+ def test_future_congress_never_trains(self):
+  rows=[row('future',116),row('test',115)]
+  self.assertEqual(make_split(rows,115,dict(future='f',test='t'))[0],[])
+ def test_ineligible_rows_remain_excluded(self):
+  self.assertEqual(unique([row('a',exclusion='late checkpoint')],dict(a='a')),[])
+ def test_no_eligible_evaluation(self):
+  self.assertEqual(make_split([row('a')],115,dict(a='a')),([],[]))
+
+class SourceAndFittingTests(unittest.TestCase):
+ def test_abbreviated_law_header(self):
+  from scripts.prepare_cross_congress_sources import parse_final
+  raw=b'FINAL LISTING\nH.R. 41/P.L. 113-1\nTitle\n(Jan. 6, 2013; 127 Stat. 3; 1 page)\n'
+  self.assertEqual(parse_final(raw,113),[dict(law=1,bill_id='113-hr41',enacted='2013-01-06')])
+ def test_calibration_families_disjoint(self):
+  rows=[dict(bill_id=f'113-hr{i}',congress=113,x=[(i%4)/4,.2,.1,.2,i%2,0],y=int(i%7==0)) for i in range(300)]
+  result=train_models(rows)['calibrated_all_history']
+  self.assertFalse(set(result['core_ids']) & set(result['calibration_ids']))
+  self.assertEqual(set(result['core_ids']) | set(result['calibration_ids']),{r['bill_id'] for r in rows})
+ def test_label_at_checkpoint_is_not_earlier(self):
+  rows=[row('train',available='2017-07-01T00:00:00Z'),row('test',115)]
+  self.assertEqual(make_split(rows,115,dict(train='a',test='b'))[0],[])
+
+if __name__=='__main__':unittest.main()
