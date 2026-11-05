@@ -80,3 +80,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Brier0.00054515 versus smoothed-rate0.00153787; all20 outcomes negative. This tests conservative probabilities, not enacted-case discrimination or general improvement. No promotion.
 - Validation: full offline replay; independent20-probability/Brier arithmetic; seeded selection and130 source checksums; two platform reports and one20-bill collection saved and endpoints checked.
 - Remaining: adequate natural positive counts and independent temporal evaluation. Same-Congress historical exposure and action/provision provenance limits persist.
+
+## 2026-11-05 — High-volume fixed survivor
+
+- Registered1,000 new118th-Congress candidate IDs; scored all736 eligible known-family-separated cases with the exact49-row survivor weights. Retained264 exclusions and16 qualifying enactments; no source failures, tuning or early stopping.
+- Brier0.01995385 versus rate0.02157197 (7.50% lower); conditional paired interval favors survivor. Higher-probability bin underestimates its6/13 enactments. Findings remain historical development evidence, not automatic learning or promotion.
+- Validation: six new selection/immutability tests; exact full offline replay; independent arithmetic for736 probabilities/Brier/log loss;3,298 source hashes and lengths; repeated bootstrap. Ten collections and two reports saved, all1,000 source XMLs imported at actual observation time, endpoints verified.
+- Remaining: independent temporal validation and separately registered calibration study; rare positives, prior exposure and historical-action/family/human gates remain.

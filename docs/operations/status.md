@@ -1,3 +1,13 @@
+# Latest high-volume experiment
+
+November5,2026. Receipt: `docs/operations/runs/20261105-survivor1000.md`.
+
+Completed1,000 new-candidate source audits with zero failures;736 eligible cases,16 enactments,264 exclusions. Exact49-row original-data survivor weights unchanged. Brier0.01995385 vs rate0.02157197 (7.50% lower); paired conditional95% difference interval[-0.00264608,-0.00072374]. This supports a within-batch advantage over baseline, not automatic learning or cross-Congress validation.
+
+Calibration lead:13 higher-probability cases averaged11.73% but6 enacted (46.15%);723 low-probability cases averaged2.41% with10 enactments (1.38%). Do not tune and rescore this now-exposed batch as fresh validation. Next study should preregister calibration and independent evaluation. Existing historical-action/family/human gates remain.
+
+Six new tests, exact offline replay, direct736-case arithmetic,3,298 source checks and repeated bootstrap passed. Saved ten collections and two reports; all1,000 current imports retain actual observation times. Scheduled settings unchanged; no promotion. Runtime bundle: `data/research-runs/survivor1000-20261105/`.
+
 # Latest requested experiment: original-data survivor on20 bills
 
 November5,2026. Receipt: `docs/operations/runs/20261105-survivor20.md`.

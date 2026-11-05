@@ -45,3 +45,8 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Completed a20-bill test with the original-data survivor's weights locked; saved bill-level probabilities and reproducible evidence.
 - Lower error than the rate baseline on an all-negative sample; no general improvement or model promotion claimed.
+
+## 2026-11-05 — High-volume survivor evaluation
+
+- Completed1,000-candidate acquisition and736-case fixed-model evaluation, including16 enactments.
+- Survivor Brier improved7.50% over its rate baseline on this sample; recorded calibration weaknesses and conditional uncertainty. Saved ten collections and two audited reports; no promotion.
