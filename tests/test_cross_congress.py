@@ -98,4 +98,23 @@ class ConflictDispositionTests(unittest.TestCase):
   with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
    with self.assertRaises(AssertionError):late_introduction_conflict(source,'116-s4935')
 
+class QuarantineTests(unittest.TestCase):
+ source=ConflictDispositionTests.source
+ def test_absent_action_assigns_no_label_or_features(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import missing_introduction_action
+  from engine.cohort import M
+  source,mods=self.source('2020-12-01','2020-12-01')
+  ext=mods.find('m:extension',M);ext.remove(ext.find('m:action',M))
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   result=missing_introduction_action(source,'116-s4935')
+  self.assertNotIn('y',result);self.assertNotIn('x',result)
+  self.assertFalse(result['adjudication']['resolved'])
+ def test_present_action_cannot_be_quarantined_as_absent(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import missing_introduction_action
+  source,mods=self.source('2020-12-01','2020-12-01')
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   with self.assertRaises(AssertionError):missing_introduction_action(source,'116-s4935')
+
 if __name__=='__main__':unittest.main()

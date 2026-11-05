@@ -112,3 +112,8 @@ Record each meaningful work batch with its date, changes, validation, and remain
 
 - Official records disagree on116-s4935 introduction (2020-11-30 vs2020-12-01). Both yield day180 after the116th Congress ends. Added explicit source-backed exclusion under every official candidate date; do not choose a date or use the outcome. Retained the disagreement and failed initial attempt.
 - A conflict that could change eligibility still blocks.58 focused tests passed, including both-date exclusion and potentially-eligible rejection.
+
+## 2026-11-05 — Additional data triggered and missing-proof quarantine
+
+- The15,000-candidate batch completed with clean recovered acquisition,51,138 source documents and5.795GB retained evidence. Temporal/family checks yielded156 usable training positives and46 development positives, triggering the registered10,000-candidate reserve before any model fitting.
+- Reserve113-hr2793 lacks mandatory explicit introduction-date evidence in its official introduced package; retained an explicit provenance quarantine with no features/outcome assigned and no replacement. The pre-fitting disposition amendment does not relax requirements for included rows; unavailable network sources and identity conflicts still block.60 focused tests passed.
