@@ -142,3 +142,9 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Tested 25%/50% constrained updates against period-specific anchors and full updates in three exposed chronological folds (8,568 evaluation rows, 182 enactments).
 - Each update improved two periods and worsened one; no restrained rule passed the all-period criterion. Survivor unchanged; no independent validation or promotion.
 - 26 tests, exact refitting replay and 34,272 probability/metric checks passed. Report saved to campaign chat; receipt: `docs/operations/runs/20261105-chronological-weight-updates.md`.
+
+## 2026-11-05 — Granular transfer and feature audit
+
+- Audited nine subgroup partitions, class errors, influential cases, exact feature collisions, calibration/base-model swaps and saved-fit gradients across 8,568 exposed evaluation rows.
+- Repeated stage mismatch: introduced-document groups overpredicted, passage-document groups underpredicted. In 117, broad negative-case losses outweigh enactment gains; calibration partly rescues Brier. L2 gradient cancellation makes regularization a specific hypothesis, not a proven fix.
+- No new fitted candidate or promotion. 29 tests, exact replay and 34,272 hybrid probability checks passed. Report saved to platform; receipt: `docs/operations/runs/20261105-granular-transfer-audit.md`.

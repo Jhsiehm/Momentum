@@ -1,3 +1,7 @@
+# Latest granular audit: stage separation and regularization leads
+
+Across three exposed periods, both anchor/update overpredict introduced-document groups and underpredict passage-document groups. The 117th loss is dominated by unsuccessful bills; calibration partially rescues Brier. Stage gradient nearly cancels L2 penalty; weaker regularization and stage representation are hypotheses for controlled testing. No fitted model change or promotion. 29 tests, exact replay, 34,272 hybrid probability checks. Receipt: `docs/operations/runs/20261105-granular-transfer-audit.md`.
+
 # Latest chronological weight tests: no consistent update rule
 
 Three exposed development folds, 8,568 evaluation rows. Fixed 25%/50% updates and full updating improve two periods but worsen one. No restrained update meets the all-period criterion; survivor retained. 26 tests, exact refitting replay and 34,272 probability checks passed. Receipt: `docs/operations/runs/20261105-chronological-weight-updates.md`.
