@@ -139,4 +139,21 @@ class LegislativeDayTests(unittest.TestCase):
   source,mods=self.fixture('March 27 (legislative day, March 25), 2015')
   with self.assertRaises(AssertionError):legislative_day_validator(source,mods,'BILLS-114s895is','2015-03-26')
 
+class ConflictQuarantineTests(unittest.TestCase):
+ source=ConflictDispositionTests.source
+ def test_conflicting_date_assigns_no_prediction_inputs(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import conflicting_introduction_quarantine
+  source,mods=self.source('2019-01-01','2019-01-02')
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   result=conflicting_introduction_quarantine(source,'116-s4935')
+  self.assertNotIn('x',result);self.assertNotIn('y',result);self.assertNotIn('cutoff',result)
+  self.assertFalse(result['adjudication']['resolved'])
+ def test_agreement_is_not_quarantined(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import conflicting_introduction_quarantine
+  source,mods=self.source('2019-01-01','2019-01-01')
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   with self.assertRaises(AssertionError):conflicting_introduction_quarantine(source,'116-s4935')
+
 if __name__=='__main__':unittest.main()

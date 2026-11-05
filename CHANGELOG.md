@@ -85,3 +85,11 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Reserve114-s895 official introduced header says March27 (legislative day, March26),2015. BILLSTATUS uses March26 and MODS action uses March27. Added a narrowly scoped validator requiring exact package/bill identity and explicit corroboration of both dates in the official introduced header; original BILLSTATUS checkpoint convention stays unchanged.
 - Default publication validation remains unchanged; only named adjudicated records use the supplementary validator. Original raw sources and initial failed attempt retained.68 focused tests passed, including missing/wrong-header rejection and publication regressions.
+
+## 2026-11-05 — Cross-Congress campaign completed; no demonstrated gain
+
+- Completed30,500 candidate audits:500 feasibility,15,000 initial development,10,000 automatically triggered reserve and5,000 reserved comparison. Latest forward fold clears training/development evidence gates with227/59 enactments; five fixed methods evaluated across four chronological folds.
+- Locked calibrated-all-history challenger on11,871 families/281 enactments. Final comparison:2,315 eligible cases/29 enactments; Brier0.0121439707 vs original0.0121441147, effectively tied; paired95% interval includes zero. Secondary log loss1.98% lower. Primary2% and50-positive gates unmet; preserve survivor, no promotion.
+- Explicitly quarantined final118-s4197 unresolved date conflict before scoring, with unchanged model/candidate identities and no replacement. Reported historical exposure and source-disposition amendments.
+- Validation:70 focused tests, exact source/fitting/scoring replays, separate61,410-probability arithmetic and102,417 main source-file checks. Full receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
+- Platform delivery: 25,400 new bill identities, 5,100 unchanged records, four final reports verified through the API, and six 100-candidate collections. Completed campaign releases its research lease; recurring schedules remain unchanged.

@@ -76,3 +76,24 @@ def legislative_day_validator(sources,mods,package,introduced_at):
 def sample_legislative_day(sources,congress,kind,number,spec,labels):
  from .sample_publication_v2 import sample_bill
  return sample_bill(sources,congress,kind,number,spec,labels,introduction_validator=lambda mods,package,intro:legislative_day_validator(sources,mods,package,intro))
+
+
+def conflicting_introduction_quarantine(sources,bid):
+ """Retain unresolved mandatory-date disagreement without assigning a target."""
+ match=re.fullmatch(r'(\d+)-(hr|s)(\d+)',bid)
+ if not match:raise ValueError('Invalid bill identity')
+ c,kind,number=int(match[1]),match[2],int(match[3])
+ raw,source=sources.get(f'https://www.govinfo.gov/bulkdata/BILLSTATUS/{c}/{kind}/BILLSTATUS-{c}{kind}{number}.xml')
+ bill=cohort.xml(raw).find('bill')
+ assert int(bill.findtext('congress'))==c and bill.findtext('type').lower()==kind and int(bill.findtext('number'))==number
+ package=f'BILLS-{c}{kind}{number}'+('ih' if kind=='hr' else 'is')
+ mods,proof=cohort.package_audit(sources,package)
+ assert mods.findtext('m:recordInfo/m:recordIdentifier',namespaces=cohort.M)==package
+ dates=[bill.findtext('introducedDate')]+[a.get('date') for a in mods.findall('m:extension/m:action',cohort.M) if re.search(r'\bintroduced\s+the\s+following\s+bill\b',' '.join(a.itertext()),re.I)]
+ assert len(dates)>1 and len(set(dates))>1,'No explicit date disagreement'
+ for value in dates:date.fromisoformat(value)
+ row=cohort.excluded_slot(bid,c,kind,'Quarantined: unresolved mandatory introduction-date disagreement',source,bill.findtext('title'))
+ row['versions']=[proof]
+ row['related']=[f"{x.findtext('congress')}-{x.findtext('type').lower()}{int(x.findtext('number'))}" for x in bill.findall('relatedBills/item') if x.findtext('congress') and x.findtext('type') and x.findtext('number')]
+ row['adjudication']=dict(rule='conflicting-introduction-quarantine-v1',official_dates=dates,resolved=False,human_certified=False,reason='Mandatory introduction-date corroboration failed. No date, features or outcome assigned; retained but excluded from scoring.')
+ return row

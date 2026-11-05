@@ -6,7 +6,7 @@ Momentum brings official-source imports, bill collections, research conversation
 
 ## Current research priority
 
-The active milestone is a forward-only learning benchmark for originating-chamber passage at day 30. It compares frozen, retrained, adaptive, and historical-rate models across Congresses. The [benchmark protocol and command](docs/SEQUENTIAL_BENCHMARK.md) describe the separate audited labels required. Official-data improvement remains unestablished; other product features are on maintenance-only status.
+The current research focus is forward-only evaluation of own-bill enactment forecasts at day 180, using audited earlier-Congress training evidence and a locked later comparison. The [cross-Congress campaign receipt](docs/operations/runs/20261105-cross-congress-campaign.md) records the data, methods, limitations, and results. The separate [day-30 originating-chamber passage benchmark](docs/SEQUENTIAL_BENCHMARK.md) still requires additional evidence. Reliable forecasting improvement remains unestablished; research results do not automatically promote models.
 
 ## What you can do
 

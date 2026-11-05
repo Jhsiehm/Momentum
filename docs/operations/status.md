@@ -1,8 +1,10 @@
-# Active cross-Congress learning campaign
+# Latest cross-Congress campaign: completed, no established gain
 
-User authorized staged larger acquisition and extra official data if insufficient. Completed500-case feasibility across113–117:426 eligible checkpoints,411 within-period families,7 positives; exact offline replay and27 focused tests passed. Five historical calendar label censuses reconciled, including explicitly adjudicated117-354 identity discrepancy.
+Completed30,500 candidate audits:500 feasibility,25,000 development/reserve and5,000 reserved comparison. The extra10,000 candidates were triggered by insufficient usable positive counts. Latest development fold then cleared evidence gates with8,812 training cases/227 enactments and3,059 evaluation cases/59 enactments.
 
-Now acquiring15,000 registered development candidates, with10,000 fixed reserves triggered by usable positive counts.5,000 new118 identities reserved for one locked challenger comparison. No large-batch score yet; preserve survivor. Historical publication/family/human limitations remain. Receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
+Calibrated-all-history selected across four forward folds and frozen on11,871 historical families/281 enactments. Final comparison:2,315 eligible cases,29 enactments. Challenger Brier0.0121439707 vs survivor0.0121441147; conditional95% paired interval includes zero. Log loss1.98% lower, but primary2% improvement and50-positive thresholds unmet. Preserve original survivor; no promotion or self-improvement claim.
+
+70 tests, exact acquisition/fitting/scoring replays, separate61,410-probability arithmetic and102,417 main source-file checks passed. Explicit missing/conflicting-evidence quarantines and legislative-day reconciliation retained; no uncertain case counted negative. Historical publication/family/exposure/human limits persist. Receipt: `docs/operations/runs/20261105-cross-congress-campaign.md`.
 
 # Latest controlled three-model comparison
 

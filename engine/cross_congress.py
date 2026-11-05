@@ -12,7 +12,7 @@ from . import cohort,sample_publication_v2 as pub
 from .store import ROOT,digest,now
 from .survivor_batch import save
 from .billstatus_compat import AuditedSources
-from .cross_congress_adjudication import late_introduction_conflict,missing_introduction_action,sample_legislative_day
+from .cross_congress_adjudication import late_introduction_conflict,missing_introduction_action,sample_legislative_day,conflicting_introduction_quarantine
 
 DIRECTORY=ROOT/'data/research-runs/cross-congress-20261105'
 
@@ -75,6 +75,7 @@ def audit(directory=DIRECTORY,offline=False):
             if adjudications.get(bid)=='late-under-all-official-dates-v1':row=late_introduction_conflict(sources,bid)
             elif adjudications.get(bid)=='missing-introduction-action-quarantine-v1':row=missing_introduction_action(sources,bid)
             elif adjudications.get(bid)=='explicit-legislative-day-header-v1':row=sample_legislative_day(sources,int(m[1]),m[2],int(m[3]),spec,labels)
+            elif adjudications.get(bid)=='conflicting-introduction-quarantine-v1':row=conflicting_introduction_quarantine(sources,bid)
             else:row=pub.sample_bill(sources,int(m[1]),m[2],int(m[3]),spec,labels)
             save(records,bid+'.json',row)
             return row,None
