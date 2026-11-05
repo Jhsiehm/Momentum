@@ -111,3 +111,9 @@ This baseline captures existing work; it does not mean all features were impleme
 - Audited nine subgroup partitions, class errors, influential cases, exact feature collisions, calibration/base-model swaps and saved-fit gradients across 8,568 exposed evaluation rows.
 - Repeated stage mismatch: introduced-document groups overpredicted, passage-document groups underpredicted. In 117, broad negative-case losses outweigh enactment gains; calibration partly rescues Brier. L2 gradient cancellation makes regularization a specific hypothesis, not a proven fix.
 - No new fitted candidate or promotion. 29 tests, exact replay and 34,272 hybrid probability checks passed. Report saved to platform; receipt: `docs/operations/runs/20261105-granular-transfer-audit.md`.
+
+## 2026-11-05 — Controlled regularization and stage experiments
+
+- Fixed L2=0.05 with unchanged inputs improves Brier/log loss in all three exposed development periods; mean relative Brier gain 8.24% versus period-specific L2=0.2 controls. Categorical stage alone worsens two periods. This is not a survivor or independent-evidence win.
+- Stage separation improves but residual calibration errors and larger saved-fit gradients remain. Convergence sensitivity is required before freezing a candidate. Survivor unchanged; no combined final fit or promotion.
+- 32 tests, exact refitting replay, 51,408 independently recalculated probabilities and platform API delivery passed. Receipt: `docs/operations/runs/20261105-stage-regularization.md`.

@@ -1,3 +1,7 @@
+# Latest controlled experiments: weaker regularization is a development lead
+
+L2=0.05 improves Brier and log loss in all three exposed periods, averaging 8.24% lower Brier versus period-specific L2=0.2 control. Categorical stage worsens two periods. Not compared with survivor here; no independent validation or promotion. 32 tests, exact replay and 51,408 probability checks passed. Larger residual gradients require a fixed convergence sensitivity check before freezing a candidate. Receipt: `docs/operations/runs/20261105-stage-regularization.md`.
+
 # Latest granular audit: stage separation and regularization leads
 
 Across three exposed periods, both anchor/update overpredict introduced-document groups and underpredict passage-document groups. The 117th loss is dominated by unsuccessful bills; calibration partially rescues Brier. Stage gradient nearly cancels L2 penalty; weaker regularization and stage representation are hypotheses for controlled testing. No fitted model change or promotion. 29 tests, exact replay, 34,272 hybrid probability checks. Receipt: `docs/operations/runs/20261105-granular-transfer-audit.md`.
