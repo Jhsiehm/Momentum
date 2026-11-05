@@ -66,3 +66,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Produced64 machine-corroborated passage-positive labels and584 day30 publication-proxy rows (32 overlap), with raw-source receipts and explicit provenance/human-review flags. No missing action was labelled negative; no official observations backdated.
 - Validation:14 focused tests passed; all802 successful rows reconstructed offline;2,664 source hashes/lengths verified; three platform reports saved and API-checked.
 - Remaining: no certified negatives or complete historical action histories; early-Congress feature coverage and human/family gates remain. Sequential scoring stays blocked. No model, schedule or production change.
+
+## 2026-11-05 — Negative passage audit
+
+- Cross-checked738 unresolved outcomes and64 positive controls against five final calendars and retained official action histories. Source-reviewed12 explicitly pending House bills into current-time negative labels;10 have day30 publication proxies. Remaining726 unresolved outcomes and18 prior missing sources preserved.
+- Added conservative screening, separate source adjudication and nine tests. Coverage assertion is outcome-specific, not historical feature or independent human certification; label availability is current audit time. No scoring or promotion.
+- Validation:23 focused tests; exact offline screen/adjudication replay; report/source hashes; three saved platform endpoints. Initial key-order serialization failure fixed in a new canonical revision while preserving initial artifacts and unchanged evidence.
+- Remaining: historical training availability, representative negatives, early-Congress evidence and action/family/human gates. Full receipt: `docs/operations/runs/20261105-negative-passage-audit.md`.

@@ -35,3 +35,8 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Added an official-source audit producing64 corroborated passage positives and584 day30 publication-evidence records, with explicit failures and provenance limits.
 - Saved source-backed platform reports and offline verification. Complete negative labels and historical action evidence remain required before sequential scoring.
+
+## 2026-11-05 — Negative passage review
+
+- Added final-calendar/action-history auditing and12 source-reviewed negative outcome labels, with explicit current audit times and no human-certification claim.
+- Preserved unresolved cases, source failures and earlier artifacts; saved three platform reports and verified offline reproduction.

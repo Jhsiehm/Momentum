@@ -1,3 +1,11 @@
+# Latest outcome audit: negatives
+
+November 5, 2026. Receipt: `docs/operations/runs/20261105-negative-passage-audit.md`.
+
+Audited738 unresolved outcomes plus64 positive controls using five final calendars and full retained BILLSTATUS action lists. Source-reviewed12 exact pending-calendar cases into negative labels;10 have day30 publication proxies. All positives remained outside the negative set. Remaining726 unresolved outcomes and18 prior source failures retained. Labels are available only at the current audit time, not retroactively; zero independent human certifications.
+
+23 focused tests and exact offline replays passed. Original JSON key-order replay failure corrected in a canonical revision with unchanged evidence and preserved initial artifacts. Three platform reports saved and API-verified. No scoring, production or schedule changes. Historical action features, early-Congress coverage, representative negatives and family/human gates remain outstanding.
+
 # Latest evidence acquisition
 
 November 5, 2026. Receipt: `docs/operations/runs/20261105-passage-evidence.md`.
