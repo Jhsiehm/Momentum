@@ -23,3 +23,9 @@ Record each meaningful work batch with its date, changes, validation, and remain
 
 - Research limitations and follow-up studies remain documented in `docs/operations/status.md` and the roadmaps. This repository setup does not validate forecasting accuracy.
 - Local runtime datasets and research bundles referenced by historical receipts are not included in Git.
+
+## 2026-11-05 — Capture concurrent research progress
+
+- Included updates produced by ongoing workspace activity to the operations status, lessons, and five-experiment receipt after the initial baseline was staged.
+- Reviewed these documentation diffs; they record the completed verifier and preserve negative-transfer and development-only conclusions. Their numerical findings are attributed to the research receipts, not independently rerun by this repository-publication task.
+- Validation: documentation diff whitespace check passed. Application code unchanged from the tested baseline.

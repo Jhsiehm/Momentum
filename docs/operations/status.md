@@ -1,20 +1,27 @@
 # Autonomous learning checkpoint
 
-Updated November 5, 2026 after a completed full research cycle.
+Updated November 5, 2026 after five prespecified real-legislation comparisons.
 
-## Completed
+## Latest completed batch
 
-- Three independent audit rounds completed: evidence/methods, results review with correction, offline verification. Receipt: `docs/operations/runs/20261105-full-learning-cycle.md`.
-- New official evidence: five GovInfo source documents. Final 114th House calendar enumerates all 329 originating laws and matches the retained NARA census. Calendar available March 24, 2017; sampled positive law date proof available May 19, 2016. Both predate July 16, 2019 inner validation. This unlocks a separately registered publication-based adaptive diagnostic, not existing human/action-history gates.
-- Real historical diagnostic: 23 training/1 enacted, 30 validation/1 enacted, 33 evaluation/0 enacted. Selected context hashing/L2=.01 on prior validation only. Adaptive Brier .00455711; fixed .00605899; baseline .00297521. Adaptive improved fixed but loses to baseline. Both bootstrap difference intervals include zero. No promotion.
-- Synthetic chronological check: 15 targets/6 enacted, 240→300 resolved training cases. Before Brier .22643566→after .22688385 (worse). Adaptive .26081357 also worse than fixed and baseline. Machinery works; no improvement claim.
-- All six inner candidate weight artifacts retained in supplementary audit; independent reviewer verified correction. Official/demo/supplement reproduce exactly. 26 relevant tests pass. Frozen studies unchanged.
-- Artifacts and full scripts: `data/research-runs/full-cycle-20261105/`. Saved local platform chat/report: “Full learning cycle · November 5 · audited results”. Demo session visible in Model learning.
+Receipt: `docs/operations/runs/20261105-five-experiments.md`. Artifacts: `data/research-runs/five-experiments-20261105/`.
+
+- Outcome-blind selection of100 new118 bills from16,053 saved inventory IDs, excluding prior local cohorts/imported118 records. Registered population/hash/seed2026110505 before acquisition. No replacements.
+- 338 source documents, 100 bills audited, zero acquisition failures. 82 eligible,81 identified families,one qualifying enactment before Congress end. Excluded17 late checkpoints and1 missing introduced publication. Another eventual enactment occurred after deadline; retain horizon wording.
+- Matched training53 distinct families with2 qualifying positives. Combined family recomputation found no new overlap exclusions. Latest training label proof May8,2021 before earliest evaluation July24,2023.
+- Five Brier results: structured .01310554; prior-selected context .01444596; stronger regularization .01103274; without stage .01172351; without activity .01182164. Baseline .01383995. Context failed transfer; stronger regularization best descriptively, not validated.
+- Every conditional bootstrap interval crosses zero. Shared cohort, one positive, five comparisons and historical provenance limits remain. No promotion or test-driven reselection.
+- Design audit, implementation/results audit and independent offline verifier passed within stated scopes. All five artifacts and43 dependency hashes verified; predictions/metrics reproduced. Core model code unchanged.
+- All100 current source XMLs imported at actual observation time, no backdating. Platform collection: “Five experiments · new historical sample · November 5”. Five clickable result reports in local chat “Five experiments · November 5 · audited results”.
+
+## Prior cycle retained
+
+`docs/operations/runs/20261105-full-learning-cycle.md`: earlier114 calendar proof unlocked separately registered publication-based adaptation. Historical33-case all-negative diagnostic improved fixed but lost baseline. Synthetic240→300 training check slightly worsened Brier. These studies are preserved and not independent new validation.
 
 ## Next cycle
 
-Freeze a broader outcome-blind temporal cohort with sufficient naturally occurring enactments and a separately protected later evaluation before fitting/selection. Reuse the new 114th proof only in a new protocol; preserve all old studies. Do not optimize again on the exposed 33-case all-negative diagnostic. Acquire missing historical/family evidence; agent review must not impersonate designated human approval. Keep comparative baselines and negative learning results.
+The82-case sample is now exposed development evidence. Do not tune/re-evaluate it as fresh proof. Register a larger sample with enough natural enactments and a separately protected later evaluation before fitting. Strong regularization is a candidate hypothesis only. Continue acquisition/provenance work; preserve human/action-history gates and baseline comparisons. Enactment-by-deadline and provision-level success are distinct targets.
 
-## Scheduling
+## Schedule and budgets
 
-One existing Codex heartbeat every two hours; local worker hourly, at most 3 experiments/cycle and 12/day; source refresh hourly. Acquire unique shared research lease, inspect active jobs and preserve budgets. Local server required. Live forecasts unchanged; no hosted language-model fine-tuning or paid provider calls were used.
+Existing two-hour audit heartbeat and hourly local workers unchanged. User explicitly authorized this manual batch of5, overriding the scheduled3-per-cycle maximum only for this turn. Scheduled limits remain3/cycle and12/day. Manual diagnostic runs are logged here separately from worker counters. Acquire shared lease and inspect active jobs before work. No paid provider calls or live-model promotion. Local server required.

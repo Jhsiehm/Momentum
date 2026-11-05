@@ -32,7 +32,7 @@ Round1: `/root/five_design_audit` reviewed evidence/methods before registration/
 
 Round2: `/root/five_implementation_audit` reviewed implementation during acquisition and all final results. Dependency snapshot gap corrected via43-file supplementary manifest recorded before scoring. Verified sampling, source/input/result hashes, artifact predictions, direct metrics and bootstrap intervals. No blocking findings.
 
-Round3: independent `/root/five_verifier` offline reproduction and numerical verification recorded below after completion.
+Round3: `/root/five_verifier` reproduced all5 offline with exact artifact equality, independently recomputed Brier/log loss and baseline, validated all43 dependency hashes, sample reproduction and identical evaluation memberships. PASS for reproducible historical development evidence only. No new broad test suite needed because core model code was unchanged; full numerical reproduction was the meaningful verification.
 
 ## Saved artifacts and next action
 
