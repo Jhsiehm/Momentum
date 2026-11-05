@@ -50,3 +50,10 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Completed1,000-candidate acquisition and736-case fixed-model evaluation, including16 enactments.
 - Survivor Brier improved7.50% over its rate baseline on this sample; recorded calibration weaknesses and conditional uncertainty. Saved ten collections and two audited reports; no promotion.
+
+## 2026-11-05 — Controlled survivor/calibration/retraining experiment
+
+- Froze original49-row survivor, monotone calibration on149 separate earlier-Congress bills, and same-feature retraining on198 rows before auditing1,000 new candidates. Added reproducible runner and separate arithmetic/source verifier; previous artifacts remain unchanged.
+- Evaluated all696 eligible families,10 enactments: original Brier0.01354544; calibrated0.01365660 (+0.82% worse, interval includes zero); retrained0.01408350 (+3.97% worse, paired interval favors original). Preserve survivor; no challenger promotion or self-improvement claim.
+- Validation:36 focused tests; exact offline replay;2,088 probabilities/scores and both bootstraps independently recalculated by separate verifier;3,320 source hashes/lengths checked. Five reports and ten collections saved and API-verified;1,000 current imports retain real observation timestamps.
+- Remaining: rare calibration positives, repeated same-Congress exposure, incomplete historical-action/family/human gates; stronger representative training evidence and separately registered time-period validation needed. Receipt: `docs/operations/runs/20261105-three-model.md`.

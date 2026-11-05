@@ -1,3 +1,11 @@
+# Latest controlled three-model comparison
+
+November5,2026. Receipt: `docs/operations/runs/20261105-three-model.md`.
+
+Completed1,000 new source audits;696 eligible bills,10 enactments. Models and candidate identities frozen before acquisition. Original49-row survivor Brier0.01354544; calibration on149 separate earlier bills0.01365660 (+0.82% worse); retrained198-row model0.01408350 (+3.97% worse). Calibration paired95% interval includes zero; retraining interval favors original within this historical batch. Neither update improves the retained survivor.
+
+36 tests, exact offline replay, separate2,088-probability/score/bootstrap verification and3,320 source checks passed. Saved five reports and ten collections in platform chat “Controlled comparison · survivor, calibration, retraining”; all1,000 imports retain actual observation times. Preserve original; no promotion or schedule changes. These are exploratory same-Congress development results, not prospective validation or proof of self-improvement. Next learning research needs stronger representative training evidence and a separately registered time-period evaluation.
+
 # Latest high-volume experiment
 
 November5,2026. Receipt: `docs/operations/runs/20261105-survivor1000.md`.

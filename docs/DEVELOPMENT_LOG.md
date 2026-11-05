@@ -87,3 +87,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Brier0.01995385 versus rate0.02157197 (7.50% lower); conditional paired interval favors survivor. Higher-probability bin underestimates its6/13 enactments. Findings remain historical development evidence, not automatic learning or promotion.
 - Validation: six new selection/immutability tests; exact full offline replay; independent arithmetic for736 probabilities/Brier/log loss;3,298 source hashes and lengths; repeated bootstrap. Ten collections and two reports saved, all1,000 source XMLs imported at actual observation time, endpoints verified.
 - Remaining: independent temporal validation and separately registered calibration study; rare positives, prior exposure and historical-action/family/human gates remain.
+
+## 2026-11-05 — Controlled survivor/calibration/retraining experiment
+
+- Froze original49-row survivor, monotone calibration on149 separate earlier-Congress bills, and same-feature retraining on198 rows before auditing1,000 new candidates. Added reproducible runner and separate arithmetic/source verifier; previous artifacts remain unchanged.
+- Evaluated all696 eligible families,10 enactments: original Brier0.01354544; calibrated0.01365660 (+0.82% worse, interval includes zero); retrained0.01408350 (+3.97% worse, paired interval favors original). Preserve survivor; no challenger promotion or self-improvement claim.
+- Validation:36 focused tests; exact offline replay;2,088 probabilities/scores and both bootstraps independently recalculated by separate verifier;3,320 source hashes/lengths checked. Five reports and ten collections saved and API-verified;1,000 current imports retain real observation timestamps.
+- Remaining: rare calibration positives, repeated same-Congress exposure, incomplete historical-action/family/human gates; stronger representative training evidence and separately registered time-period validation needed. Receipt: `docs/operations/runs/20261105-three-model.md`.
