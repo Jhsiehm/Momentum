@@ -1,3 +1,11 @@
+# Latest evidence acquisition
+
+November 5, 2026. Receipt: `docs/operations/runs/20261105-passage-evidence.md`.
+
+Audited802/820 fixed bills;18 HTTP404 source failures. Produced64 machine-corroborated passage positives and584 day30 publication-proxy records;32 bills have both. Verified2,664 retained sources and reconstructed802 successful rows offline. Fourteen focused tests passed; three platform reports saved and checked.
+
+These are preservation-bound publication proxies, not complete historical actions or human-certified labels. No certified negative labels. No day30 proxy rows in110/111, seven in112. Sequential scoring remains blocked pending complete negatives, sufficient early-Congress evidence, family/human review and action-history provenance. Do not backdate official records or use exposed samples as fresh validation.
+
 # Latest execution: updated sequential practices
 
 November 5, 2026. Receipt: `docs/operations/runs/20261105-sequential-practices-execution.md`.

@@ -59,3 +59,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Ran a separate fixed-seed 1,080-bill synthetic workflow across six forward Congress folds and four methods; exact replay matched. Results remain mixed and establish software behavior only.
 - Validation: 8/8 sequential tests, independent report-hash and all24 Brier arithmetic checks, temporal/equal-case assertions, and all3 saved platform report endpoints passed. Archived reproducible runner and execution receipt; no core model changes or promotion.
 - Outstanding: audited passage labels, historically available day-30 features, early-Congress coverage and remaining research gates are required for real-data scoring.
+
+## 2026-11-05 — Acquire passage and day-30 source evidence
+
+- Added a bounded source-audit pipeline and six focused tests. Audited802 of820 fixed candidates, acquiring early110–112 official sources and reusing verified700-bill caches. Retained18 HTTP404 failures without replacement.
+- Produced64 machine-corroborated passage-positive labels and584 day30 publication-proxy rows (32 overlap), with raw-source receipts and explicit provenance/human-review flags. No missing action was labelled negative; no official observations backdated.
+- Validation:14 focused tests passed; all802 successful rows reconstructed offline;2,664 source hashes/lengths verified; three platform reports saved and API-checked.
+- Remaining: no certified negatives or complete historical action histories; early-Congress feature coverage and human/family gates remain. Sequential scoring stays blocked. No model, schedule or production change.

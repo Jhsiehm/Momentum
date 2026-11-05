@@ -30,3 +30,8 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Recorded a blocked official passage experiment with explicit data-readiness counts, plus a separately labelled six-fold synthetic execution check.
 - Saved three platform reports with reproducibility checks. Real-data accuracy improvement remains unestablished.
+
+## 2026-11-05 — Passage evidence acquisition
+
+- Added an official-source audit producing64 corroborated passage positives and584 day30 publication-evidence records, with explicit failures and provenance limits.
+- Saved source-backed platform reports and offline verification. Complete negative labels and historical action evidence remain required before sequential scoring.
