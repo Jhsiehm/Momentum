@@ -40,3 +40,8 @@ This baseline captures existing work; it does not mean all features were impleme
 
 - Added final-calendar/action-history auditing and12 source-reviewed negative outcome labels, with explicit current audit times and no human-certification claim.
 - Preserved unresolved cases, source failures and earlier artifacts; saved three platform reports and verified offline reproduction.
+
+## 2026-11-05 — Fixed-survivor follow-up
+
+- Completed a20-bill test with the original-data survivor's weights locked; saved bill-level probabilities and reproducible evidence.
+- Lower error than the rate baseline on an all-negative sample; no general improvement or model promotion claimed.

@@ -1,3 +1,11 @@
+# Latest requested experiment: original-data survivor on20 bills
+
+November5,2026. Receipt: `docs/operations/runs/20261105-survivor20.md`.
+
+Scored20 eligible bills from a preregistered40-candidate screen using the exact49-row trained L2 .2 survivor, with no updated prediction weights. Eight late checkpoints and two prior-family overlaps excluded; ten eligible surplus cases unscored. Brier0.00054515 versus rate baseline0.00153787. All20 outcomes negative; no enacted-case discrimination or general improvement established.
+
+Offline replay and independent arithmetic passed;130 source documents verified. Two reports and a20-bill collection saved in the platform. All40 screened cases are now exposed; preserve original artifacts. No production promotion or schedule change. Day180 enactment remains distinct from the blocked day30 passage workflow below.
+
 # Latest outcome audit: negatives
 
 November 5, 2026. Receipt: `docs/operations/runs/20261105-negative-passage-audit.md`.

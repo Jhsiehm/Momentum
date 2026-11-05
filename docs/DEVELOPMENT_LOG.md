@@ -73,3 +73,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Added conservative screening, separate source adjudication and nine tests. Coverage assertion is outcome-specific, not historical feature or independent human certification; label availability is current audit time. No scoring or promotion.
 - Validation:23 focused tests; exact offline screen/adjudication replay; report/source hashes; three saved platform endpoints. Initial key-order serialization failure fixed in a new canonical revision while preserving initial artifacts and unchanged evidence.
 - Remaining: historical training availability, representative negatives, early-Congress evidence and action/family/human gates. Full receipt: `docs/operations/runs/20261105-negative-passage-audit.md`.
+
+## 2026-11-05 — Fixed original-data survivor, 20 bills
+
+- Tested the exact49-row original-data survivor artifact on20 new eligible118th-Congress bill identities, selected from a preregistered40-candidate screen with known-family exclusions. Model weights unchanged; no performance-based case selection.
+- Brier0.00054515 versus smoothed-rate0.00153787; all20 outcomes negative. This tests conservative probabilities, not enacted-case discrimination or general improvement. No promotion.
+- Validation: full offline replay; independent20-probability/Brier arithmetic; seeded selection and130 source checksums; two platform reports and one20-bill collection saved and endpoints checked.
+- Remaining: adequate natural positive counts and independent temporal evaluation. Same-Congress historical exposure and action/provision provenance limits persist.
