@@ -15,3 +15,7 @@ Read before related scheduled work. These are verified engineering/research less
 - Retaining selected weights alone does not satisfy a promise to retain every trial. Save candidate coefficients/scaling alongside predictions and training hashes; verify reconstructed trial probabilities exactly.
 - A previously selected adaptive configuration can lose on a new sample. In the five-experiment November5 batch, context/L2=.01 lost to the baseline on82 newly sampled eligible bills. Preserve the failed transfer; do not promote based on the earlier33-case improvement or pick a winner from five correlated tests without further validation.
 - Outcome wording must include the deadline. In the new sample H.R.8841 enacted after Congress end and is negative under the registered horizon; say “qualifying enactment before Congress end,” not “ever enacted.”
+
+## Expanded batch, November5,2026
+
+Ten registered variants on700 new bills selected weaker L2 .05, reversing the prior sample's descriptive .2 preference. Selection depended on one development enactment; confirmation had two. Both selected-versus-survivor and selected-versus-rate intervals crossed zero. Expanded survivor training198 rows worsened confirmation Brier6.00% against a matched49-row original-only refit. Treat training growth as a testable intervention, not proof of learning; preserve original-only comparisons and fresh held-out evaluation.

@@ -4,11 +4,80 @@ Run: python3 -m engine.import_quality --output data/audits/import-quality.json
 """
 import argparse
 from collections import Counter
+from datetime import datetime, timedelta
 import hashlib
 import json
 from pathlib import Path
 import sqlite3
-from .store import ROOT, digest, now
+from .store import ROOT, available, congress_end, digest, now, timestamp
+
+
+def historical_quality(records, age_days=180):
+    """Diagnostics only: neither retained positive labels nor timestamps certify eligibility.
+
+    Inspect all metadata versions, so a current import cannot hide an earlier
+    snapshot. Conflicting labels and family identities remain visible; never
+    resolve them by choosing the latest row or silently create negative labels.
+    """
+    if type(age_days) is not int or age_days < 0:
+        raise ValueError('age_days must be a nonnegative integer')
+    bills, labels, identities = {}, {}, {}
+    for _, kind, body in records:
+        bid = body['bill_id']
+        identities.setdefault(bid, set()).add(body.get('family_id'))
+        if kind == 'bill':
+            bills.setdefault(bid, []).append(body)
+        elif kind == 'resolution':
+            labels.setdefault(bid, []).append(body)
+    groups = {}
+    for bid, versions in sorted(bills.items()):
+        latest = versions[-1]
+        congress = latest['congress']
+        counts = groups.setdefault(congress, Counter())
+        counts['imported'] += 1
+        counts['family_identity_conflicts'] += len(identities[bid]) > 1
+        counts['metadata_identity_conflicts'] += len({(b['congress'], b['type'], b.get('introduced_at')) for b in versions}) > 1
+        outcomes = labels.get(bid, [])
+        values = {r['value'] for r in outcomes}
+        category = 'unresolved'
+        if len(values) > 1:
+            category = 'conflicting'
+        elif values == {0}:
+            category = 'recorded_negative'
+        elif values == {1}:
+            dates = {timestamp(r['effective_at']) for r in outcomes}
+            if len(dates) > 1:
+                category = 'positive_date_conflict'
+            else:
+                enacted = next(iter(dates))
+                end = congress_end(congress)
+                # Date-only inputs have been normalized by Store to end of day.
+                # All endpoint-day records conservatively need precision review.
+                category = ('positive_endpoint_day_review' if enacted[:10] == end[:10]
+                            else 'positive_before_deadline' if enacted < end
+                            else 'positive_after_deadline')
+        counts[category] += 1
+        try:
+            cutoff = (datetime.fromisoformat(timestamp(latest['introduced_at']).replace('Z', '+00:00'))
+                      + timedelta(days=age_days)).isoformat().replace('+00:00', 'Z')
+            before_end = cutoff < congress_end(congress)
+            counts['checkpoint_before_end'] += before_end
+            has_metadata = any(available(b) <= cutoff and timestamp(b['effective_at']) <= cutoff for b in versions)
+            counts['metadata_available_by_checkpoint'] += before_end and has_metadata
+            if category == 'positive_before_deadline':
+                counts['positive_after_checkpoint_before_deadline'] += before_end and cutoff[:10] < enacted[:10]
+        except (KeyError, TypeError, ValueError):
+            counts['invalid_checkpoint_metadata'] += 1
+    fields = ('imported', 'unresolved', 'conflicting', 'recorded_negative',
+              'positive_before_deadline', 'positive_after_deadline', 'positive_endpoint_day_review',
+              'positive_date_conflict', 'positive_after_checkpoint_before_deadline',
+              'checkpoint_before_end', 'metadata_available_by_checkpoint',
+              'invalid_checkpoint_metadata', 'family_identity_conflicts', 'metadata_identity_conflicts')
+    return dict(age_days=age_days, by_congress=[dict(congress=c, **{k: counts[k] for k in fields})
+                for c, counts in sorted(groups.items())],
+                orphan_resolution_bill_ids=sorted(set(labels)-set(bills)),
+                eligible_positive_families=None,
+                note='Eligible positive families are not certified by this audit. Counts do not verify source contents, complete negative coverage, action history, historical label availability, or adjudicated family separation. After-deadline positives are not converted to negatives.')
 
 
 def audit(database, raw_directory):
@@ -101,10 +170,11 @@ def audit(database, raw_directory):
             batches=len(plan['batches']), completed_batches=sum(j['status']=='completed' for j in job_list),
             job_completed=sum(j['completed'] for j in job_list), job_failed=sum(j['failed'] for j in job_list),
             **population_stats(plan['bill_ids'])))
-    report = dict(schema_version=1, started_at=started, database_snapshot_at=snapshot, finished_at=now(),
+    report = dict(schema_version=2, started_at=started, database_snapshot_at=snapshot, finished_at=now(),
         database=str(Path(database).resolve()), scope='Official local records and saved inventory/coverage plans in one read-only SQLite snapshot.',
         record_counts=dict(kind_counts), unique_bills=len(latest), extra_bill_versions=kind_counts['bill']-len(latest),
         official_population=population_stats(latest), plans=plan_reports,
+        historical_quality=historical_quality(records),
         integrity=dict(record_ids_checked=len(records), invalid_record_ids=record_failures,
             raw_hashes_checked=len(raw_hashes), missing_raw=missing_raw, corrupt_raw=corrupt_raw,
             bulk_receipts_checked=len(bulk_bills), other_provenance_bills=len(latest)-len(bulk_bills),

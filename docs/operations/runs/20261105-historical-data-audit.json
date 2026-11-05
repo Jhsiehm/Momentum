@@ -1,0 +1,637 @@
+{
+  "audit_date": "2026-11-05",
+  "audit_report_hash": "46243eab7176e37c7fac580948f2d9a3640c7d25509d03c89912f2d1c5db7dd1",
+  "historical_quality": {
+    "age_days": 180,
+    "by_congress": [
+      {
+        "checkpoint_before_end": 8768,
+        "conflicting": 0,
+        "congress": 114,
+        "family_identity_conflicts": 0,
+        "imported": 10074,
+        "invalid_checkpoint_metadata": 0,
+        "metadata_available_by_checkpoint": 0,
+        "metadata_identity_conflicts": 0,
+        "positive_after_checkpoint_before_deadline": 179,
+        "positive_after_deadline": 1,
+        "positive_before_deadline": 325,
+        "positive_date_conflict": 0,
+        "positive_endpoint_day_review": 0,
+        "recorded_negative": 0,
+        "unresolved": 9748
+      },
+      {
+        "checkpoint_before_end": 30,
+        "conflicting": 0,
+        "congress": 116,
+        "family_identity_conflicts": 0,
+        "imported": 35,
+        "invalid_checkpoint_metadata": 0,
+        "metadata_available_by_checkpoint": 0,
+        "metadata_identity_conflicts": 0,
+        "positive_after_checkpoint_before_deadline": 1,
+        "positive_after_deadline": 0,
+        "positive_before_deadline": 1,
+        "positive_date_conflict": 0,
+        "positive_endpoint_day_review": 0,
+        "recorded_negative": 0,
+        "unresolved": 34
+      },
+      {
+        "checkpoint_before_end": 1,
+        "conflicting": 0,
+        "congress": 117,
+        "family_identity_conflicts": 0,
+        "imported": 1,
+        "invalid_checkpoint_metadata": 0,
+        "metadata_available_by_checkpoint": 0,
+        "metadata_identity_conflicts": 0,
+        "positive_after_checkpoint_before_deadline": 0,
+        "positive_after_deadline": 0,
+        "positive_before_deadline": 1,
+        "positive_date_conflict": 0,
+        "positive_endpoint_day_review": 0,
+        "recorded_negative": 0,
+        "unresolved": 0
+      },
+      {
+        "checkpoint_before_end": 234,
+        "conflicting": 0,
+        "congress": 118,
+        "family_identity_conflicts": 0,
+        "imported": 260,
+        "invalid_checkpoint_metadata": 0,
+        "metadata_available_by_checkpoint": 0,
+        "metadata_identity_conflicts": 0,
+        "positive_after_checkpoint_before_deadline": 3,
+        "positive_after_deadline": 2,
+        "positive_before_deadline": 4,
+        "positive_date_conflict": 0,
+        "positive_endpoint_day_review": 0,
+        "recorded_negative": 0,
+        "unresolved": 254
+      },
+      {
+        "checkpoint_before_end": 2,
+        "conflicting": 0,
+        "congress": 119,
+        "family_identity_conflicts": 0,
+        "imported": 22,
+        "invalid_checkpoint_metadata": 0,
+        "metadata_available_by_checkpoint": 0,
+        "metadata_identity_conflicts": 0,
+        "positive_after_checkpoint_before_deadline": 0,
+        "positive_after_deadline": 0,
+        "positive_before_deadline": 1,
+        "positive_date_conflict": 0,
+        "positive_endpoint_day_review": 0,
+        "recorded_negative": 0,
+        "unresolved": 21
+      }
+    ],
+    "eligible_positive_families": null,
+    "note": "Eligible positive families are not certified by this audit. Counts do not verify source contents, complete negative coverage, action history, historical label availability, or adjudicated family separation. After-deadline positives are not converted to negatives.",
+    "orphan_resolution_bill_ids": []
+  },
+  "integrity": {
+    "bulk_receipts_checked": 10392,
+    "corrupt_raw": [],
+    "invalid_bulk_receipts": [],
+    "invalid_record_ids": [],
+    "inventories": [
+      {
+        "hash_valid": true,
+        "id": "17c9bbca-5edb-470e-816d-d5a7ec72f611"
+      }
+    ],
+    "missing_bulk_receipts": [],
+    "missing_raw": [],
+    "other_provenance_bills": 0,
+    "raw_hashes_checked": 10398,
+    "record_ids_checked": 70858
+  },
+  "inventory": {
+    "discovered_at": "2026-10-26T06:03:47Z",
+    "hash": "c69000c5d0a2d6c72af0cc139872217ffcdfce370a072b170b22134a1d709575",
+    "id": "17c9bbca-5edb-470e-816d-d5a7ec72f611",
+    "total": 40435
+  },
+  "inventory_strata": [
+    {
+      "congress": 114,
+      "count": 6526,
+      "raw_hash": "3cd33c0d125eeacd5f21351900b207ae1432f4e57f09f5a01625f825b4e9211a",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/114/hr",
+      "type": "hr"
+    },
+    {
+      "congress": 114,
+      "count": 3548,
+      "raw_hash": "8ac21203b00712f214fc69d47120a7db8bf3f16053cb7aa601a87cce20d9f50d",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/114/s",
+      "type": "s"
+    },
+    {
+      "congress": 116,
+      "count": 9062,
+      "raw_hash": "e60dd9af9acce9eeff256d5b58cbff91467814e2d6d4d3ec68acf32da53ec257",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/116/hr",
+      "type": "hr"
+    },
+    {
+      "congress": 116,
+      "count": 5086,
+      "raw_hash": "a09247fed71d29580b3cffb12d53006a05a3a22bf6f7bdcf54d6ec24a7a2ad7c",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/116/s",
+      "type": "s"
+    },
+    {
+      "congress": 118,
+      "count": 10564,
+      "raw_hash": "0ad157c9d2290fa7e94cd47b6649d9ae96189edc5b1ec7e6610e5161c086157e",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/118/hr",
+      "type": "hr"
+    },
+    {
+      "congress": 118,
+      "count": 5649,
+      "raw_hash": "f7b550f5fd0ce2e6fd162e6a3f4b7121b73f064de91bab149ad7a7dd38db941e",
+      "source_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/118/s",
+      "type": "s"
+    }
+  ],
+  "official_population": {
+    "family_unadjudicated": 10392,
+    "historically_verified_metadata": 0,
+    "imported": 10392,
+    "missing_fields": {
+      "introduced_at": 0,
+      "raw_hash": 0,
+      "sponsor": 0,
+      "title": 0,
+      "topic": 60
+    },
+    "missing_ids": [],
+    "outcomes": {
+      "conflicting": 0,
+      "negative": 0,
+      "positive": 335,
+      "unresolved": 10057
+    },
+    "population": 10392,
+    "without_actions": 0
+  },
+  "preservation_verification": {
+    "changed_frozen_files": [],
+    "five_experiment_hashes": [
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/frozen-inputs.json"
+      },
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/E1-result.json"
+      },
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/E2-result.json"
+      },
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/E3-result.json"
+      },
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/E4-result.json"
+      },
+      {
+        "hash_valid": true,
+        "path": "data/research-runs/five-experiments-20261105/E5-result.json"
+      }
+    ],
+    "frozen_files_checked": 5321,
+    "invalid_source_receipts": [],
+    "source_formats": {
+      "macro_csv": 80,
+      "raw": 2545
+    },
+    "source_receipts_checked": 2625
+  },
+  "record_counts": {
+    "bill": 10392,
+    "event": 60131,
+    "resolution": 335
+  },
+  "release_eligible": false,
+  "saved_result_receipts": [
+    {
+      "baseline": {
+        "base_rate": 0.0,
+        "brier": 0.0029752066115702473,
+        "log_loss": 0.056089466651043626,
+        "n": 33,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 33,
+            "observed": 0.0,
+            "predicted": 0.054545454545454515
+          }
+        ]
+      },
+      "counts": null,
+      "metrics": {
+        "base_rate": 0.0,
+        "brier": 0.0060589882643796965,
+        "log_loss": 0.043972730710217116,
+        "n": 33,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 31,
+            "observed": 0.0,
+            "predicted": 0.023683367245144683
+          },
+          {
+            "lower": 0.2,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.23365958173271742
+          },
+          {
+            "lower": 0.3,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.35706255785986124
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/cohorts/seeded-publication-v2/result.json",
+      "sha256": "6deb64b65f83382f6fba96e78ba12654a22cd4cea21ea88feb5e46bde4b3fedd"
+    },
+    {
+      "baseline": null,
+      "counts": {
+        "114": {
+          "enacted": 1,
+          "n": 23
+        },
+        "116": {
+          "enacted": 1,
+          "n": 30
+        },
+        "118": {
+          "enacted": 0,
+          "n": 33
+        }
+      },
+      "metrics": {
+        "adaptive": {
+          "base_rate": 0.0,
+          "brier": 0.0045571105343777864,
+          "log_loss": 0.03678501989715006,
+          "n": 33,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "n": 31,
+              "observed": 0.0,
+              "predicted": 0.020495280849803673
+            },
+            {
+              "lower": 0.1,
+              "n": 1,
+              "observed": 0.0,
+              "predicted": 0.15112200049460725
+            },
+            {
+              "lower": 0.3,
+              "n": 1,
+              "observed": 0.0,
+              "predicted": 0.3340758154275328
+            }
+          ]
+        },
+        "baseline": {
+          "base_rate": 0.0,
+          "brier": 0.0029752066115702473,
+          "log_loss": 0.056089466651043626,
+          "n": 33,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "n": 33,
+              "observed": 0.0,
+              "predicted": 0.054545454545454515
+            }
+          ]
+        },
+        "fixed": {
+          "base_rate": 0.0,
+          "brier": 0.0060589882643796965,
+          "log_loss": 0.043972730710217116,
+          "n": 33,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "n": 31,
+              "observed": 0.0,
+              "predicted": 0.023683367245144683
+            },
+            {
+              "lower": 0.2,
+              "n": 1,
+              "observed": 0.0,
+              "predicted": 0.23365958173271742
+            },
+            {
+              "lower": 0.3,
+              "n": 1,
+              "observed": 0.0,
+              "predicted": 0.35706255785986124
+            }
+          ]
+        }
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/full-cycle-20261105/official-result.json",
+      "sha256": "676c111795e20d98015cd44102711c412e4a5cf72eba570f9f349b15570eccaa"
+    },
+    {
+      "baseline": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013839951622656721,
+        "log_loss": 0.09087765482071804,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 82,
+            "observed": 0.012195121951219513,
+            "predicted": 0.0545454545454546
+          }
+        ]
+      },
+      "counts": {
+        "evaluation": 82,
+        "evaluation_positive": 1,
+        "selected": 100,
+        "training": 53,
+        "training_positive": 2
+      },
+      "metrics": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013105540450747497,
+        "log_loss": 0.05431319549644468,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 80,
+            "observed": 0.0,
+            "predicted": 0.02342565147995574
+          },
+          {
+            "lower": 0.3,
+            "n": 1,
+            "observed": 1.0,
+            "predicted": 0.35461787603007217
+          },
+          {
+            "lower": 0.7,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.780899411976264
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/five-experiments-20261105/E1-result.json",
+      "sha256": "5d8030a830ea734fb855120f24e32229db339c573e17d90a8fe1786d95d984a6"
+    },
+    {
+      "baseline": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013839951622656721,
+        "log_loss": 0.09087765482071804,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 82,
+            "observed": 0.012195121951219513,
+            "predicted": 0.0545454545454546
+          }
+        ]
+      },
+      "counts": {
+        "evaluation": 82,
+        "evaluation_positive": 1,
+        "selected": 100,
+        "training": 53,
+        "training_positive": 2
+      },
+      "metrics": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.014445962553840955,
+        "log_loss": 0.05999857536862872,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 80,
+            "observed": 0.0,
+            "predicted": 0.022509748766832316
+          },
+          {
+            "lower": 0.4,
+            "n": 1,
+            "observed": 1.0,
+            "predicted": 0.41887590520456897
+          },
+          {
+            "lower": 0.8,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.8916446527641824
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/five-experiments-20261105/E2-result.json",
+      "sha256": "4b5cd60f04b3ab3a6434d229c6d05b48048c02ce143a53db23e68963799a9ed6"
+    },
+    {
+      "baseline": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013839951622656721,
+        "log_loss": 0.09087765482071804,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 82,
+            "observed": 0.012195121951219513,
+            "predicted": 0.0545454545454546
+          }
+        ]
+      },
+      "counts": {
+        "evaluation": 82,
+        "evaluation_positive": 1,
+        "selected": 100,
+        "training": 53,
+        "training_positive": 2
+      },
+      "metrics": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.01103273525953485,
+        "log_loss": 0.058310824209539855,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 80,
+            "observed": 0.0,
+            "predicted": 0.0317290914689189
+          },
+          {
+            "lower": 0.1,
+            "n": 1,
+            "observed": 1.0,
+            "predicted": 0.18146339093531877
+          },
+          {
+            "lower": 0.3,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.38992850446245564
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/five-experiments-20261105/E3-result.json",
+      "sha256": "7308788b67fb3c486979a726541b616af6b6cdb010720bc0c5d961c13852e2d4"
+    },
+    {
+      "baseline": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013839951622656721,
+        "log_loss": 0.09087765482071804,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 82,
+            "observed": 0.012195121951219513,
+            "predicted": 0.0545454545454546
+          }
+        ]
+      },
+      "counts": {
+        "evaluation": 82,
+        "evaluation_positive": 1,
+        "selected": 100,
+        "training": 53,
+        "training_positive": 2
+      },
+      "metrics": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.011723507021684969,
+        "log_loss": 0.06572055068822245,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 80,
+            "observed": 0.0,
+            "predicted": 0.03749314439645589
+          },
+          {
+            "lower": 0.1,
+            "n": 1,
+            "observed": 1.0,
+            "predicted": 0.14664107866046092
+          },
+          {
+            "lower": 0.3,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.334719063201834
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/five-experiments-20261105/E4-result.json",
+      "sha256": "acaacf82fd4a2dfbbcd264464814594f6fe54df01ccfc2f418f850e5b8ad2b9c"
+    },
+    {
+      "baseline": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.013839951622656721,
+        "log_loss": 0.09087765482071804,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 82,
+            "observed": 0.012195121951219513,
+            "predicted": 0.0545454545454546
+          }
+        ]
+      },
+      "counts": {
+        "evaluation": 82,
+        "evaluation_positive": 1,
+        "selected": 100,
+        "training": 53,
+        "training_positive": 2
+      },
+      "metrics": {
+        "base_rate": 0.012195121951219513,
+        "brier": 0.01182164357907917,
+        "log_loss": 0.051494541949166944,
+        "n": 82,
+        "reliability": [
+          {
+            "lower": 0.0,
+            "n": 79,
+            "observed": 0.0,
+            "predicted": 0.023205426588081186
+          },
+          {
+            "lower": 0.1,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.1043680429322155
+          },
+          {
+            "lower": 0.3,
+            "n": 1,
+            "observed": 1.0,
+            "predicted": 0.3372308395181674
+          },
+          {
+            "lower": 0.6,
+            "n": 1,
+            "observed": 0.0,
+            "predicted": 0.6896081248089909
+          }
+        ]
+      },
+      "note": "Previously saved metrics; not rescored in this audit.",
+      "path": "data/research-runs/five-experiments-20261105/E5-result.json",
+      "sha256": "27b1163f5002089017d085173ee34897cc5e0a9458f2c05389227b2f8a17af31"
+    },
+    {
+      "note": "Saved macro results transcribed from docs/cohorts/macro-pilot-v2-results.md; not rescored.",
+      "path": "data/cohorts/macro-pilot-v2/result.json",
+      "sha256": "256f0d9013341d78c99bc32fbf09e8436d4795563789fa3e1038585dab0f3114"
+    }
+  ],
+  "scope": "Read-only local snapshot; no fitting, prediction, candidate selection, or new scoring.",
+  "snapshot_read_at": "2026-11-05T09:23:20Z",
+  "snapshot_sha256": "d111a899df5fefba1019d0020ad710b3e82c37c0fed174a5e7178946210ed2dd"
+}
