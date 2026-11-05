@@ -25,3 +25,8 @@ This baseline captures existing work; it does not mean all features were impleme
 - Completed 700-bill acquisition and 10 predefined forecasting experiments with separate development and confirmation samples.
 - Saved source evidence, fitted weights, independent verification, 12 platform reports and 7 bill collections.
 - Recorded mixed results and negative transfer from added training; no production model promotion.
+
+## 2026-11-05 — Execute new sequential workflow
+
+- Recorded a blocked official passage experiment with explicit data-readiness counts, plus a separately labelled six-fold synthetic execution check.
+- Saved three platform reports with reproducibility checks. Real-data accuracy improvement remains unestablished.

@@ -52,3 +52,10 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Documented the active sequential-learning milestone and maintenance-only product scope in the public README and benchmark protocol. Added an operations receipt alongside existing research receipts.
 - Validation: final focused suite 8/8; final full suite 217 tests passed in 105.937 seconds; CLI smoke replay twice reused one immutable report; CLI help, compilation and whitespace checks passed. The initial full run (215 tests) had one reproducibility failure because source hashes changed during an in-flight edit; the unchanged-source rerun passed.
 - Outstanding: no official passage study scored; audited passage labels and multi-Congress feature coverage, clustered uncertainty, protected final evaluation and a minimal dashboard remain. Synthetic tests demonstrate software correctness only; improvement is not established and release eligibility stays false.
+
+## 2026-11-05 — Execute updated sequential practices
+
+- Ran the new day-30 passage benchmark against a consistent official-data snapshot: 11,092 bills, no adjudicated passage-label manifest, no historical evaluation checkpoint metadata; all six folds blocked with no scores. Nineteen available checkpoints belong to out-of-scope Congress119.
+- Ran a separate fixed-seed 1,080-bill synthetic workflow across six forward Congress folds and four methods; exact replay matched. Results remain mixed and establish software behavior only.
+- Validation: 8/8 sequential tests, independent report-hash and all24 Brier arithmetic checks, temporal/equal-case assertions, and all3 saved platform report endpoints passed. Archived reproducible runner and execution receipt; no core model changes or promotion.
+- Outstanding: audited passage labels, historically available day-30 features, early-Congress coverage and remaining research gates are required for real-data scoring.

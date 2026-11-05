@@ -1,3 +1,13 @@
+# Latest execution: updated sequential practices
+
+November 5, 2026. Receipt: `docs/operations/runs/20261105-sequential-practices-execution.md`.
+
+The active day-30 originating-chamber passage workflow was executed. Official snapshot: 11,092 bills; no audited passage labels; no historical day-30 checkpoint metadata in available evaluation Congresses. All six113–118 folds blocked; no official scores or model fitted. Nineteen119th-Congress checkpoints exist outside this benchmark. Earlier110–112 training coverage is absent.
+
+Separate synthetic check: 1,080 simulated bills, six folds, four comparison methods, exact replay passed. Eight tests and independent checks of24 synthetic Brier scores passed; three reports saved and API-verified. This does not establish real forecasting improvement. No promotion or schedule changes.
+
+Next prerequisite: source-audited passage labels and historical checkpoint evidence, plus early-Congress coverage and the documented research gates. Do not substitute prior enactment labels or backdate modern source imports. Prior expanded experiment findings remain below as historical context, not the active target.
+
 # Autonomous learning checkpoint
 
 Updated November 5, 2026 after the expanded700-bill/10-candidate batch.
