@@ -107,3 +107,8 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Large-batch auditing found115-hr3354 uses legacy GovInfo billType/billNumber fields. Added explicit unambiguous identifier normalization with original/parsed hashes; retained original source bytes. Current-time imports now accept the same aliases while retaining the original raw hash. Conflicting aliases are rejected.
 - Same-ID retry resolves the parser failure; the bill remains excluded for its missing introduced publication under unchanged evidence rules. An earlier network timeout also recovered without replacement.
 - Validation:56 focused temporal/model/import/schema tests passed;500-case feasibility replay rerun after the adapter. Changes amend source compatibility only, before model fitting; frozen statistical rules and previous artifacts remain unchanged.
+
+## 2026-11-05 — Explicit introduction-date conflict disposition
+
+- Official records disagree on116-s4935 introduction (2020-11-30 vs2020-12-01). Both yield day180 after the116th Congress ends. Added explicit source-backed exclusion under every official candidate date; do not choose a date or use the outcome. Retained the disagreement and failed initial attempt.
+- A conflict that could change eligibility still blocks.58 focused tests passed, including both-date exclusion and potentially-eligible rejection.

@@ -34,3 +34,5 @@ Initial validation:27 focused temporal/family/calibration/source-label tests pas
 ## Acquisition compatibility amendment
 
 The initial scale pass encountered one network timeout and a legacy identifier-schema record (115-hr3354). Same-ID retries recovered both. Explicit adapter maps only unambiguous billType/billNumber aliases, records original and parsed SHA256, and leaves source cache bytes unchanged.115-hr3354 remains excluded because its official list lacks an introduced publication. Platform import supports these aliases while retaining original raw bytes.56 focused tests passed; no scoring, selection or model-setting change. Amendment hashes and original failed-attempt records are retained locally.
+
+A third initial-pass issue was116-s4935's conflicting introduction date (BILLSTATUS2020-12-01; introduced-publication action2020-11-30). Both imply day180 in May2021, after Congress end. An explicit named adjudication excludes it under every candidate date while retaining the unresolved conflict and all original sources. No date/outcome was selected; conflicts that could affect eligibility still block.58 focused tests passed.

@@ -75,4 +75,27 @@ class LegacyImportTests(unittest.TestCase):
     self.assertEqual(store.bill('official','115-hr3354')['raw_hash'],result['hash'])
    finally:store.close()
 
+class ConflictDispositionTests(unittest.TestCase):
+ def source(self,first,second):
+  from types import SimpleNamespace
+  import xml.etree.ElementTree as ET
+  raw=f'<billStatus><bill><congress>116</congress><type>S</type><number>4935</number><introducedDate>{first}</introducedDate><title>Test</title></bill></billStatus>'.encode()
+  mods=ET.fromstring(f'<mods xmlns="http://www.loc.gov/mods/v3"><recordInfo><recordIdentifier>BILLS-116s4935is</recordIdentifier></recordInfo><extension><action date="{second}">Mr. X introduced the following bill</action></extension></mods>')
+  return SimpleNamespace(get=lambda url:(raw,dict(url=url))),mods
+ def test_both_dates_late_excludes_without_choosing(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import late_introduction_conflict
+  source,mods=self.source('2020-12-01','2020-11-30')
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   result=late_introduction_conflict(source,'116-s4935')
+  self.assertEqual(len(result['adjudication']['official_dates']),2)
+  self.assertNotIn('y',result)
+  self.assertTrue(result['exclusion'])
+ def test_potentially_eligible_date_blocks(self):
+  from unittest.mock import patch
+  from engine.cross_congress_adjudication import late_introduction_conflict
+  source,mods=self.source('2019-01-01','2020-11-30')
+  with patch('engine.cross_congress_adjudication.cohort.package_audit',return_value=(mods,{})):
+   with self.assertRaises(AssertionError):late_introduction_conflict(source,'116-s4935')
+
 if __name__=='__main__':unittest.main()

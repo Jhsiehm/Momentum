@@ -12,6 +12,7 @@ from . import cohort,sample_publication_v2 as pub
 from .store import ROOT,digest,now
 from .survivor_batch import save
 from .billstatus_compat import AuditedSources
+from .cross_congress_adjudication import late_introduction_conflict
 
 DIRECTORY=ROOT/'data/research-runs/cross-congress-20261105'
 
@@ -65,12 +66,14 @@ def audit(directory=DIRECTORY,offline=False):
         labels.update({r['bill_id']:r for r in value['laws']})
     rows=[];failures=[]
     records=directory/'records';records.mkdir(exist_ok=True)
+    adjudications=json.loads((directory/'adjudications.json').read_text()) if (directory/'adjudications.json').exists() else {}
     def collect(bid):
         path=records/(bid+'.json')
         if path.exists() and not offline:return json.loads(path.read_text()),None
         try:
             m=re.fullmatch(r'(\d+)-(hr|s)(\d+)',bid);assert m
-            row=pub.sample_bill(sources,int(m[1]),m[2],int(m[3]),spec,labels)
+            if adjudications.get(bid)=='late-under-all-official-dates-v1':row=late_introduction_conflict(sources,bid)
+            else:row=pub.sample_bill(sources,int(m[1]),m[2],int(m[3]),spec,labels)
             save(records,bid+'.json',row)
             return row,None
         except Exception as e:return None,dict(bill_id=bid,error=str(e))
