@@ -1,3 +1,7 @@
+# Latest chronological weight tests: no consistent update rule
+
+Three exposed development folds, 8,568 evaluation rows. Fixed 25%/50% updates and full updating improve two periods but worsen one. No restrained update meets the all-period criterion; survivor retained. 26 tests, exact refitting replay and 34,272 probability checks passed. Receipt: `docs/operations/runs/20261105-chronological-weight-updates.md`.
+
 # Latest transfer diagnosis: survivor retained
 
 Fixed 25%/50% weight changes tested on the already exposed 2,315-case comparison. The 50% blend leads with only 0.1195% lower Brier; conditional uncertainty includes zero. No independent success or promotion. 22 tests, exact replay and 11,575 arithmetic checks passed. Full diagnosis is in `docs/operations/runs/20261105-transfer-diagnosis.md` and the platform campaign chat.

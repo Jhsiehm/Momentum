@@ -136,3 +136,9 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Preserved the survivor and diagnosed the canceled gains: improved negative-case error was offset by worse positive-case error; calibration partly rescued retraining.
 - Tested fixed 25%/50% weight changes on explicitly exposed development evidence. Best blend improves Brier only 0.1195%, conditional interval includes zero; no independent validation or promotion.
 - 22 tests, exact replay and 11,575 independently recalculated probabilities passed. Full report saved to the platform campaign chat. Receipt: `docs/operations/runs/20261105-transfer-diagnosis.md`.
+
+## 2026-11-05 — Chronological weight-update consistency tests
+
+- Tested 25%/50% constrained updates against period-specific anchors and full updates in three exposed chronological folds (8,568 evaluation rows, 182 enactments).
+- Each update improved two periods and worsened one; no restrained rule passed the all-period criterion. Survivor unchanged; no independent validation or promotion.
+- 26 tests, exact refitting replay and 34,272 probability/metric checks passed. Report saved to campaign chat; receipt: `docs/operations/runs/20261105-chronological-weight-updates.md`.
