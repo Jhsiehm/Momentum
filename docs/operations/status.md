@@ -1,3 +1,7 @@
+# Latest convergence check: research candidate frozen, survivor retained
+
+Both penalties reach the training-gradient tolerance. L2=0.05 improves all three exposed periods, averaging 8.39% lower Brier versus converged L2=0.2 controls. A separate candidate is frozen on 11,871 historical families; no independent validation or promotion. 35 tests, exact replay and 34,272 scalar probability checks passed. Next gate is a newly registered unexposed comparison against survivor. Receipt: `docs/operations/runs/20261105-convergence.md`.
+
 # Latest controlled experiments: weaker regularization is a development lead
 
 L2=0.05 improves Brier and log loss in all three exposed periods, averaging 8.24% lower Brier versus period-specific L2=0.2 control. Categorical stage worsens two periods. Not compared with survivor here; no independent validation or promotion. 32 tests, exact replay and 51,408 probability checks passed. Larger residual gradients require a fixed convergence sensitivity check before freezing a candidate. Receipt: `docs/operations/runs/20261105-stage-regularization.md`.

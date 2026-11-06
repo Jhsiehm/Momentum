@@ -117,3 +117,9 @@ This baseline captures existing work; it does not mean all features were impleme
 - Fixed L2=0.05 with unchanged inputs improves Brier/log loss in all three exposed development periods; mean relative Brier gain 8.24% versus period-specific L2=0.2 controls. Categorical stage alone worsens two periods. This is not a survivor or independent-evidence win.
 - Stage separation improves but residual calibration errors and larger saved-fit gradients remain. Convergence sensitivity is required before freezing a candidate. Survivor unchanged; no combined final fit or promotion.
 - 32 tests, exact refitting replay, 51,408 independently recalculated probabilities and platform API delivery passed. Receipt: `docs/operations/runs/20261105-stage-regularization.md`.
+
+## 2026-11-05 — Converged weaker-penalty candidate frozen for research
+
+- Training-only gradient stopping confirms L2=0.05 improves all three exposed development folds, averaging 8.39% lower Brier against converged L2=0.2 controls. Both penalties reach tolerance; calibration procedure unchanged.
+- Frozen separate candidate on 11,871 historical families/281 enactments, 9,496 core and 2,375 calibration rows. No fresh survivor comparison, independent validation or promotion.
+- Retained initial numerical-warning artifacts; accepted explicit finite-checked einsum rerun agrees within 6.94e-16. 35 tests, exact replay and 34,272 scalar probability checks passed. Platform report saved. Receipt: `docs/operations/runs/20261105-convergence.md`.
