@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-05 — Live-agent source review workflow
+
+- Added deterministic retained-evidence review packets with immutable selection, source checks and pending human approvals.
+- Three live agents audited actual source provenance, training/exposure boundaries and independent replay.
+- Closed an exposed-development identity/family exclusion gap in paper preparation; scientific validation and prospective scoring remain blocked.
+
 ## 2026-11-05 — Paper protocol and validation readiness
 
 - Added a formal day-180 enactment paper protocol, substantive paper draft, exposure audit and frozen-artifact verification manifest.

@@ -1,3 +1,7 @@
+# Live agents completed real-source review and repaired an exposure gate
+
+November 5, 2026: three live agents audited real source provenance, frozen training/exposure boundaries and independent replay. Exported an immutable 12-case review packet with 40 verified retained files; human approvals remain pending. Fixed the missing exposed-development identity/family gate. Full suite: 302 tests passed; independent focused suite: 20 passed. No new scoring, fitting, acquisition or promotion. Receipt: `docs/operations/runs/20261105-live-agent-paper-review.md`. Source/family certification, custody and prospective issuance still block independent evaluation.
+
 # Research-preparation workflow executed
 
 November 5, 2026: 15 focused tests passed; before/after frozen-artifact audits exactly matched the versioned reference. Saved an exclusive timestamped execution receipt under the shared research lease. Preparation checks pass; real evaluation remains blocked on evidence review, custody and certified prospective issuance. No model fitting, new real outcome scoring or forecasts. Receipt: `docs/operations/runs/20261105-paper-preparation-workflow.md`.

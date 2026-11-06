@@ -28,6 +28,7 @@ class PaperEvaluationTests(unittest.TestCase):
         self.spec = dict(target=p.TARGET, feature_version=p.FEATURES, mode='synthetic', periods=[120],
                          candidates=[r['bill_id'] for r in self.cases], paper_protocol_sha256='fixture',
                          baseline_training_hash=digest(self.training),
+                         exposure_registry=self.review(dict(bill_ids=[],family_ids=[],scope='Synthetic fixture only')),
                          models={k:dict(artifact_hash=digest(v['artifact']),training_hash=digest(v['training'])) for k,v in self.models.items()})
         self.reg = p.register(self.spec,self.root/'registration.json')
 
@@ -176,6 +177,20 @@ class PaperEvaluationTests(unittest.TestCase):
         body=copy.deepcopy(p.unseal(self.reg));body['code_hashes']['model.py']='changed'
         with self.assertRaisesRegex(ValueError,'implementation'):
             p.prepare(p.seal(body),self.cases,[disposition],self.models,self.training,self.root)
+
+    def test_exposed_development_registry_is_required_and_enforced(self):
+        missing=copy.deepcopy(self.spec);missing.pop('exposure_registry')
+        with self.assertRaisesRegex(ValueError,'registry'):p.register(missing,self.root/'missing-exposure.json')
+        for key,value in (('bill_ids',self.cases[0]['bill_id']),('family_ids',self.cases[0]['family_id'])):
+            spec=copy.deepcopy(self.spec)
+            exposure=spec['exposure_registry'];exposure.pop('review');exposure[key]=[value];self.review(exposure)
+            reg=p.register(spec,self.root/(key+'.json'))
+            with self.assertRaisesRegex(ValueError,'exposed development'):
+                p.prepare(reg,self.cases,[],self.models,self.training,self.root)
+        spec=copy.deepcopy(self.spec);spec['exposure_registry']['scope']='tampered'
+        reg=p.register(spec,self.root/'bad-exposure-review.json')
+        with self.assertRaisesRegex(ValueError,'Review subject'):
+            p.prepare(reg,self.cases,[],self.models,self.training,self.root)
 
     def test_nan_and_bad_probabilities(self):
         for probability in (float('nan'),float('inf'),-1,2):

@@ -19,3 +19,7 @@ Read before related scheduled work. These are verified engineering/research less
 ## Expanded batch, November5,2026
 
 Ten registered variants on700 new bills selected weaker L2 .05, reversing the prior sample's descriptive .2 preference. Selection depended on one development enactment; confirmation had two. Both selected-versus-survivor and selected-versus-rate intervals crossed zero. Expanded survivor training198 rows worsened confirmation Brier6.00% against a matched49-row original-only refit. Treat training growth as a testable intervention, not proof of learning; preserve original-only comparisons and fresh held-out evaluation.
+
+## Live paper review, November 5, 2026
+
+- Training/evaluation separation alone does not exclude previously exposed development evidence. The methods agent found that the new paper adapter lacked a declared exposure registry; preparation now requires a reviewed, subject-bound registry and rejects matching evaluation identities/families. Tests cover absent registry, identity/family overlap and tampered review. The gate checks declared exposure, not completeness of the human-reviewed graph; do not claim it independently certifies an untouched population.

@@ -120,6 +120,13 @@ def register(spec, path):
     require(spec['periods'] == sorted(set(spec['periods'])), 'Invalid periods')
     require(set(spec['models']) == {'survivor', 'challenger'}, 'Require both frozen models')
     require(bool(spec['paper_protocol_sha256']), 'Missing paper protocol hash')
+    exposure = spec.get('exposure_registry')
+    require(isinstance(exposure, dict), 'Missing exposed-development registry')
+    for key in ('bill_ids', 'family_ids'):
+        values = exposure.get(key)
+        require(isinstance(values, list) and all(isinstance(v, str) and v for v in values)
+                and len(values) == len(set(values)), 'Invalid exposure registry identities')
+    require(bool(exposure.get('scope')) and bool(exposure.get('review')), 'Unreviewed exposure registry')
     result = seal(dict(spec=spec, code_hashes=implementation_hashes(), registered_at=datetime.now(timezone.utc).isoformat()))
     save(path, result)
     return result
@@ -147,7 +154,11 @@ def prepare(registration, cases, exclusions, models, baseline_training, root):
         require(row.get('dataset') == expected_dataset, 'Dataset/mode mismatch')
         case(row, root)
         require(row['congress'] in spec['periods'], 'Unregistered period')
+    exposure = spec['exposure_registry']
+    reviewed(exposure['review'], digest({k:v for k,v in exposure.items() if k != 'review'}), root)
     families = {r['family_id'] for r in cases}
+    require(not selected.intersection(exposure['bill_ids']) and not families.intersection(exposure['family_ids']),
+            'Evaluation overlaps exposed development evidence')
     origin = min(timestamp(r['cutoff']) for r in cases)
     train_sets = [baseline_training] + [models[n]['training'] for n in ('survivor', 'challenger')]
     require(digest(baseline_training) == spec['baseline_training_hash'], 'Baseline membership changed')
