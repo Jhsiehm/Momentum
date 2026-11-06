@@ -160,3 +160,23 @@ Record each meaningful work batch with its date, changes, validation, and remain
 - Training-only gradient stopping confirms L2=0.05 improves all three exposed development folds, averaging 8.39% lower Brier against converged L2=0.2 controls. Both penalties reach tolerance; calibration procedure unchanged.
 - Frozen separate candidate on 11,871 historical families/281 enactments, 9,496 core and 2,375 calibration rows. No fresh survivor comparison, independent validation or promotion.
 - Retained initial numerical-warning artifacts; accepted explicit finite-checked einsum rerun agrees within 6.94e-16. 35 tests, exact replay and 34,272 scalar probability checks passed. Platform report saved. Receipt: `docs/operations/runs/20261105-convergence.md`.
+
+## 2026-11-05 — Consolidated research handoff and log audit
+
+User requested that all new findings be committed and logged. Verified the preceding implementation commits and existing development log, changelog, operational status and detailed receipts.
+
+| Work | Implementation commit | Receipt |
+| --- | --- | --- |
+| Transfer diagnosis and small weight changes | `c060511` | [Transfer diagnosis](operations/runs/20261105-transfer-diagnosis.md) |
+| Chronological update consistency | `5b2d9f0` | [Chronological tests](operations/runs/20261105-chronological-weight-updates.md) |
+| Granular errors and feature audit | `5a63cf9` | [Granular audit](operations/runs/20261105-granular-transfer-audit.md) |
+| Regularization and categorical stage | `711615f` | [Controlled experiments](operations/runs/20261105-stage-regularization.md) |
+| Convergence and candidate freeze | `3310549` | [Convergence receipt](operations/runs/20261105-convergence.md) |
+
+Current conclusion: smaller blending changes did not generalize consistently; categorical stage alone worsened two development periods. Weaker L2 improved all three exposed periods, averaging 8.39% lower Brier against converged period-specific controls. This is not an independent win against the survivor.
+
+Frozen candidate: 11,871 historical family representatives, 281 enactments; 9,496 core and 2,375 calibration rows; final base gradient target reached after 3,917 iterations. Candidate digest `149b5f618cd74bcc1974cd502581490e8e8cb3c390baf25b9279e213bb35c0c5`. Survivor digest `ffb089cff396415431c2e2b04cb99ebf7d75fe040a777da661bb58d6af9d255c` remains unchanged.
+
+Validation carried forward: 35 tests, exact replay, and 34,272 scalar probability checks. This documentation-only audit rechecked result/candidate/survivor hashes against verification receipts; no model retraining or new test-performance claim. Full numerical-warning reconciliation, limitations and runtime locations are in the convergence receipt. Runtime data and private platform chat history remain outside Git.
+
+Next gate: newly registered unexposed evaluation against survivor and rate baseline, or prospective shadow forecasting if an appropriate historical cohort cannot be established. No production promotion or recurring schedule change.

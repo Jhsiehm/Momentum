@@ -123,3 +123,7 @@ This baseline captures existing work; it does not mean all features were impleme
 - Training-only gradient stopping confirms L2=0.05 improves all three exposed development folds, averaging 8.39% lower Brier against converged L2=0.2 controls. Both penalties reach tolerance; calibration procedure unchanged.
 - Frozen separate candidate on 11,871 historical families/281 enactments, 9,496 core and 2,375 calibration rows. No fresh survivor comparison, independent validation or promotion.
 - Retained initial numerical-warning artifacts; accepted explicit finite-checked einsum rerun agrees within 6.94e-16. 35 tests, exact replay and 34,272 scalar probability checks passed. Platform report saved. Receipt: `docs/operations/runs/20261105-convergence.md`.
+
+## 2026-11-05 — Research log consolidation
+
+- Added a consolidated development-log handoff linking all five recent research commits and detailed receipts, with frozen candidate/survivor digests and the pending independent-evaluation gate. Rechecked artifact hashes; no model or schedule changes.
