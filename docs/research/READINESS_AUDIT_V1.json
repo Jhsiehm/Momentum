@@ -1,0 +1,66 @@
+{
+  "artifact_file_sha256": {
+    "convergence-einsum-20261105/candidate-lock.json": "7712aecd6080d8c6f94d5948549d5cca9a813111b3a6e268db4231ad684b5f55",
+    "convergence-einsum-20261105/result.json": "f9f0e56a8bcf5ee5eb7a8c0224e787b3b9bd693b0a22bd0ad31504dc849aafd7",
+    "cross-congress-confirmation-20261105/result.json": "92356c9c57cac8713a6a1cbe9b843a9374fad77f09c4e00909709427dc22e1a7",
+    "cross-congress-scale-20261105/final-training.json": "5f3027cabbf1da78602bfbb67392cf7d7efe1a3a3f1d40067a59cc4ef4dd63eb",
+    "cross-congress-scale-20261105/fold-114.json": "3081b68d05852201fd11fcaa04e92157844166649705229b14e2549c84caa16e",
+    "cross-congress-scale-20261105/fold-115.json": "3bc95fc385590060dc980e1599652e53c4296aa3e97a644bd2ceb9b4dd77a0cf",
+    "cross-congress-scale-20261105/fold-116.json": "9a7188ed0062091e6a19a102d45edeedd035e697337e198f0c5755c375cf797e",
+    "cross-congress-scale-20261105/fold-117.json": "1b1afdac8ef455d086823f668d7ffd4b95d6c1cba6dc42f3f1538eb63f9c130d",
+    "survivor1000-20261105/artifact.json": "477d2cdfc8889c3a205e24ef44a7ab8cd8d060c5a8cb7ccd78a49dd2ae7d4b86"
+  },
+  "blockers": [
+    "No certified untouched historical period",
+    "Historical source and family reviews incomplete",
+    "No protected outcome custodian or certified paired day180 prospective ledger"
+  ],
+  "challenger_hash": "149b5f618cd74bcc1974cd502581490e8e8cb3c390baf25b9279e213bb35c0c5",
+  "confirmation_saved_hash": "5f670ce379c5770d842d988bcae04e3cf7eb3d9ed621544b85e39c9280e5296e",
+  "convergence_saved_gain": 0.08391050579922332,
+  "development_folds": {
+    "114": {
+      "evaluation": 2788,
+      "evaluation_positives": 56,
+      "training": 2302,
+      "training_positives": 67
+    },
+    "115": {
+      "evaluation": 2717,
+      "evaluation_positives": 75,
+      "training": 4462,
+      "training_positives": 116
+    },
+    "116": {
+      "evaluation": 2792,
+      "evaluation_positives": 48,
+      "training": 6591,
+      "training_positives": 158
+    },
+    "117": {
+      "evaluation": 3059,
+      "evaluation_positives": 59,
+      "training": 8812,
+      "training_positives": 227
+    }
+  },
+  "independent_historical_validation_ready": false,
+  "release_eligible": false,
+  "schema": 1,
+  "scope": "Read-only frozen-artifact audit; no new outcome scoring",
+  "survivor_hash": "ffb089cff396415431c2e2b04cb99ebf7d75fe040a777da661bb58d6af9d255c",
+  "training": {
+    "calibration": 2375,
+    "congresses": [
+      113,
+      114,
+      115,
+      116,
+      117
+    ],
+    "core": 9496,
+    "latest_label": "2023-04-13T23:59:59Z",
+    "n": 11871,
+    "positives": 281
+  }
+}

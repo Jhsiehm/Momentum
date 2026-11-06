@@ -1,3 +1,7 @@
+# Paper preparation: prospective validation specified, real scoring blocked
+
+November 5, 2026. New [paper protocol](../research/PAPER_PROTOCOL_V1.md), [readiness audit](../research/VALIDATION_READINESS.md) and [draft](../research/PAPER_DRAFT_V1.md) preserve the exploratory findings and negative results. No audited historical period is established as an independent forward test. Both frozen model identities and final training membership rechecked. New isolated preparation/scoring code is tested on synthetic cases only; real scoring blocks pending reviewed evidence, custody and certified paired day-180 issuance. No new real outcome scoring, fitting, promotion or schedule changes. Receipt: `docs/operations/runs/20261105-paper-preparation.md`.
+
 # Latest convergence check: research candidate frozen, survivor retained
 
 Both penalties reach the training-gradient tolerance. L2=0.05 improves all three exposed periods, averaging 8.39% lower Brier versus converged L2=0.2 controls. A separate candidate is frozen on 11,871 historical families; no independent validation or promotion. 35 tests, exact replay and 34,272 scalar probability checks passed. Next gate is a newly registered unexposed comparison against survivor. Receipt: `docs/operations/runs/20261105-convergence.md`.

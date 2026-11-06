@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-05 — Paper protocol and validation readiness
+
+- Added a formal day-180 enactment paper protocol, substantive paper draft, exposure audit and frozen-artifact verification manifest.
+- Added isolated evaluation preparation with frozen hashes, identical cases, earlier-only rate/stage baselines, strict source/label/family gates and synthetic numerical verification.
+- Documented that independent historical validation is not currently defensible; prospective custody and issuance remain blockers. No new final scores, searches or model promotion.
+
 ## 2026-11-05 — Sequential passage development benchmark
 
 - Added a separate day-30 originating-chamber passage benchmark with forward Congress folds, frozen/retrained/adaptive/rate comparisons, provenance manifests, and immutable report files.
