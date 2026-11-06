@@ -189,3 +189,11 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Validation: final full suite **297 tests passed in 62.580 seconds**; focused 15 passed; exact aggregate artifact audit replay, Python compilation, four-document local-link check and staged whitespace check passed. Earlier full iteration passed 294 tests in 95.944 seconds. No broad source recertification or independent human review claimed.
 - README/changelog/status now link paper preparation and explain exposed historical evidence. Full receipt: `docs/operations/runs/20261105-paper-preparation.md`.
 - Outstanding: independent custodian and source/family reviewers, external preregistration/timestamps, reviewed legacy adapters, rolling census/paired day-180 ledger, clustered inference implementation and publication reproduction bundle. No prospective forecast issued; existing live capture is a different workflow. Scientific experiment specified but not yet certified for execution.
+
+
+## 2026-11-05 — Execute research-preparation workflow
+
+- Ran the requested paper-preparation workflow under a unique shared lease; preserved an exclusive timestamped runtime execution envelope and exact test output.
+- Validation: 15 focused tests passed in 0.263 seconds; before/after audits exactly match the versioned reference; frozen artifact and implementation/protocol hashes unchanged; saved envelope hash verified. Initial preflight also passed 15 tests. No full-suite rerun or new empirical result claimed.
+- Outcome: preparation software checks pass; independent scientific evaluation remains blocked on the existing evidence, custody, prospective issuance and inference requirements. Zero models fitted, new real outcomes scored or forecasts issued; no schedule changes.
+- Receipt: `docs/operations/runs/20261105-paper-preparation-workflow.md`. Runtime data stays ignored. This execution-only batch introduces no user-facing functionality or model milestone.

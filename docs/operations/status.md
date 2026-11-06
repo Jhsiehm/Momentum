@@ -1,3 +1,7 @@
+# Research-preparation workflow executed
+
+November 5, 2026: 15 focused tests passed; before/after frozen-artifact audits exactly matched the versioned reference. Saved an exclusive timestamped execution receipt under the shared research lease. Preparation checks pass; real evaluation remains blocked on evidence review, custody and certified prospective issuance. No model fitting, new real outcome scoring or forecasts. Receipt: `docs/operations/runs/20261105-paper-preparation-workflow.md`.
+
 # Paper preparation: prospective validation specified, real scoring blocked
 
 November 5, 2026. New [paper protocol](../research/PAPER_PROTOCOL_V1.md), [readiness audit](../research/VALIDATION_READINESS.md) and [draft](../research/PAPER_DRAFT_V1.md) preserve the exploratory findings and negative results. No audited historical period is established as an independent forward test. Both frozen model identities and final training membership rechecked. New isolated preparation/scoring code is tested on synthetic cases only; real scoring blocks pending reviewed evidence, custody and certified paired day-180 issuance. No new real outcome scoring, fitting, promotion or schedule changes. Receipt: `docs/operations/runs/20261105-paper-preparation.md`.
