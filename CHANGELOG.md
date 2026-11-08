@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Corrected bill meanings and expanded source coverage
+
+- Applied audited corrections in a separate 40-bill version with 501 evidence-linked effects and explicit uncertainty.
+- Acquired 200 additional dated-metadata bill texts for training/calibration; calibration positives and historical certification remain insufficient for predictive testing.
+
 ## 2026-11-08 — Resumed bill-meaning agent review
 
 - Completed all 40 primary bill annotations and reciprocal source review after the earlier interruption.

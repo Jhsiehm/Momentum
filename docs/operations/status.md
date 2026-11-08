@@ -1,3 +1,7 @@
+# Corrected meanings applied;200 new training/calibration sources acquired
+
+November 8, 2026: separate corrected version covers 40 bills and 501 evidence-linked effects; all 50 finding references disposed and reciprocal correction checks passed. Acquired 200/200 introduced XMLs with dated official metadata, excluding pilot families. Expanded calibration source subsets n = 22/32/44 still have zero positives; certified historical coverage remains zero. No prediction testing or improvement claim. 21 focused tests passed; original evidence preserved. [Receipt](runs/20261108-mechanism-corrections-and-coverage.md).
+
 # Mechanism v2 resumed: primary and reciprocal review complete
 
 November 8, 2026: agents resumed successfully. All 40 design bills now have primary annotations (480 statuses, 463 effects) and source-based peer review (34 findings). The independent methods auditor reviewed all peer findings: 33 accepted with qualifications, one uncertain; corrections remain separate recommendations. Original labels and the earlier interruption receipt are preserved. Eleven focused tests and evidence-integrity checks passed; no fitting or predictive improvement claim. [Resumed receipt](runs/20261108-mechanism-rubric-v2-resume.md).
