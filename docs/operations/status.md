@@ -1,3 +1,7 @@
+# Independent agents completed reciprocal bill-context audit
+
+November 8, 2026: three agents independently audited sources, methods and code, then challenged peer findings and reviewed repairs. Hardened identity/split/eligibility verification, added a separate boundary-aware design text view, and bound review exports to source receipts/page hashes. All359 original pilot files and frozen artifacts preserved. Methods and human-review gates remain unresolved; no new fitting or scoring. [Audit receipt](runs/20261108-context-peer-audit.md).
+
 # Bill-context pilot acquired; model experiments blocked on reviews
 
 November 8, 2026: acquired all 100 introduced bill texts, parsed 50 design cases (213 sections), preserved 50 unparsed quality cases, and prepared calendar inputs on the original folds. E0 is partial; E1–E9 remain blocked on evidence reviews and upstream/future requirements. User volunteered as first reviewer; no approvals recorded. Full regression suite: 307 tests passed. No fits, new scores or forecasts. [Execution receipt](runs/20261108-bill-context-execution.md); [review guide](../research/BILL_CONTEXT_ANNOTATION_GUIDE_V1.md).

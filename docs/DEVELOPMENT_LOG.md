@@ -221,3 +221,12 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Assessed E0–E9 dependencies: E0 partial, E1–E9 blocked by required evidence/review/upstream/prospective prerequisites. User volunteered as first reviewer; no approval inferred.
 - Validation: 25 focused tests and full 307-test suite passed (57.302 seconds); real artifact replay passed; 50 design / zero quality review pages checked. Frozen artifacts preserved. Diff whitespace checked before commit.
 - Receipt: [execution and blockers](operations/runs/20261108-bill-context-execution.md). Runtime XML, reviews and manifests remain ignored. Remaining work: qualified human annotations, second reviewer/adjudicator, historical-source/family/label certification and approved model registrations.
+
+## 2026-11-08 — Independent agents, reciprocal audit and verified repairs
+
+- Dispatched three independent source, methods and software auditors at the user's explicit request, then had each cross-review a peer. Retained reports distinguish independent findings, implementation ownership and repeated checks.
+- Fixed verifier optimized-mode and resealed-data gaps with explicit checks and authoritative source/split/vector/section/annotation bindings. Added eight local-corpus mutation/replay tests (explicit skip when runtime evidence is absent).
+- Added separately versioned text rendering with exact Congress identity and block boundaries, preserving inline words and all original evidence. Bound readable review exports to source bytes, metadata receipts, guide/code and page hashes. Source agent identified and rechecked receipt-chain repair; methods agent identified and rechecked section-coordinate repair.
+- Documented unresolved positive-family scope and E6 population-comparison ambiguity in a separate methods clarification. Did not change the hashed original plan, registered runner, human gates or frozen models.
+- Validation: full **318-test suite passed in 77.310 seconds**; independent real-source replay, temporal/split checks, mutation probes and final export checks passed. All 359 original pilot files and frozen audit hashes preserved; no quality extraction, new fitting, scoring, acquisition or promotion. Diff whitespace checked.
+- Receipt: [reciprocal agent audit](operations/runs/20261108-context-peer-audit.md). Remaining work includes certified source/family/annotation evidence, applicable population signoff, common-population registration and prospective custody. Machine review is not human certification.

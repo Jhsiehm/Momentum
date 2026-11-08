@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Reciprocal agent audit and evidence hardening
+
+- Three agents independently reviewed sources, methods and code, then cross-audited findings and fixes.
+- Closed verifier mutation/optimized-mode gaps, added boundary-aware bill text views and source-bound review-page manifests while preserving original evidence.
+- Documented remaining population-comparison and review gates; agent agreement is not scientific validation.
+
 ## 2026-11-08 — Bill-context pilot and review handoff
 
 - Collected 100 official introduced bill texts; preserved full language and sections for 50 design cases while protecting the 50-case quality partition.
