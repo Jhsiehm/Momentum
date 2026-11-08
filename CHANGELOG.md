@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Design-only bill-mechanism extractor
+
+- Executed a context-preserving candidate extractor on forty corrected design bills; all 480 mechanism decisions remain explicit abstentions pending validation.
+- Added externally adjudicated effect-matching machinery and independent review checks. Historical text identity remains unresolved; no predictive improvement claimed.
+
 ## 2026-11-08 — Larger dated-source corpus and readiness audit
 
 - Acquired 1,000 additional bill texts in ten audited cycles; source coverage now 1,232 distinct bills.
