@@ -1,3 +1,7 @@
+# Mechanism/direction v2 batch partially completed
+
+November 8, 2026: froze the v2 rubric and registered 40 remaining design cases. One agent sealed 20 bills with 197 evidence-linked effects; the second submission and reciprocal/methods annotation reviews remain incomplete after the workspace spending cap stopped both annotators. Eleven focused tests pass. All original evidence/models preserved; no quality parsing or fits. Design-subset calibration splits have zero positives, so predictive work also needs broader source coverage. [Partial receipt and resume point](runs/20261108-mechanism-rubric-v2.md).
+
 # Mechanism design pilot completed with independent agent reviews
 
 November 8, 2026: two agents independently annotated ten design bills across twelve mechanisms; a third challenged all 120 labels, and an original reviewer counter-audited the adjudication. Initial agreement 111/120 is not accuracy. Final provisional labels: 32 present / 74 absent / 14 uncertain. All uncertainties retained; no fitting, quality-text extraction or performance claim. [Design receipt](runs/20261108-mechanism-design.md).

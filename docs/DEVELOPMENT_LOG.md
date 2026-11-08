@@ -246,3 +246,12 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Added deterministic paired-annotation and adjudication integrity tooling; exact quotes, identities, status schemas, original review bindings, comparison replay and challenge coverage verified. Seven focused tests passed, including changed-original rejection; no full regression rerun claimed.
 - All 359 original pilot files and frozen model audit preserved. No quality-text parsing, downloads, training, scores or promotion. Runtime annotations remain ignored; public methodological summaries committed. Diff whitespace checked.
 - [Receipt](operations/runs/20261108-mechanism-design.md). Remaining work: define operative category boundaries and action direction, separated extraction measurement and source eligibility before E2 predictive comparison. Machine agreement does not certify labels or historical validity.
+
+
+## 2026-11-08 — Mechanism/direction rubric v2, partial agent batch
+
+- Froze a clearer mechanism/direction/evidence rubric and registered the remaining 40 design cases. Reviewer A sealed 20 cases, 240 statuses and 197 effects; B has no sealed submission. Reciprocal reviews and methods annotation audit remain incomplete after both annotators hit the workspace spending cap.
+- Added source-offset/schema/provenance validators and rejection tests; repaired two independently demonstrated peer-validation gaps. Methods agent read its ten-case subset before labels; source-first notes preserved.
+- Validation: eleven focused tests passed; all 40 input views matched preserved source envelopes; A validated; all 359 original pilot files and frozen model audit unchanged. No full regression claim. Runtime data remains ignored.
+- Readiness counts show zero positive cases in every design-subset calibration split. No fitting, scoring, quality parsing, promotion or performance gain. Resume missing B annotations and reciprocal/methods review before broader source-coverage preparation.
+- [Partial execution receipt](operations/runs/20261108-mechanism-rubric-v2.md). Frozen rubric and sealed A submission must remain unchanged on resume.

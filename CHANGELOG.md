@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Mechanism and direction rubric
+
+- Added explicit direction, actor, target, conditions and evidence offsets to bill-meaning annotations.
+- Preserved 20 completed provisional cases; remaining annotations and peer review paused by the workspace spending cap. No predictive improvement claimed.
+
 ## 2026-11-08 — Bill-meaning design pilot
 
 - Completed independent agent annotations, adjudication and peer challenge for ten design bills across twelve legal mechanisms.
