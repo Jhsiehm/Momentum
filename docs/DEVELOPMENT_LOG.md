@@ -213,3 +213,11 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Fixed chronological/matched-case comparison rules, development decisions, baseline and calibration rules, missingness handling, trial/compute caps, controlled update cadence and the meaning of a 60% Brier reduction. Maximum historical modeling budget is 75 model/period fits; no power or performance guarantee. Preserves all existing paper/model gates and requires a distinct successor registration for richer models.
 - Grounding: inspected repository protocols/runners and primary GovInfo, Senate and research-paper sources. Validation: manual design-consistency review, local document links, E0–E9/14-section coverage, fit-budget arithmetic and whitespace check passed. No tests or empirical experiments executed for this documentation-only batch.
 - Added a planning receipt and documentation links. Next: reviewed schema/pilot registration and bounded E1 calendar experiment preparation; actual evidence/human/custody gates remain. Receipt: `docs/operations/runs/20261108-bill-context-experiment-plan.md`.
+
+## 2026-11-08 — Bill-context execution and human-review handoff
+
+- Executed the bounded 100-bill introduced-text acquisition with immutable selection and provenance. All 100 downloads succeeded; parsed only the 50 design cases, preserving 213 sections. Quality text remains unparsed pending design freeze.
+- Added preparation runner, artifact verifier, readable design-review exporter and versioned annotation/dictionary guidance. Calendar encodings prepared on exact legacy splits; no new model fits or outcome scores.
+- Assessed E0–E9 dependencies: E0 partial, E1–E9 blocked by required evidence/review/upstream/prospective prerequisites. User volunteered as first reviewer; no approval inferred.
+- Validation: 25 focused tests and full 307-test suite passed (57.302 seconds); real artifact replay passed; 50 design / zero quality review pages checked. Frozen artifacts preserved. Diff whitespace checked before commit.
+- Receipt: [execution and blockers](operations/runs/20261108-bill-context-execution.md). Runtime XML, reviews and manifests remain ignored. Remaining work: qualified human annotations, second reviewer/adjudicator, historical-source/family/label certification and approved model registrations.

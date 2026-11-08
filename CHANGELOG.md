@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Bill-context pilot and review handoff
+
+- Collected 100 official introduced bill texts; preserved full language and sections for 50 design cases while protecting the 50-case quality partition.
+- Added reproducible evidence preparation, calendar encodings, verification and readable review materials. Required human reviews block model experiments; no new predictive improvement claimed.
+
 ## 2026-11-08 — Bill-context experimental plan
 
 - Added a complete staged plan for richer bill representations, calendar/context/text experiments and controlled learning.

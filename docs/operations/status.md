@@ -1,3 +1,7 @@
+# Bill-context pilot acquired; model experiments blocked on reviews
+
+November 8, 2026: acquired all 100 introduced bill texts, parsed 50 design cases (213 sections), preserved 50 unparsed quality cases, and prepared calendar inputs on the original folds. E0 is partial; E1–E9 remain blocked on evidence reviews and upstream/future requirements. User volunteered as first reviewer; no approvals recorded. Full regression suite: 307 tests passed. No fits, new scores or forecasts. [Execution receipt](runs/20261108-bill-context-execution.md); [review guide](../research/BILL_CONTEXT_ANNOTATION_GUIDE_V1.md).
+
 # Bill-context experimental programme planned
 
 November 8, 2026: [complete experimental plan](../research/BILL_CONTEXT_EXPERIMENT_PLAN_V1.md) specifies a source-reviewed bill representation, bounded feature/model/update studies and successor prospective registration. It preserves full language and multi-label attributes, keeps the existing paper frozen, and defines a 75-fit maximum historical budget with explicit gates. Documentation only: no experiments, new forecasts or model changes. Planning receipt: `docs/operations/runs/20261108-bill-context-experiment-plan.md`. Source/family review, custody and prospective issuance remain unresolved.
