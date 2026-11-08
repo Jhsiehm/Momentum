@@ -70,6 +70,7 @@ See [repository instructions](AGENTS.md) for the commit and progress-log workflo
 - [Bill-context pilot execution](docs/operations/runs/20261108-bill-context-execution.md): 100 official texts acquired, design review prepared; model experiments remain gated on human evidence reviews.
 - [Reciprocal agent audit](docs/operations/runs/20261108-context-peer-audit.md): source, methods and software reviews, peer challenges, verified repairs and unresolved scientific gates.
 - [Exploratory calendar results](docs/operations/runs/20261108-exploratory-calendar.md): nine real fits; small mixed gains, no qualifying lead or model promotion.
+- [Context-triage experiment](docs/operations/runs/20261108-context-filter-experiment.md): flagged 322 of 2,727 hits while preserving 449/501 reference-quotation coverage; flags are review aids, not legal labels.
 - [Expanded candidate-rule experiment](docs/operations/runs/20261108-expanded-candidate-rules.md): fixed-reference locator intersections increased 401→449/501, with 73 added hits; semantic accuracy remains unestablished.
 - [Reference v3 and context extractor v2](docs/operations/runs/20261108-reference-v3-context-v2.md): eight separately adjudicated corrections and a forty-bill structural-context run, with unchanged lexical output.
 - [Candidate error review](docs/operations/runs/20261108-candidate-error-review.md): source-based review of all 102 locator misses and five suggestions, with separate reference questions and archival follow-up.

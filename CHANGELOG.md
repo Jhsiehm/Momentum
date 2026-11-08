@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Context-triage design experiment
+
+- Added a separate source-linked warning layer for headings, purpose statements, findings and explicitly struck language.
+- Flagged 322 hits without losing reference-quotation coverage; all raw hits remain available and no semantic or predictive accuracy is claimed.
+
 ## 2026-11-08 — Expanded bill-mechanism candidate rules tested
 
 - Tested 33 additional locator rule families against fixed corrected design references:48 more effect quotations located, with no lost matches.
