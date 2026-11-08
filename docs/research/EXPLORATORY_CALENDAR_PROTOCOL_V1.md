@@ -1,0 +1,22 @@
+# Exploratory calendar study v1
+
+November 8, 2026. User explicitly authorized this separate exploratory protocol after being told that agent review would replace the unmet human-review requirement for this diagnostic study and that sample requirements would be revised. This is not an amendment of the frozen paper study, a human certification, or independent validation. Original protocols and evidence remain unchanged.
+
+## Scoped deviations
+
+For this study only, unresolved human source/family/outcome certifications and the reviewed 200/100 positive-family floors do not prevent computation. Use all exactly registered legacy rows without pretending these requirements passed. Report raw event counts and uncertainty. Historical rendition availability, negative-label coverage and family genealogy remain provisional; machine checks cannot establish those facts. E0 extraction quality is not a prerequisite for these already available calendar coordinates. No new bill-text, policy, support or schedule features are included.
+
+## Fixed experiment before scores
+
+- Target remains own-bill public-law enactment after day180 and before Congress end, in the legacy still-unenacted risk set. Exposed folds115,116,117 only. No118 selection and no retrospective frozen-survivor comparison.
+- Three arms: original six-feature control; control plus r; control plus r and x[0]*r. Here r=(Congress_end−checkpoint).total_seconds()/(86400*730), x[0]=stage/4.
+- Exactly nine model/period fits, plus existing fixed calibration. No hyperparameter search, changed arms or added periods after results. No final model fit, deployment or successor promotion.
+- Reuse exact ordered legacy core/calibration/evaluation IDs. Require disjoint identities and provisional global families, both classes in core/calibration, earlier training Congresses, labels available before earliest test checkpoint, and exact existing vectors. Register complete input/code hashes before fitting. Machine review only; no old approval field is changed.
+- Same logistic objective: mean negative log likelihood +(.05/2)*sum(slopes²), unpenalized intercept, core-only standardization with scale floor .1. Existing deterministic NumPy float64 gradient descent: learning rate .12, min300/max20000 iterations, max absolute objective gradient≤1e-6. Scalar gradient replay, finite parameters and inactive training-logit clipping (maximum absolute logit below35) required before scoring. Fixed2000-step monotone affine-logit calibration on original calibration families. Control must exactly reproduce the previous L2=.05 base artifact, including scaling and iteration count.
+- Rate baseline: (positive_training+1)/(n_training+2), using core plus calibration. Stage baseline: (stage_positive+5*global_rate)/(stage_n+5), fitted only on that same earlier population.
+- Primary mean is equal-weighted fold Brier. Skill is1−mean_model_Brier/mean_baseline_Brier. Report raw/calibrated Brier and logloss, event counts, expected events, positive/negative Brier and fixed-decile calibration summaries. Report rate and stage skill separately.
+- Exploratory lead requires lower calibrated Brier and no higher logloss than control in all three folds. Any blocked fold blocks lead selection. Among qualifying additions choose lowest equal-fold Brier; tolerance1e-12, then fewer dimensions and fixed arm order. Mixed signs are a mixed result, not a lead.
+- Descriptive intervals:10000 global-family paired bootstrap draws, seed20261108; resample unique evaluation families with replacement, retain their period memberships, calculate equal-period mean Brier differences. Report invalid draws; fewer than9000valid draws blocks interval reporting. This separate study explicitly uses seed20261108 rather than the original paper bootstrap seed. Percentile95% intervals are conditional on exposed periods and unadjusted for selection or multiple comparisons; no confirmatory significance claim.
+- Six-hour wall-clock cap for the study; preserve partial fit artifacts and failure receipt, no automatic extension or changed tolerance. Unique shared lease; no acquisition, paid services or scheduling changes.
+
+Machine-readable registration freezes this document, exact executable/dependency hashes, all membership/feature/source-input hashes, versions and decision rules before fitting. All models, predictions, diagnostics and metrics go to a new ignored directory. Independent agent replays numerical and split checks after execution. Findings may be negative or mixed; no60% improvement is presumed.

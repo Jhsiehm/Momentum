@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Exploratory calendar experiment
+
+- Executed nine registered historical fits under a separate user-authorized exploratory protocol, preserving the frozen paper study.
+- Calendar additions produced small average gains but failed the all-period rule; no qualifying lead, model promotion or independent improvement claim.
+
 ## 2026-11-08 — Reciprocal agent audit and evidence hardening
 
 - Three agents independently reviewed sources, methods and code, then cross-audited findings and fixes.

@@ -1,3 +1,7 @@
+# Exploratory calendar experiment completed: mixed result
+
+November 8, 2026: under an explicitly authorized separate exploratory protocol, ran all nine registered calendar fits on exposed folds 115–117. All converged. The interaction variant lowered mean Brier by 0.6004% versus the six-feature control (14.0822% skill versus historical rate), but worsened Congress 115 and failed the all-period lead rule. No model promoted and no 60% claim. Original paper/evidence gates remain unchanged. [Execution and results](runs/20261108-exploratory-calendar.md).
+
 # Independent agents completed reciprocal bill-context audit
 
 November 8, 2026: three agents independently audited sources, methods and code, then challenged peer findings and reviewed repairs. Hardened identity/split/eligibility verification, added a separate boundary-aware design text view, and bound review exports to source receipts/page hashes. All359 original pilot files and frozen artifacts preserved. Methods and human-review gates remain unresolved; no new fitting or scoring. [Audit receipt](runs/20261108-context-peer-audit.md).
