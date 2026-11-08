@@ -1,3 +1,7 @@
+# Bill-context experimental programme planned
+
+November 8, 2026: [complete experimental plan](../research/BILL_CONTEXT_EXPERIMENT_PLAN_V1.md) specifies a source-reviewed bill representation, bounded feature/model/update studies and successor prospective registration. It preserves full language and multi-label attributes, keeps the existing paper frozen, and defines a 75-fit maximum historical budget with explicit gates. Documentation only: no experiments, new forecasts or model changes. Planning receipt: `docs/operations/runs/20261108-bill-context-experiment-plan.md`. Source/family review, custody and prospective issuance remain unresolved.
+
 # Live agents completed real-source review and repaired an exposure gate
 
 November 5, 2026: three live agents audited real source provenance, frozen training/exposure boundaries and independent replay. Exported an immutable 12-case review packet with 40 verified retained files; human approvals remain pending. Fixed the missing exposed-development identity/family gate. Full suite: 302 tests passed; independent focused suite: 20 passed. No new scoring, fitting, acquisition or promotion. Receipt: `docs/operations/runs/20261105-live-agent-paper-review.md`. Source/family certification, custody and prospective issuance still block independent evaluation.

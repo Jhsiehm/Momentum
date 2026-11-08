@@ -66,6 +66,8 @@ See [repository instructions](AGENTS.md) for the commit and progress-log workflo
 
 ## Documentation and progress
 
+- [Bill-context experimental plan](docs/research/BILL_CONTEXT_EXPERIMENT_PLAN_V1.md): staged research into bill meaning, text, political context, timing and controlled updates; proposed experiments, not measured gains.
+
 - [Workspace guide](WORKSPACE_GUIDE.md): detailed workflows, command examples, and implementation notes. Saved-workspace observations describe development history, not data bundled with a clone.
 - [Architecture](docs/ARCHITECTURE.md) and [research protocol](docs/PROTOCOL.md).
 - [Roadmap](docs/ROADMAP.md) and [intelligence roadmap](docs/INTELLIGENCE_ROADMAP.md).

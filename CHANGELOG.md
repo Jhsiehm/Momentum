@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Bill-context experimental plan
+
+- Added a complete staged plan for richer bill representations, calendar/context/text experiments and controlled learning.
+- Prespecified bounded comparisons and evidence gates; preserved frozen studies and distinguished the 60% aspiration from demonstrated performance. No experiments executed by this planning milestone.
+
 ## 2026-11-05 — Live-agent source review workflow
 
 - Added deterministic retained-evidence review packets with immutable selection, source checks and pending human approvals.
