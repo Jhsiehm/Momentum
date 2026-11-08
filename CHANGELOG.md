@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Larger dated-source corpus and readiness audit
+
+- Acquired 1,000 additional bill texts in ten audited cycles; source coverage now 1,232 distinct bills.
+- Calibration subsets now include positive outcomes, but remain sparse. Documented concrete historical-rendition gaps and drafted extractor evaluation rules; no predictive gain claimed.
+
 ## 2026-11-08 — Corrected bill meanings and expanded source coverage
 
 - Applied audited corrections in a separate 40-bill version with 501 evidence-linked effects and explicit uncertainty.

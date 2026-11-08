@@ -70,6 +70,7 @@ See [repository instructions](AGENTS.md) for the commit and progress-log workflo
 - [Bill-context pilot execution](docs/operations/runs/20261108-bill-context-execution.md): 100 official texts acquired, design review prepared; model experiments remain gated on human evidence reviews.
 - [Reciprocal agent audit](docs/operations/runs/20261108-context-peer-audit.md): source, methods and software reviews, peer challenges, verified repairs and unresolved scientific gates.
 - [Exploratory calendar results](docs/operations/runs/20261108-exploratory-calendar.md): nine real fits; small mixed gains, no qualifying lead or model promotion.
+- [Larger corpus and readiness](docs/operations/runs/20261108-large-training-corpus.md): 1,000 additional sources, postselection class coverage, historical-rendition audit and extractor evaluation draft.
 - [Corrected meanings and source expansion](docs/operations/runs/20261108-mechanism-corrections-and-coverage.md): separate corrected dataset and 200 new bill texts; readiness limits remain explicit.
 - [Mechanism and direction review](docs/operations/runs/20261108-mechanism-rubric-v2-resume.md): all 40 design bills annotated and cross-reviewed; corrections and uncertainty preserved before predictive use.
 - [Bill-meaning design pilot](docs/operations/runs/20261108-mechanism-design.md): independent agent annotations and reciprocal challenges; uncertain labels retained before predictive use.

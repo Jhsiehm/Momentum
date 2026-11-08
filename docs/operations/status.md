@@ -1,3 +1,7 @@
+# Larger source corpus completed; calibration classes present, eligibility unresolved
+
+November 8, 2026: acquired 1,000/1,000 additional XMLs in ten audited cycles, bringing source coverage to 1,232 distinct bills. Calibration positives are now 5/1/5 across folds 115–117; small counts and historical/extraction gates still prevent predictive readiness. Eight-case source audit found current renditions created in 2023 after historical cutoffs without old-to-current byte binding. 36 focused tests and full/supplemental replay passed. No fits, scores, quality-text access or promotion. [Combined receipt](runs/20261108-large-training-corpus.md).
+
 # Corrected meanings applied;200 new training/calibration sources acquired
 
 November 8, 2026: separate corrected version covers 40 bills and 501 evidence-linked effects; all 50 finding references disposed and reciprocal correction checks passed. Acquired 200/200 introduced XMLs with dated official metadata, excluding pilot families. Expanded calibration source subsets n = 22/32/44 still have zero positives; certified historical coverage remains zero. No prediction testing or improvement claim. 21 focused tests passed; original evidence preserved. [Receipt](runs/20261108-mechanism-corrections-and-coverage.md).
