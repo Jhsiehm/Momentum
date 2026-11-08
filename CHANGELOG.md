@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Resumed bill-meaning agent review
+
+- Completed all 40 primary bill annotations and reciprocal source review after the earlier interruption.
+- Preserved 34 peer findings separately from original annotations; predictive readiness and uncertainty remain explicit.
+
 ## 2026-11-08 — Mechanism and direction rubric
 
 - Added explicit direction, actor, target, conditions and evidence offsets to bill-meaning annotations.

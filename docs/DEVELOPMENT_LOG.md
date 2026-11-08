@@ -255,3 +255,12 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Validation: eleven focused tests passed; all 40 input views matched preserved source envelopes; A validated; all 359 original pilot files and frozen model audit unchanged. No full regression claim. Runtime data remains ignored.
 - Readiness counts show zero positive cases in every design-subset calibration split. No fitting, scoring, quality parsing, promotion or performance gain. Resume missing B annotations and reciprocal/methods review before broader source-coverage preparation.
 - [Partial execution receipt](operations/runs/20261108-mechanism-rubric-v2.md). Frozen rubric and sealed A submission must remain unchanged on resume.
+
+
+## 2026-11-08 — Resumed mechanism v2 annotation and reciprocal review
+
+- Resumed agents successfully after prior spending-cap interruption; preserved the partial receipt and A's sealed primary. Both batches now contain 40 bills, 480 statuses and 463 evidence-linked effects, with original counts 205 present / 261 absent / 14 uncertain.
+- Completed source-based reciprocal review of every case: 23 supported without peer findings, 16 corrections requested and one uncertain; 34 findings in separately sealed receipts. These are review dispositions, not accuracy. Original annotations remain immutable.
+- Eleven focused tests passed. Primary/peer integrity replay passed; all 40 source views, all 359 original pilot files and frozen audit preserved. No full-suite claim, quality parsing, acquisition, fitting, scoring, promotion or scheduler change.
+- [Resumed execution receipt](operations/runs/20261108-mechanism-rubric-v2-resume.md). Predictive readiness remains blocked by missing calibration positives and source/encoding eligibility; corrections remain a separate representation version, not silently applied original labels.
+- Independent methods audit completed the fixed ten-case subset (120 statuses/86 effects;13 findings) and every peer finding (33 accepted with qualifications,one uncertain), plus one additional sunset-direction correction. Root verified coverage, bindings and evidence quotes. Preserved an explicit later revision to one subset interpretation; no forced consensus or overwritten primary.

@@ -1,3 +1,7 @@
+# Mechanism v2 resumed: primary and reciprocal review complete
+
+November 8, 2026: agents resumed successfully. All 40 design bills now have primary annotations (480 statuses, 463 effects) and source-based peer review (34 findings). The independent methods auditor reviewed all peer findings: 33 accepted with qualifications, one uncertain; corrections remain separate recommendations. Original labels and the earlier interruption receipt are preserved. Eleven focused tests and evidence-integrity checks passed; no fitting or predictive improvement claim. [Resumed receipt](runs/20261108-mechanism-rubric-v2-resume.md).
+
 # Mechanism/direction v2 batch partially completed
 
 November 8, 2026: froze the v2 rubric and registered 40 remaining design cases. One agent sealed 20 bills with 197 evidence-linked effects; the second submission and reciprocal/methods annotation reviews remain incomplete after the workspace spending cap stopped both annotators. Eleven focused tests pass. All original evidence/models preserved; no quality parsing or fits. Design-subset calibration splits have zero positives, so predictive work also needs broader source coverage. [Partial receipt and resume point](runs/20261108-mechanism-rubric-v2.md).
