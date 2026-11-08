@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Source-based extractor error review
+
+- Reviewed every missed design quotation and all five suggestions; separated vocabulary gaps, implicit effects and missing clause context.
+- Preserved reference-direction and deadline-dimension questions for adjudication. Public archival API/ZIP investigation still does not establish historical text identity.
+
 ## 2026-11-08 — Design-only bill-mechanism extractor
 
 - Executed a context-preserving candidate extractor on forty corrected design bills; all 480 mechanism decisions remain explicit abstentions pending validation.
