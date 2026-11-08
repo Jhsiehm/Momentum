@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Corrected references and structural bill context
+
+- Applied eight agent-adjudicated corrections in a separate provisional reference version.
+- Ran a new extractor wrapper on forty bills, attaching exact structural context while preserving original candidates and abstentions. No predictive improvement claimed.
+
 ## 2026-11-08 — Source-based extractor error review
 
 - Reviewed every missed design quotation and all five suggestions; separated vocabulary gaps, implicit effects and missing clause context.
