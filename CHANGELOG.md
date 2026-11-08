@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Bill-meaning design pilot
+
+- Completed independent agent annotations, adjudication and peer challenge for ten design bills across twelve legal mechanisms.
+- Added quote/disagreement integrity checks; retained uncertain categories and documented rubric gaps before predictive use. No accuracy or forecast improvement claim.
+
 ## 2026-11-08 — Exploratory calendar experiment
 
 - Executed nine registered historical fits under a separate user-authorized exploratory protocol, preserving the frozen paper study.
