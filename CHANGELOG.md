@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Expanded bill-mechanism candidate rules tested
+
+- Tested 33 additional locator rule families against fixed corrected design references:48 more effect quotations located, with no lost matches.
+- Preserved baseline behavior and abstentions; added review workload is explicit. This is locator coverage, not semantic or predictive accuracy.
+
 ## 2026-11-08 — Corrected references and structural bill context
 
 - Applied eight agent-adjudicated corrections in a separate provisional reference version.
