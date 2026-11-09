@@ -68,6 +68,7 @@ See [repository instructions](AGENTS.md) for the commit and progress-log workflo
 
 ## Documentation and progress
 
+- [Historical corpus inventory audit](docs/operations/runs/20261108-bicam-inventory-audit.md): verified bounded acquisition; preserved parser failures and 43 missing identity/date records. Sampling and predictive use remain blocked pending source reconciliation.
 - [Retrospective text diagnostic](docs/operations/runs/20261108-retrospective-text-diagnostic.md): four real-data fits on selected historical subsets; small, inconclusive text gain over the structured anchor, worse Brier loss than the stage reference. No validated forecasting or promotion claim.
 
 - [Bill-context experimental plan](docs/research/BILL_CONTEXT_EXPERIMENT_PLAN_V1.md): staged research into bill meaning, text, political context, timing and controlled updates; proposed experiments, not measured gains.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Bounded historical corpus audit
+
+- Verified two historical corpus members through six bounded requests; independently reproduced source-format failures and 43 missing identity/date records.
+- Preserved separate registered versions and reversible offset evidence; no sample, predictive fit or model promotion.
+- Defined dated context acceptance rules and official-record reconciliation as the next source-readiness step.
+
 ## 2026-11-08 — Real-data retrospective text comparison
 
 - Completed four fixed fits on historical source-conditioned subsets: text reduced Brier loss 0.24% versus the structured anchor, but remained worse than the stage reference; uncertainty includes no incremental gain. No model promotion or validated forecast claim.
