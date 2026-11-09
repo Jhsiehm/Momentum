@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Structural extractor diagnostic and model-experiment priorities
+
+- Added a separately registered cell-boundary screen retaining every raw locator and full bill/fraction context.
+- Fixed forty-design run produced no boundary changes: 2,722 hits, 2,403 context-retained hits and 449/501 quotation intersections remain unchanged. Review found the retained month-name “May” ambiguity; no predictive gain claimed.
+- Added a bounded critical-path plan to move effort from locator tuning toward source eligibility and one matched predictive feature comparison.
+
 ## 2026-11-08 — Separate structural bill input
 
 - Added authenticated structural sidecars preserving table rows/cells, fraction context, qualified attributes and exact Unicode reading-view mappings.

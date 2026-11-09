@@ -128,3 +128,10 @@ Queue items 2–3 now have executed accounting and synthetic-helper evidence, no
 Separate `structural-input-v1` sidecars now preserve all 8,331 parsed nodes, 3,726 attributes, ten table rows/twenty cells and three fractions across the fixed forty design bills. Existing text and reference offsets remain immutable. Independent raw-XML traversal matched all forty outputs. Source maps are Unicode reading-view coordinates, not raw XML byte offsets; table spans and fraction meaning remain uninterpreted.
 
 [Complete receipt](../operations/runs/20261108-structural-input-v1.md). Next permitted design work is a separately registered structural consumer that respects cell boundaries and retains fraction/full-text context. This does not open protected quality, waive human/source/family/time gates, certify historical availability, or authorize a predictive accuracy claim.
+
+
+## 2026-11-08 — Structural consumer closed; prioritize model evidence
+
+The separately registered structural extractor preserves all v5 hits and full bill context, attaching cell/fraction information and screening strictly interior cell boundaries. The fixed forty-design result is null: zero crossings among 2,722 hits; combined retention 2,403 and quotation overlap 449/501 unchanged. The retained “May” month-name locator illustrates unresolved lexical meaning. No post-result tuning or predictive fit follows automatically.
+
+[Execution receipt](../operations/runs/20261108-structural-extractor-v1.md). Follow the [model-experiment critical path](20261108-model-experiment-critical-path.md): stop open-ended locator optimization, make a finite historical-evidence feasibility decision on the same eight unresolved cases, prepare required review, then freeze one eligible feature block and matched population before its fixed predictive comparison. The original human/source/family/time/quality gates and finite fit budgets remain intact.
