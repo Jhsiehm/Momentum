@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09 — Official metadata feasibility established
+
+- All 100 fixed official bill-status files downloaded and passed identity/date checks; independent replay matched every case.
+- Recorded calendar/context/text-version coverage and all missing fields; 721 tests passed. No predictive improvement or historical availability certification claimed.
+
 ## 2026-11-09 — Official population coverage audit
 
 - Enumerated 75,605 current official bill-status identities and independently compared them with the historical corpus.
