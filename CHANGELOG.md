@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Real-data retrospective text comparison
+
+- Completed four fixed fits on historical source-conditioned subsets: text reduced Brier loss 0.24% versus the structured anchor, but remained worse than the stage reference; uncertainty includes no incremental gain. No model promotion or validated forecast claim.
+- Added primary scholarly methods review and verified a new public corpus’s archive structure through bounded downloads.
+- Preserved nine preprocessing exclusions and every case result; independent numerical replay passed, with 641 full-suite tests passing.
+
 ## 2026-11-08 — Archive-source follow-up and prospective feasibility
 
 - Checked current and inferred legacy archive addresses for eight historical cases; sixteen successful metadata requests returned no capture leads, leaving eligibility unresolved.

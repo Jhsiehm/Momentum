@@ -68,8 +68,10 @@ See [repository instructions](AGENTS.md) for the commit and progress-log workflo
 
 ## Documentation and progress
 
+- [Retrospective text diagnostic](docs/operations/runs/20261108-retrospective-text-diagnostic.md): four real-data fits on selected historical subsets; small, inconclusive text gain over the structured anchor, worse Brier loss than the stage reference. No validated forecasting or promotion claim.
+
 - [Bill-context experimental plan](docs/research/BILL_CONTEXT_EXPERIMENT_PLAN_V1.md): staged research into bill meaning, text, political context, timing and controlled updates; proposed experiments, not measured gains.
-- [Bill-context pilot execution](docs/operations/runs/20261108-bill-context-execution.md): 100 official texts acquired, design review prepared; model experiments remain gated on human evidence reviews.
+- [Bill-context pilot execution](docs/operations/runs/20261108-bill-context-execution.md): 100 official texts acquired, design review prepared; the original forecasting programme remains gated on evidence reviews.
 - [Reciprocal agent audit](docs/operations/runs/20261108-context-peer-audit.md): source, methods and software reviews, peer challenges, verified repairs and unresolved scientific gates.
 - [Exploratory calendar results](docs/operations/runs/20261108-exploratory-calendar.md): nine real fits; small mixed gains, no qualifying lead or model promotion.
 - [Context-triage experiment](docs/operations/runs/20261108-context-filter-experiment.md): flagged 322 of 2,727 hits while preserving 449/501 reference-quotation coverage; flags are review aids, not legal labels.
