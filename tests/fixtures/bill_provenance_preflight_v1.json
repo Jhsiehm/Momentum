@@ -1,0 +1,553 @@
+{
+  "synthetic_only": true,
+  "definition": "180 elapsed UTC days; availability cutoff inclusive; Congress-end horizon strictly positive; cancellation event_at is cancellation effective instant; all facts synthetic and unverified",
+  "cases": [
+    {
+      "id": "exact_identity",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "result": true
+      }
+    },
+    {
+      "id": "wrong_congress",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 116,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "wrong_type",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "s",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "wrong_number",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 2,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "wrong_version",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "eh",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "wrong_raw_sha256",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "wrong_view_sha256",
+      "operation": "identity",
+      "args": [
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        {
+          "congress": 117,
+          "type": "hr",
+          "number": 1,
+          "version": "ih",
+          "raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "view_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "expected": {
+        "error": "identity/version/digest mismatch"
+      }
+    },
+    {
+      "id": "day180_exact",
+      "operation": "day180",
+      "args": [
+        "2021-01-01T00:00:00Z",
+        "2021-06-30T00:00:00Z",
+        "2023-01-03T17:00:00Z"
+      ],
+      "expected": {
+        "result": "2021-06-30T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "day180_equivalent_offset",
+      "operation": "day180",
+      "args": [
+        "2020-12-31T19:00:00-05:00",
+        "2021-06-29T20:00:00-04:00",
+        "2023-01-03T12:00:00-05:00"
+      ],
+      "expected": {
+        "result": "2021-06-30T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "naive_cutoff",
+      "operation": "day180",
+      "args": [
+        "2021-01-01T00:00:00Z",
+        "2021-06-30T00:00:00",
+        "2023-01-03T17:00:00Z"
+      ],
+      "expected": {
+        "error": "naive timestamp"
+      }
+    },
+    {
+      "id": "day180_one_second_early",
+      "operation": "day180",
+      "args": [
+        "2021-01-01T00:00:00Z",
+        "2021-06-29T23:59:59Z",
+        "2023-01-03T17:00:00Z"
+      ],
+      "expected": {
+        "error": "cutoff is not introduction plus 180 days"
+      }
+    },
+    {
+      "id": "zero_horizon",
+      "operation": "day180",
+      "args": [
+        "2021-01-01T00:00:00Z",
+        "2021-06-30T00:00:00Z",
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "error": "nonpositive prediction horizon"
+      }
+    },
+    {
+      "id": "negative_horizon",
+      "operation": "day180",
+      "args": [
+        "2021-01-01T00:00:00Z",
+        "2021-06-30T00:00:00Z",
+        "2021-06-29T00:00:00Z"
+      ],
+      "expected": {
+        "error": "nonpositive prediction horizon"
+      }
+    },
+    {
+      "id": "inclusive_availability",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "text_version",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": true,
+          "reasons": [],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "future_known_at",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "text_version",
+          "known_at": "2021-06-30T00:00:00.000001Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": false,
+          "reasons": [
+            "known_at_after_cutoff"
+          ],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "future_source_available_at",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "text_version",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00.000001Z",
+          "version_available_at": "2021-06-30T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": false,
+          "reasons": [
+            "source_available_at_after_cutoff"
+          ],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "future_version_available_at",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "text_version",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00.000001Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": false,
+          "reasons": [
+            "version_available_at_after_cutoff"
+          ],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "missing_version_availability",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "text_version",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "error": "missing availability clock"
+      }
+    },
+    {
+      "id": "future_announced_event",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "scheduled_event",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00Z",
+          "event_at": "2021-07-01T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": true,
+          "reasons": [],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "future_realized_adjournment",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "realized_adjournment",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00Z",
+          "event_at": "2021-07-01T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": false,
+          "reasons": [
+            "realized_event_after_cutoff"
+          ],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "family_screening_only",
+      "operation": "feature",
+      "args": [
+        {
+          "kind": "family_screening",
+          "known_at": "2021-06-30T00:00:00Z",
+          "source_available_at": "2021-06-30T00:00:00Z",
+          "version_available_at": "2021-06-30T00:00:00Z"
+        },
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "eligible": false,
+          "reasons": [
+            "family_screening_only"
+          ],
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "later_revision_excluded",
+      "operation": "schedule",
+      "args": [
+        [
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-01T00:00:00Z"
+          },
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-07-02T00:00:00Z",
+            "source_available_at": "2021-07-02T00:00:00Z",
+            "version_available_at": "2021-07-02T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-03T00:00:00Z"
+          }
+        ],
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "selected": {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-01T00:00:00Z"
+          },
+          "excluded_count": 1,
+          "status": "announced",
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "later_cancellation_excluded",
+      "operation": "schedule",
+      "args": [
+        [
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-01T00:00:00Z"
+          },
+          {
+            "kind": "cancellation",
+            "known_at": "2021-07-02T00:00:00Z",
+            "source_available_at": "2021-07-02T00:00:00Z",
+            "version_available_at": "2021-07-02T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-02T00:00:00Z"
+          }
+        ],
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "selected": {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-01T00:00:00Z"
+          },
+          "excluded_count": 1,
+          "status": "announced",
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "missing_schedule_unknown",
+      "operation": "schedule",
+      "args": [
+        [
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-07-02T00:00:00Z",
+            "source_available_at": "2021-07-02T00:00:00Z",
+            "version_available_at": "2021-07-02T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-03T00:00:00Z"
+          }
+        ],
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "result": {
+          "selected": null,
+          "excluded_count": 1,
+          "status": "unknown",
+          "historical_source_certified": false
+        }
+      }
+    },
+    {
+      "id": "ambiguous_same_time_vintage",
+      "operation": "schedule",
+      "args": [
+        [
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-01T00:00:00Z"
+          },
+          {
+            "kind": "scheduled_event",
+            "known_at": "2021-06-30T00:00:00Z",
+            "source_available_at": "2021-06-30T00:00:00Z",
+            "version_available_at": "2021-06-30T00:00:00Z",
+            "event_id": "synthetic-hearing",
+            "event_at": "2021-07-04T00:00:00Z"
+          }
+        ],
+        "2021-06-30T00:00:00Z"
+      ],
+      "expected": {
+        "error": "ambiguous same-time schedule vintages"
+      }
+    }
+  ]
+}

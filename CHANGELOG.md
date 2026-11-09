@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Source structure and temporal readiness audit
+
+- Added reproducible XML/text accounting and synthetic bill-version, cutoff and calendar-vintage checks.
+- Preserved an initial DTD compatibility failure and completed a separately registered correction; identified actual table concatenation and fraction-structure risks while retaining all source text.
+- No document-completeness, historical-eligibility or predictive-accuracy certification.
+
 ## 2026-11-08 — Known locator regressions recovered
 
 - Added separate bounded subject and amendment-context rules, recovering five useful locators and two missed struck-text flags on the fixed design set.
