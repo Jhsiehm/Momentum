@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09 — Official-record metadata reconciliation
+
+- Found official dated introduction evidence for five target-period bills with missing corpus metadata, preserving original values and failed source routes.
+- Distinguished range-based evidence and corrected renditions; no sample release, historical timing certification or model fit.
+
 ## 2026-11-08 — Bounded historical corpus audit
 
 - Verified two historical corpus members through six bounded requests; independently reproduced source-format failures and 43 missing identity/date records.
