@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Experiment validity audit and recovery plan
+
+- Added versioned source-bound expansion rules, affirmative amendment-context checks and strict source/reference validation.
+- Quarantined unvalidated semantic suggestions and documented tested edge cases, historical protocol deviations and the remaining gates before quality or predictive testing.
+- Preserved previous experiments and references; fixes do not establish semantic accuracy or a forecasting gain.
+
 ## 2026-11-08 — Context-triage design experiment
 
 - Added a separate source-linked warning layer for headings, purpose statements, findings and explicitly struck language.
