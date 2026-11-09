@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Known locator regressions recovered
+
+- Added separate bounded subject and amendment-context rules, recovering five useful locators and two missed struck-text flags on the fixed design set.
+- Restored reference quotation coverage to 449/501 with no v4 hit losses; preserved all prior results and semantic abstentions. This remains design evidence, not forecasting accuracy.
+
 ## 2026-11-08 — Experiment validity audit and recovery plan
 
 - Added versioned source-bound expansion rules, affirmative amendment-context checks and strict source/reference validation.
