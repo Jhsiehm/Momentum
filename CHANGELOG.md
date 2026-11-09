@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Historical-source feasibility and conditional text comparison
+
+- Completed a registered sixteen-request study of eight unresolved sources; current PREMIS/ZIPs did not recover missing historical XML checksums. Eligibility remains unresolved, with all failures and evidence preserved.
+- Froze a two-arm, three-fold introduced-text comparison specification and candidate identities; fitting remains blocked by explicit evidence and implementation gates.
+- Prepared an exact historical-object evidence request and checked alternate PDF/HTML lineage without sending messages or claiming predictive improvement.
+
 ## 2026-11-08 — Structural extractor diagnostic and model-experiment priorities
 
 - Added a separately registered cell-boundary screen retaining every raw locator and full bill/fraction context.
