@@ -1,0 +1,7 @@
+# Offline BICAM/current-directory reconciliation v1
+
+November 9, 2026. Seal source result, candidate census and entire error-ledger hashes with code/tests/protocol before computing set differences. No network, labels, XML or model fitting. Require twelve accepted official directory parse results and unique candidate IDs. Save every official-only and candidate-only identity, intersections and per-Congress/chamber counts. Preserve every corpus error separately and annotate presence only for syntactically valid in-scope identity strings; a malformed identity has unknown presence, not absence. Do not silently add error records to the accepted candidate census or reinterpret their introduction dates.
+
+The offline v3 corpus output is a candidate census with unresolved errors, not a complete eligible population. Current official directory membership is not proof of introduction, historical availability or completeness. Difference sets identify follow-up work; they do not label failed bills, authorize a sample or release fitting gates. All errors and both difference directions belong in the execution receipt. Synthetic tests precede registration; independent review replays sets/hashes without new requests.
+
+Reproduction: `python3 -m scripts.bicam_inventory_compare_v1 --official PATH_TO_OFFICIAL_V2_RESULT --census PATH_TO_V3_CENSUS --errors PATH_TO_V3_ERRORS --output FRESH_IGNORED_DIRECTORY`.

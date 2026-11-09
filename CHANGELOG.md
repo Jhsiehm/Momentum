@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09 — Official population coverage audit
+
+- Enumerated 75,605 current official bill-status identities and independently compared them with the historical corpus.
+- Preserved 116 further corpus issues, thirteen official-only and thirty candidate-only identities; moved the next source-readiness study to a separately registered official-directory sample.
+
 ## 2026-11-09 — Official-record metadata reconciliation
 
 - Found official dated introduction evidence for five target-period bills with missing corpus metadata, preserving original values and failed source routes.
