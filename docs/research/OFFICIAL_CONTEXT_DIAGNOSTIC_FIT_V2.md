@@ -1,0 +1,11 @@
+# Official-context fit runner v2: source-only compatibility amendment
+
+This separately versioned runner uses the reviewed offline feature-v2 projection of the original registered source acquisition. V1 code, acquired bytes, selection, errors and source-only no-go remain preserved. No labels or scores informed the amendment: v1 produced no observed procedural context values, so fitting did not commence.
+
+The feature adapter and input bindings change. The reviewed source-v2 outcome adapter additionally accepts the explicitly represented Senate source name when its numeric source code is absent, only for ordinary actions; it does not invent a numeric code or change terminal public-law code/source/number/date requirements. This representation compatibility repair is fixed before labels, not a relaxed outcome rule. Preserve the v1 acquisition population, protected/exposed exclusions, family rules, train113–116/evaluation117–118 split, exact within-family hash-selection salt `official-context-diagnostic-v1`, two model arms,12-column transformation, solver, references, label-proxy rule, bootstrap and all stopping/reporting rules in `OFFICIAL_CONTEXT_DIAGNOSTIC_FIT_V1.md`. The new runner version must not alter the representative-selection salt inadvertently. Feature-v2 changes may legitimately change which rows have observed context, but cannot add sources or select by outcomes.
+
+Validate both original acquisition and offline amendment registrations and their complete input hashes. Use original source XML/receipts and selected/protected manifest, with exactly the offline amendment's feature artifacts and population ledger. Replay the reviewed v2 extractor and verify source hashes before sealing feature/family membership. Any mismatch blocks before labels. Preserve the existing feature-population-before-label and predictions-before-scoring boundaries.
+
+The original human/historical evidence gates remain unresolved. This amendment releases no fit on its own: independent preflight, actual offline-source replay and root execution authorization are still required. Runtime is immutable and ignored; tests are synthetic/mock solver calls, not actual model experiments.
+
+Reproduction: `python3 -m scripts.official_context_diagnostic_v2 --source ORIGINAL_ACQUISITION --features OFFLINE_V2_DIRECTORY --output FRESH_IGNORED_DIRECTORY`.

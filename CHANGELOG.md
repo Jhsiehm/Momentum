@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09 — Larger official-source diagnostic and honest stop
+
+- Collected and independently replayed 12,000 official bill records. A separately versioned offline correction recovered dated procedural context without replacing sources or altering baseline data.
+- The registered comparison stopped before model fitting because no positive training labels survived its population rules. Preserved the failure; independent diagnosis found that publication-completeness requirements excluded all 333 records with public-law assertions. A separate action-based design is being implemented; no predictive improvement or promotion claimed.
+
 ## 2026-11-09 — Official metadata feasibility established
 
 - All 100 fixed official bill-status files downloaded and passed identity/date checks; independent replay matched every case.
