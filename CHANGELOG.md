@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-08 — Archive-source follow-up and prospective feasibility
+
+- Checked current and inferred legacy archive addresses for eight historical cases; sixteen successful metadata requests returned no capture leads, leaving eligibility unresolved.
+- Added independent gate review and a concrete prospective capture draft, including training-data and outcome-maturation constraints. No forecasts or predictive fits ran.
+
 ## 2026-11-08 — Synthetic text-pipeline validation
 
 - Added versioned context-preserving text preparation, training-only TF-IDF and a gradient-checked sparse solver.
