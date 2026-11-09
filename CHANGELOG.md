@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Separate structural bill input
+
+- Added authenticated structural sidecars preserving table rows/cells, fraction context, qualified attributes and exact Unicode reading-view mappings.
+- Reconciled all forty design bills without changing reading text or reference offsets; independently checked every node and actual table/fraction case.
+- Structural consistency does not establish legal interpretation, historical availability or predictive accuracy.
+
 ## 2026-11-08 — Source structure and temporal readiness audit
 
 - Added reproducible XML/text accounting and synthetic bill-version, cutoff and calendar-vintage checks.
