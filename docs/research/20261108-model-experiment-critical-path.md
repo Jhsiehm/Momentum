@@ -90,3 +90,10 @@ After this structural run, prioritize one sealed evidence-readiness decision for
 The 60% objective remains `1 − mean-period(Brier_model) / mean-period(Brier_rate) ≥ 0.60`, with the historical-rate baseline fitted only on eligible earlier data and identical evaluation cases. It is neither 60 percentage points of accuracy nor a promise of improvement. Before any protected outcome access, a specific 60% claim needs the additional prespecified `mean-period(Brier_model − 0.40 × Brier_rate)` contrast and simultaneous interval/multiplicity accounting described in the recovery plan. Report rate and stage baselines separately.
 
 Model learning means fitting new forecasting weights to genuine, matured labels under a fixed versioned procedure. Automatic self-labels, agent agreement, unmatured negatives and repeated selection on exposed outcomes do not supply independent learning evidence. The existing controlled-updating plan uses completed, adjudicated Congress boundaries and separate immutable forecasts; no self-updating model or deployment is introduced by this work.
+
+
+## Checkpoint: synthetic implementation completed
+
+The [registered text-pipeline preflight](../operations/runs/20261108-matched-text-synthetic-preflight.md) now supplies a frozen preprocessing implementation and sparse numerical validation. All ten synthetic checks passed in a separately registered serialization-only successor; the failed original is retained. This closes the immediate software-validation task, not the source or predictive-readiness gates. No additional locator expansion is indicated.
+
+The next substantive dependency remains dated evidence for the same eight historical objects, followed by authenticated matched populations, required reviews and class coverage. The exact evidence-request packet is prepared locally and unsent. Do not acquire thousands more current renditions or execute the six real-data fits on the strength of synthetic results. If historical evidence cannot be recovered, separately register a prospective collection/evaluation design rather than reclassifying current renditions as historical evidence.

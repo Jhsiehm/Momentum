@@ -1,0 +1,3 @@
+# Research-only frozen synthetic preflight environment; not a production dependency change.
+numpy==2.0.2
+scipy==1.13.1

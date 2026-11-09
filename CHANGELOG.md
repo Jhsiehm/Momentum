@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-08 — Synthetic text-pipeline validation
+
+- Added versioned context-preserving text preparation, training-only TF-IDF and a gradient-checked sparse solver.
+- Passed a registered synthetic preflight and independent numerical replay; preserved the initial serialization failure in its original version.
+- No real forecasting comparison or improvement claim; historical-source and predictive-execution gates remain unresolved.
+
 ## 2026-11-08 — Historical-source feasibility and conditional text comparison
 
 - Completed a registered sixteen-request study of eight unresolved sources; current PREMIS/ZIPs did not recover missing historical XML checksums. Eligibility remains unresolved, with all failures and evidence preserved.

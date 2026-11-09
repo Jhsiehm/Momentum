@@ -1,0 +1,474 @@
+{
+  "documents": [
+    {
+      "bill_id": "113-hr100",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 100.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-00",
+      "role": "core",
+      "structured": [
+        -1.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr101",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 101.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-01",
+      "role": "core",
+      "structured": [
+        -0.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr102",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 102.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-02",
+      "role": "core",
+      "structured": [
+        0.5,
+        0,
+        1.0,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr103",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 103.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-03",
+      "role": "core",
+      "structured": [
+        1.5,
+        1,
+        0.0,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr104",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 104.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-04",
+      "role": "core",
+      "structured": [
+        -1.5,
+        0,
+        0.5,
+        0,
+        1,
+        0.8
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr105",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 105.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-05",
+      "role": "core",
+      "structured": [
+        -0.5,
+        1,
+        1.0,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr106",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 106.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-06",
+      "role": "core",
+      "structured": [
+        0.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr107",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 107.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-07",
+      "role": "core",
+      "structured": [
+        1.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr108",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 108.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-08",
+      "role": "core",
+      "structured": [
+        -1.5,
+        0,
+        1.0,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr109",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 109.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-09",
+      "role": "core",
+      "structured": [
+        -0.5,
+        1,
+        0.0,
+        0,
+        1,
+        0.8
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr110",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 110.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-10",
+      "role": "core",
+      "structured": [
+        0.5,
+        0,
+        0.5,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr111",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 111.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-11",
+      "role": "core",
+      "structured": [
+        1.5,
+        1,
+        1.0,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr112",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 112.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-12",
+      "role": "core",
+      "structured": [
+        -1.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr113",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 113.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-13",
+      "role": "core",
+      "structured": [
+        -0.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr114",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 114.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-14",
+      "role": "core",
+      "structured": [
+        0.5,
+        0,
+        1.0,
+        0,
+        1,
+        0.8
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr115",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 115.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-15",
+      "role": "core",
+      "structured": [
+        1.5,
+        1,
+        0.0,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr116",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 116.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-16",
+      "role": "core",
+      "structured": [
+        -1.5,
+        0,
+        0.5,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr117",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 117.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-17",
+      "role": "core",
+      "structured": [
+        -0.5,
+        1,
+        1.0,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr118",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. See 42 U.S.C. 1983 and H. R. 118.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-18",
+      "role": "core",
+      "structured": [
+        0.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr119",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. See 42 U.S.C. 1983 and H. R. 119.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-core-19",
+      "role": "core",
+      "structured": [
+        1.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.8
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr200",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 200.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-calibration-00",
+      "role": "calibration",
+      "structured": [
+        -1.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr201",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 201.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-calibration-01",
+      "role": "calibration",
+      "structured": [
+        -0.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr202",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 202.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-calibration-02",
+      "role": "calibration",
+      "structured": [
+        0.5,
+        0,
+        1.0,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr203",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 203.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-calibration-03",
+      "role": "calibration",
+      "structured": [
+        1.5,
+        1,
+        0.0,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr300",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 300.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-evaluation-00",
+      "role": "evaluation",
+      "structured": [
+        -1.5,
+        0,
+        0.0,
+        0,
+        1,
+        0.0
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr301",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 301.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-evaluation-01",
+      "role": "evaluation",
+      "structured": [
+        -0.5,
+        1,
+        0.5,
+        0,
+        1,
+        0.2
+      ],
+      "synthetic_label": 1
+    },
+    {
+      "bill_id": "113-hr302",
+      "body": "<section><header>Research fixture</header><text>Agency may grant tax credit relief. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 302.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-evaluation-02",
+      "role": "evaluation",
+      "structured": [
+        0.5,
+        0,
+        1.0,
+        0,
+        1,
+        0.4
+      ],
+      "synthetic_label": 0
+    },
+    {
+      "bill_id": "113-hr303",
+      "body": "<section><header>Research fixture</header><text>Agency shall not deny habitat protection. quarantinetoken unseenholdout See 42 U.S.C. 1983 and H. R. 303.</text><table><row><entry>red</entry><entry>blue</entry></row></table><text>4<fraction>1/2</fraction> hours.</text></section>",
+      "id": "synthetic-evaluation-03",
+      "role": "evaluation",
+      "structured": [
+        1.5,
+        1,
+        0.0,
+        0,
+        1,
+        0.6
+      ],
+      "synthetic_label": 1
+    }
+  ],
+  "numerical": {
+    "X": [
+      [
+        -2.0,
+        0.5
+      ],
+      [
+        -1.0,
+        -0.5
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        2.0,
+        1.5
+      ],
+      [
+        3.0,
+        -1.0
+      ]
+    ],
+    "theta": [
+      0.1,
+      -0.2,
+      0.3
+    ],
+    "y": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  "origin": "Entirely invented deterministic software fixtures; no actual bill content or outcomes",
+  "thresholds": {
+    "finite_difference_max_error": 1e-07,
+    "gd_prediction_max_difference": 0.0001,
+    "gradient_tolerance": 1e-06,
+    "scalar_gradient_max_error": 1e-12,
+    "scalar_objective_max_error": 1e-12
+  },
+  "version": "matched-text-synthetic-fixtures-v1"
+}
