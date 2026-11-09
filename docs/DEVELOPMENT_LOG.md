@@ -325,3 +325,9 @@ Next gate: newly registered unexposed evaluation against survivor and rate basel
 - Fresh source review of all13 found11 supported locators and2 misleading occurrences:flaggedheading and retained cross-clause “no cost ... and may” match. Root verified all evidence, bindings and cross-tab. Preserved residual failure; no post-result tuning, rejected raw hits or accepted labels.
 - Validation:89 focused tests passed; normal/optimized results and independent full arithmetic/source/sample replay agree.143 prior files and frozen-model audit unchanged. No full-suite claim, protected quality parsing, acquisition, outcome scoring, model fitting, promotion or schedule change. Shared lease released.
 - [Experiment receipt](operations/runs/20261108-context-filter-experiment.md). Context flags remain review aids; clause attachment and explicit semantic interpretation remain next research questions.
+
+## 2026-11-08 — Detailed experiment reporting preference
+
+- Recorded standing user preference in AGENTS.md: every experiment must receive detailed user-facing results and a complete saved receipt, including setup, definitions, denominators, per-category/per-case measurements, failures, exclusions, validation, uncertainty and exact artifact/reproduction links.
+- Expanded the existing context-triage receipt with all forty bill rows, all twelve mechanism results, every fresh source-review rationale, offset conventions and a full artifact index. No new experiment or research result was produced.
+- Validation: authenticated forty output envelopes and verified their recomputed totals match2,727 raw/322flagged/2,405retained hits,501effects and449raw/retained intersections; all13review records mapped to the sample. Documentation diff check passed. No code or tests changed; no suite rerun needed.
