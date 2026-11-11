@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11 — Context comparison completed after source-contract corrections
+
+- Removed the publication-completeness exclusion from the separate action-based design and corrected exact signing-annotation handling while requiring independent law-number/date evidence. Preserved previous failures and every label change.
+- Two fixed retrospective fits completed: context reduced Brier loss 3.04% against the simple baseline and 8.56% against historical rate. The 0.83% advantage over the stronger action-milestone reference remains uncertain; no model promotion or 60% claim.
+- Independent full replay passed, with 908 software tests passing. Detailed receipts include every evaluation case, audited label and exclusion.
+
 ## 2026-11-09 — Larger official-source diagnostic and honest stop
 
 - Collected and independently replayed 12,000 official bill records. A separately versioned offline correction recovered dated procedural context without replacing sources or altering baseline data.
