@@ -9,6 +9,7 @@ import tempfile
 from unittest import mock
 import unittest
 import zlib
+import zipfile
 from scripts import bicam_inventory_audit_v1 as m
 
 
@@ -79,18 +80,38 @@ class IndependentInventoryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.local_header(raw, entry)
 
+    def synthetic_archive(self, root):
+        """Synthetic ZIP/prior envelope; never reconstruct a historical receipt."""
+        members = {
+            'bills.csv': self.data([self.row(1), self.row(2)]),
+            'ref_bill_version_codes.csv': b'code,description\nIH,Introduced in House\nIS,Introduced in Senate\n',
+        }
+        stream = io.BytesIO()
+        with zipfile.ZipFile(stream, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+            for name, value in members.items():
+                archive.writestr(name, value)
+        raw = stream.getvalue()
+        prior = root / 'synthetic-prior'
+        prior.mkdir()
+        headers = {'Content-Length': str(len(raw)), 'ETag': '"synthetic-archive"',
+                   'x-amz-version-id': 'synthetic-v1'}
+        (prior / 'zip-result.json').write_text(json.dumps([{'headers': headers}]))
+        # The complete small ZIP is also a valid tail; its offset adjustment is zero.
+        (prior / 'zip-tail.bin').write_bytes(raw)
+        return raw, prior, headers, members
+
     def test_http_identity_failures_are_retained_and_stop(self):
-        prior = json.loads((m.PRIOR / 'zip-result.json').read_text())[0]['headers']
-        size = prior['Content-Length']
-        base = {'ETag': prior['ETag'], 'x-amz-version-id': prior['x-amz-version-id'],
-                'Content-Range': f'bytes 0-29/{size}', 'Content-Length': '30'}
         cases = [('ETag', '"wrong"'), ('x-amz-version-id', 'wrong'),
-                 ('Content-Range', f'bytes 1-30/{size}'), ('Content-Length', '31'), ('status', 200)]
+                 ('Content-Range', 'wrong range'), ('Content-Length', '31'), ('status', 200)]
         for key, value in cases:
             with self.subTest(key=key), tempfile.TemporaryDirectory() as temp:
+                root = pathlib.Path(temp)
+                raw, prior, source_headers, _ = self.synthetic_archive(root)
+                size = len(raw)
                 response = mock.MagicMock()
                 response.__enter__.return_value = response
-                response.headers = dict(base)
+                response.headers = dict(source_headers, **{
+                    'Content-Range': f'bytes 0-29/{size}', 'Content-Length': '30'})
                 response.status = 206
                 if key == 'status':
                     response.status = value
@@ -98,8 +119,10 @@ class IndependentInventoryTests(unittest.TestCase):
                     response.headers[key] = value
                 opener = mock.Mock()
                 opener.open.return_value = response
-                output = pathlib.Path(temp) / 'run'
-                with mock.patch.object(m.urllib.request, 'build_opener', return_value=opener):
+                output = root / 'run'
+                with mock.patch.object(m, 'PRIOR', prior), \
+                     mock.patch.object(m, 'TAIL_HASH', hashlib.sha256(raw).hexdigest()), \
+                     mock.patch.object(m.urllib.request, 'build_opener', return_value=opener):
                     with self.assertRaisesRegex(ValueError, 'HTTP range identity mismatch'):
                         m.run(output)
                 self.assertEqual(opener.open.call_count, 1)
@@ -108,6 +131,63 @@ class IndependentInventoryTests(unittest.TestCase):
                 self.assertTrue((output / 'request-01.json').exists())
                 self.assertTrue((output / 'failure.json').exists())
                 self.assertFalse((output / 'result.json').exists())
+                failure = json.loads((output / 'failure.json').read_text())
+                self.assertEqual(failure['request_count'], 1)
+                self.assertEqual(failure['error'], 'HTTP range identity mismatch')
+
+    def test_valid_synthetic_range_archive_completes_all_six_requests(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = pathlib.Path(temp)
+            raw, prior, source_headers, members = self.synthetic_archive(root)
+            observed_ranges = []
+
+            def respond(request, timeout):
+                self.assertEqual(request.full_url, m.URL)
+                self.assertEqual(request.get_header('If-match'), source_headers['ETag'])
+                self.assertGreater(timeout, 0)
+                unit, interval = request.get_header('Range').split('=')
+                self.assertEqual(unit, 'bytes')
+                lo, hi = map(int, interval.split('-'))
+                self.assertGreaterEqual(lo, 0)
+                self.assertLess(hi, len(raw))
+                observed_ranges.append((lo, hi))
+                payload = io.BytesIO(raw[lo:hi + 1])
+                response = mock.MagicMock()
+                response.__enter__.return_value = response
+                response.status = 206
+                response.headers = dict(source_headers, **{
+                    'Content-Range': f'bytes {lo}-{hi}/{len(raw)}',
+                    'Content-Length': str(hi - lo + 1)})
+                response.read.side_effect = payload.read
+                return response
+
+            opener = mock.Mock()
+            opener.open.side_effect = respond
+            output = root / 'run'
+            with mock.patch.object(m, 'PRIOR', prior), \
+                 mock.patch.object(m, 'TAIL_HASH', hashlib.sha256(raw).hexdigest()), \
+                 mock.patch.object(m.urllib.request, 'build_opener', return_value=opener):
+                m.run(output)
+            self.assertEqual(opener.open.call_count, 6)
+            self.assertEqual(len(observed_ranges), 6)
+            self.assertFalse((output / 'failure.json').exists())
+            result = json.loads((output / 'result.json').read_text())
+            self.assertEqual(result['disposition'], 'inventory_complete')
+            self.assertEqual(result['request_count'], 6)
+            self.assertEqual(result['sampled'], 2)
+            self.assertEqual(result['reference_rows'], 2)
+            self.assertEqual(result['model_fits'], 0)
+            self.assertFalse(result['historical_eligibility_established'])
+            self.assertEqual(result['downloaded_bytes'], sum(hi - lo + 1 for lo, hi in observed_ranges))
+            for index in range(1, 7):
+                self.assertTrue((output / f'request-{index:02d}-intent.json').exists())
+                self.assertTrue((output / f'request-{index:02d}.json').exists())
+            for name, expected in members.items():
+                self.assertEqual((output / name).read_bytes(), expected)
+                self.assertEqual(result['member_sha256'][name], hashlib.sha256(expected).hexdigest())
+            census = json.loads((output / 'identity-census.json').read_text())
+            self.assertNotIn('OUTCOME_SENTINEL', str(census))
+            self.assertEqual(census['sample_shortfall'], 98)
 
     def test_redirect_handler_disallows_redirect(self):
         self.assertIsNone(m.NoRedirect().redirect_request(None, None, 302, 'redirect', {}, 'https://example.com'))
