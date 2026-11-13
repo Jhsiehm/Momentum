@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 from . import model
-from .store import now, digest, congress_end
+from .store import now, digest, congress_end, timestamp
 
 SCHEMA='''
 CREATE TABLE IF NOT EXISTS prospective_receipts(id TEXT PRIMARY KEY, identity TEXT UNIQUE NOT NULL, dataset TEXT NOT NULL, bill_id TEXT NOT NULL, issued_at TEXT NOT NULL, body TEXT NOT NULL);
@@ -65,8 +65,15 @@ def capture(store,dataset,bill_id):
     identity=digest(basis)
     existing=store.db.execute('SELECT body FROM prospective_receipts WHERE identity=?',(identity,)).fetchone()
     if existing:return dict(json.loads(existing[0]),reused=True)
-    if eligible and forecast['status']=='available':forecast=model.forecast(store,dataset,bill_id,cutoff,persist=True)
-    receipt=dict(id=identity,identity=identity,issued_at=now(),cutoff=cutoff,dataset=dataset,bill_id=bill_id,status=status,
+    issued_at=now()
+    if timestamp(issued_at)<timestamp(cutoff):
+        raise ValueError('Clock moved backward during prospective capture')
+    if eligible and forecast['status']=='available':
+        forecast=model.forecast(store,dataset,bill_id,cutoff,persist=True)
+        issued_at=now()
+        if timestamp(issued_at)<timestamp(cutoff):
+            raise ValueError('Clock moved backward during prospective capture')
+    receipt=dict(id=identity,identity=identity,issued_at=issued_at,cutoff=cutoff,dataset=dataset,bill_id=bill_id,status=status,
                  prospective_eligible=eligible and dataset=='official',synthetic=dataset=='demo',reason=reason,input_snapshot=snap,
                  source_records=sources,source_hash=basis['source_hash'],forecast=forecast,forecast_hash=digest(forecast),
                  implementation_hashes=code,outcome_at_issue=outcome,release_eligible=False,
