@@ -6,7 +6,9 @@ Momentum brings official-source imports, bill collections, research conversation
 
 ## Current research priority
 
-The current research focus is rigorous evaluation of own-bill enactment forecasts at day 180. The [paper protocol](docs/research/PAPER_PROTOCOL_V1.md), [validation-readiness audit](docs/research/VALIDATION_READINESS.md) and [working paper draft](docs/research/PAPER_DRAFT_V1.md) distinguish exposed historical development from proposed prospective evaluation. No independent historical validation cohort is currently established; real scoring remains blocked pending evidence review and prospective controls. The [cross-Congress campaign receipt](docs/operations/runs/20261105-cross-congress-campaign.md) records the data, methods, limitations, and results. The separate [day-30 originating-chamber passage benchmark](docs/SEQUENTIAL_BENCHMARK.md) still requires additional evidence. Reliable forecasting improvement remains unestablished; research results do not automatically promote models.
+Momentum now follows a [forecasting-first execution plan](docs/research/FORECASTING_FIRST_PLAN_V1.md). A separate [day-30 / next-90-day originating-chamber passage study](docs/research/PASSAGE90_PROTOCOL_V1.md) adds explicit target and population contracts, a strong stage/chamber/time-remaining reference, paired metrics, and an immutable source/forecast ledger. The [first source pilot](docs/operations/runs/20261112-passage90-foundation.md) collected 20 bills and was independently replayed; it produced no certified labels, fitted passage model or validated forecasts. Prospective launch remains blocked on reviewed evidence, model artifacts and independent timestamps.
+
+The existing enactment programme evaluates own-bill forecasts at day 180. The [paper protocol](docs/research/PAPER_PROTOCOL_V1.md), [validation-readiness audit](docs/research/VALIDATION_READINESS.md) and [working paper draft](docs/research/PAPER_DRAFT_V1.md) distinguish exposed historical development from proposed prospective evaluation. No independent historical validation cohort is currently established; real scoring remains blocked pending evidence review and prospective controls. The [cross-Congress campaign receipt](docs/operations/runs/20261105-cross-congress-campaign.md) records the data, methods, limitations, and results. The separate [day-30 originating-chamber passage benchmark](docs/SEQUENTIAL_BENCHMARK.md) still requires additional evidence. Reliable forecasting improvement remains unestablished; research results do not automatically promote models.
 
 The [experiment validity recovery plan](docs/research/EXPERIMENT_VALIDITY_RECOVERY_PLAN.md) separates source-integrity fixes, provisional bill annotation, protected quality evaluation and predictive testing. Candidate quotation coverage is not semantic accuracy.
 
@@ -49,8 +51,12 @@ Never commit `.env` or API keys. You can use direct research and organization sc
 
 ## Development
 
+The application itself needs no third-party packages. The complete research test suite also needs the pinned numerical packages in an isolated environment:
+
 ```sh
-python3 -m unittest discover -s tests -v
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-research-text-v1.txt
+.venv/bin/python -m unittest discover -s tests -v
 node --check web/app.js
 ```
 

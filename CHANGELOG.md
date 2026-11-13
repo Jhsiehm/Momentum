@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-12 — Forecasting-first passage study and independently checked source ledger
+
+- Added a comprehensive execution plan and separate day-30 / next-90-day passage protocol, with a strong stage/chamber/time-remaining reference and matched probability, calibration and prioritization diagnostics.
+- Added exact source capture, immutable local paired-forecast receipts and independent replay. The 20-bill live source pilot completed 22 requests; all cases and hashes replayed independently. Missing passage evidence remains unresolved. No passage model was fitted or forecast accuracy established.
+- Independent agents found and repaired timestamp-equivalent duplicate issuance, ambiguous XML identities and evidence-mode/chronology gaps. Added adverse-input, concurrency, interruption, CLI and deliberately disabled-guard checks. Made the legacy inventory transport test self-contained with a synthetic ZIP and valid control.
+- Final suite: 978 tests run, no failures, one existing retained-data integration skip; 88 focused tests also pass under optimized Python. Prospective launch remains blocked on reviewed evidence, model artifacts and independent timestamps.
+
+## 2026-11-12 — Failure-path audit hardening
+
+- Passage identity and frozen-output checks remain active under optimized Python.
+- Evaluation rejects duplicate or malformed outcomes/predictions and compares normalized timestamps.
+- Prospective capture rejects clock rollback during issuance; independent attestation remains unavailable.
+
 ## 2026-11-11 — Context comparison completed after source-contract corrections
 
 - Removed the publication-completeness exclusion from the separate action-based design and corrected exact signing-annotation handling while requiring independent law-number/date evidence. Preserved previous failures and every label change.

@@ -174,3 +174,23 @@ Each bill checkpoint exposes fixed/adaptive predictions, learned standardized lo
 This surface uses the existing `learning.py` implementation without changing frozen study hashes. It does not fine-tune the hosted language model, unlock missing official evidence, or promote experimental weights into live forecasting. Training history reports matched fixed/adaptive development scores and does not pool unlike populations. A lower development score is not independently validated improvement.
 
 API: `GET /api/learning?dataset=official|demo`, `GET /api/learning/detail?id=…`, `POST /api/learning/train` with `{"id":"session ID"}`. Training preserves the research session's implementation, evidence, audit and idempotence gates. The history view filters the latest 100 research sessions.
+## Passage90 research foundation (November 12, 2026)
+
+Start with the [forecasting-first plan](docs/research/FORECASTING_FIRST_PLAN_V1.md), [separate protocol](docs/research/PASSAGE90_PROTOCOL_V1.md) and [execution receipt](docs/operations/runs/20261112-passage90-foundation.md). The new target is first originating-chamber passage in the 90 days after a day-30 checkpoint, restricted to complete windows before Congress end. The older enactment and passage-by-Congress-end workflows remain distinct.
+
+The new ledger supports exact official BILLSTATUS/inventory capture, immutable registration/source receipts and local-only paired issuance through its Python API. It does not fit models or certify prospective research. A caller-supplied probability, at-risk assertion or family ID is not independent validation. The certified issuance path deliberately rejects until an external verification route exists.
+
+```sh
+# A new source-feasibility run makes up to 22 live official requests.
+# It must use a new directory; the existing receipt and raw bytes are immutable.
+python3 -m scripts.passage90_source_pilot --output data/research-runs/NEW-PILOT
+
+# Verify an existing local ledger without network requests.
+python3 -m engine.forecast_ledger verify data/research-runs/NEW-PILOT/ledger
+
+# Focused contracts and adverse-input tests, including optimized Python.
+python3 -m unittest tests.test_passage90 tests.test_forecast_ledger tests.test_passage90_source_pilot -v
+python3 -O -m unittest tests.test_passage90 tests.test_forecast_ledger tests.test_passage90_source_pilot -v
+```
+
+Current-source inspection never backdates observations or fills missing passage labels with negatives. The source pilot is a small engineering check, not a trained forecasting system or a full census. Future operations still require reviewed labels/features/families, a fixed fitting manifest and passage-specific model artifacts, discovery/custody controls, independent timestamps and matured outcomes. No recurring capture schedule or live model promotion is enabled by these commands.

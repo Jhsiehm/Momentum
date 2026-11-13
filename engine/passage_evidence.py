@@ -38,7 +38,8 @@ class Sources(cohort.Sources):
 def audit_bill(sources,bid):
     match=re.fullmatch(r'(\d+)-(hr|s)(\d+)',bid);c,kind,n=int(match[1]),match[2],int(match[3])
     raw,source=sources.get(f'https://www.govinfo.gov/bulkdata/BILLSTATUS/{c}/{kind}/BILLSTATUS-{c}{kind}{n}.xml');bill=cohort.xml(raw).find('bill')
-    assert bill is not None and int(bill.findtext('congress'))==c and bill.findtext('type').lower()==kind and int(bill.findtext('number'))==n,'Bill identity mismatch'
+    if bill is None or int(bill.findtext('congress'))!=c or bill.findtext('type').lower()!=kind or int(bill.findtext('number'))!=n:
+        raise ValueError('Bill identity mismatch')
     intro=timestamp(bill.findtext('introducedDate'));cutoff=timestamp((date(intro)+timedelta(days=30)).isoformat());actions=passage_actions(bill,kind);versions=[]
     packages=set()
     for u in bill.findall('textVersions/item/formats/item/url'):
@@ -49,7 +50,8 @@ def audit_bill(sources,bid):
         if version==('ih' if kind=='hr' else 'is'):proof['introduction_validation']=validate_introduction(mods,package,intro)
         versions.append(proof)
     introduced=[v for v in versions if v['version']==('ih' if kind=='hr' else 'is')]
-    assert len(introduced)<=1,'Ambiguous introduction'
+    if len(introduced)>1:
+        raise ValueError('Ambiguous introduction')
     eligible=[v for v in versions if v['available_at']<=cutoff and v['issued_at']<=cutoff]
     checkpoint_reason=None
     if cutoff>=congress_end(c):checkpoint_reason='checkpoint_after_congress'
@@ -80,7 +82,8 @@ def run(offline=False):
     spec=dict(target=TARGET,ids=ids,checkpoint_days=30,negative_rule='Unknown until independent complete action coverage is audited; never infer from missing action or missing version',positive_rule='Matching first coded LOC origin passage and same-date EH/ES; preservation bound, not human certification',sampling='Existing exposed700 plus deterministic first20 HR/S in each110–112; early-bill sample is not representative',scoring=False)
     def save(name,value):
         path=D/name;text=json.dumps(value,indent=2)+'\n'
-        if path.exists():assert path.read_text()==text,'Frozen artifact changed: '+name
+        if path.exists():
+            if path.read_text()!=text:raise ValueError('Frozen artifact changed: '+name)
         else:path.write_text(text)
     save('protocol.json',dict(spec=spec,hash=digest(spec)))
     sources=Sources(D,offline);rows=[];failures=[]
@@ -95,7 +98,8 @@ def run(offline=False):
     result=dict(protocol_hash=digest(spec),rows=rows,failures=failures,sources=sources.manifest(),summary=summary,code_hashes={n:hashlib.sha256(Path(__file__).with_name(n).read_bytes()).hexdigest() for n in ('passage_evidence.py','publication_identity.py','cohort.py','store.py')});result['hash']=digest(result);save('audit.json',result)
     save('summary.json',summary)
     text=''.join(json.dumps(x,sort_keys=True)+'\n' for x in labels);path=D/'corroborated-positive-labels.jsonl'
-    if path.exists():assert path.read_text()==text
+    if path.exists():
+        if path.read_text()!=text:raise ValueError('Frozen passage labels changed')
     else:path.write_text(text)
     print(json.dumps(summary,indent=2));return result
 if __name__=='__main__':
