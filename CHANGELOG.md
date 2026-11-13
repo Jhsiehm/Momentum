@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-12 — Failure-path audit hardening
+
+- Passage identity and frozen-output checks remain active under optimized Python.
+- Evaluation rejects duplicate or malformed outcomes/predictions and compares normalized timestamps.
+- Prospective capture rejects clock rollback during issuance; independent attestation remains unavailable.
+
 ## 2026-11-11 — Context comparison completed after source-contract corrections
 
 - Removed the publication-completeness exclusion from the separate action-based design and corrected exact signing-annotation handling while requiring independent law-number/date evidence. Preserved previous failures and every label change.
